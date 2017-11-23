@@ -1,0 +1,83 @@
+game-music.mp3 
+-----------------------------------------------------------
+"Somewhere Sunny (ver 2)" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+game-music01.mp3
+-----------------------------------------------------------
+"Relaxing Piano Music" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+game-music02.mp3
+-----------------------------------------------------------
+"Dreams Become Real" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+hospital-ambience-phone-ringing01.wav
+-----------------------------------------------------------
+"PhoneRinging.wav" Bassmonkey91 (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://freesound.org/people/Bassmonkey91/sounds/134067/
+
+hospital-ambience-cupboard-door02.wav
+-----------------------------------------------------------
+"Door opening and closing 8" JakLocke (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://freesound.org/people/JakLocke/sounds/261109/
+
+game-menu-submit01.wav
+-----------------------------------------------------------
+"Ding" Aiwha (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://freesound.org/people/Aiwha/sounds/196106/
+
+page-turn01.wav
+-----------------------------------------------------------
+"Page Turn - Please Turn Over (PTO) - paper_turn_over.wav" flag2 (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://freesound.org/people/flag2/sounds/63318/
+
+button-press01.wav
+-----------------------------------------------------------
+"button 20.wav" bubaproducer (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/bubaproducer/sounds/107139/
+
+button-press02.wav
+-----------------------------------------------------------
+"Wallet Open" Natty23 (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/Natty23/sounds/349191/
+
+notification01.wav
+-----------------------------------------------------------
+"Notification 01" rhodesmas (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/rhodesmas/sounds/342749/
+
+notification02.wav
+-----------------------------------------------------------
+"failure" fins (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/fins/sounds/173958/
+
+next-phase01.wav
+-----------------------------------------------------------
+"320655__rhodesmas__level-up-01.mp3" shinephoenixstormcrow (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/shinephoenixstormcrow/sounds/337049/
+
+incorrect-selection01.wav
+-----------------------------------------------------------
+"Game Sound Wrong.wav" Bertrof (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/Bertrof/sounds/131657/
+
+correct-selection01.mp3
+-----------------------------------------------------------
+"Bong Chime 2" FoolBoyMedia (freesound.org)
+Licensed under Creative Commons: By Attribution 3.0 License
+https://www.freesound.org/people/FoolBoyMedia/sounds/352656/
