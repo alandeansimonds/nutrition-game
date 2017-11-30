@@ -3187,6 +3187,28 @@ public class MenuOptions : MonoBehaviour
 			}
 		}    
     }
+ 
+    /// <summary>
+    /// Handles saving the player's current progress.
+    /// </summary>
+    /// <param name="phaseNumber">The number of the phase just completed.</param>
+    public void PhaseTransitionSave(int phaseNumber)
+    {
+        // Need to save all information required to later restore
+        // the game to the start of the next phase.
+        switch (phaseNumber)
+        {
+            case 1:
+                // Player name.
+                ///TODO: Finish this.
+                //playerNameString;
+                // Phase completed.
+
+                break;
+            default:
+                break;
+        }
+    }
 
 	public void ChangeDietHistoryToSchedule() {
 		DietHistoryImage.sprite = DietHistoryScheduleSprite;
@@ -4141,6 +4163,10 @@ public class MenuOptions : MonoBehaviour
                 canAnthropometry = true;
                 canMedicalHistory = true;
                 inChat = false;
+
+                //PhaseTransitionSave(PhaseManagement.gamePhase);
+                PhaseTransitionSave(1);
+
                 PhaseManagement.gamePhase = 2;
                 nextPhaseSource.Play();
                 PhaseReachedAnim.SetTrigger("PhaseReached");

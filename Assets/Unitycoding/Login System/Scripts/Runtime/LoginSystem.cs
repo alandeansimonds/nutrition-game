@@ -7,7 +7,10 @@ namespace Unitycoding.LoginSystem
 	public class LoginSystem : MonoBehaviour
 	{
 
-		private static LoginSystem m_Current;
+        // Stores the id of the user from the SQL database.  Used for future queries (i.e. saving and loading progress).
+        public static int playerId = -1;
+
+        private static LoginSystem m_Current;
 
 		/// <summary>
 		/// The LoginSystem singleton object. This object is set inside Awake()
@@ -179,14 +182,31 @@ namespace Unitycoding.LoginSystem
 			if (w.error != null) {
 				Debug.LogError (w.error);
 			}
-			
-			bool res = w.text.Trim ().Equals ("true");
-			if (res) {
+
+            //bool res = w.text.Trim ().Equals ("true");
+            string response = w.text.Trim();
+            bool res = !response.Equals("-1");
+            if (res) {
 				PlayerPrefs.SetString (LoginSystem.Settings.accountKey, username);
-				LoginSystem.logger.LogInfo ("[LoginAccount] Login was successfull!");
-				EventHandler.Execute ("OnLogin");
+                
+                // This represents the id of the player within the SQL database.
+                // It will be used for future queries involving saving and loading progress.
+                int playerId = -1;
+                // Extract the userId from the response.
+                if (System.Int32.TryParse(response, out playerId))
+                {
+                    LoginSystem.playerId = playerId;
+                    LoginSystem.logger.LogInfo("[LoginAccount] Login was successful!  PlayerId: " + playerId.ToString());
+                    EventHandler.Execute("OnLogin");
+                } else
+                {
+                    LoginSystem.playerId = playerId;
+                    LoginSystem.logger.LogInfo("[LoginAccount] Failed to login. Failed to parse response.");
+                    EventHandler.Execute("OnFailedToLogin");
+                }
 			} else {
-				LoginSystem.logger.LogInfo ("[LoginAccount] Failed to login. Result: " + w.text);
+                LoginSystem.playerId = -1;
+                LoginSystem.logger.LogInfo ("[LoginAccount] Failed to login. Result: " + w.text);
 				EventHandler.Execute ("OnFailedToLogin");
 			}
 		}

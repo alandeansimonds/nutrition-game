@@ -13,13 +13,27 @@
 	$user_name = mysqli_real_escape_string($db,$_POST['name']);
 	$user_password = mysqli_real_escape_string($db,$_POST['password']);
 
-	$sql = mysqli_query($db,"SELECT * FROM account WHERE (user = '$user_name' AND password = MD5('".$user_password."')) AND active IS NULL");
-	$rows= mysqli_num_rows($sql);
-	if($rows > 0){
-		echo "true";
-	}else{
-		echo "false";
+	//$sql = mysqli_query($db,"SELECT * FROM account WHERE (user = '$user_name' AND password = MD5('".$user_password."')) AND active IS NULL");
+	$sql = mysqli_query($db,"SELECT Id FROM account WHERE ((user = '$user_name' AND password = MD5('".$user_password."')) AND active IS NULL) LIMIT 1");
+	$numRows= mysqli_num_rows($sql);
+
+	$id = -1;
+	while ($row = mysqli_fetch_array($sql)) {
+		$id = $row["Id"];
+		break;
 	}
+
+	echo $id;
+
+	//if($numRows > 0){
+		//echo "true";
+		// Send back the associated Player Id.
+		
+	//}else{
+		//echo "false";
+		// Send back an invalid Player Id.
+	//	echo "-1";
+	//}
 	mysqli_close($db);
 	
 ?> 
