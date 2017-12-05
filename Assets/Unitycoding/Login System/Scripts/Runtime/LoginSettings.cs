@@ -20,10 +20,17 @@ namespace Unitycoding.LoginSystem{
 		public string recoverPasswordWindow="RecoverPassword";
 		public string messageBoxWindow="MessageBox";
 
-		/// <summary>
-		/// Settings to use when login fails.
+        /// <summary>
+		/// Settings to use when save fails.
 		/// </summary>
-		public MessageOptions loginFailed= new MessageOptions(){
+		public MessageOptions saveFailed = new MessageOptions()
+        {
+            text = "Failed to save progress."
+        };
+        /// <summary>
+        /// Settings to use when login fails.
+        /// </summary>
+        public MessageOptions loginFailed= new MessageOptions(){
 			text = "Username or password wrong! You may need to activate your account."
 		};
 		/// <summary>
@@ -83,6 +90,8 @@ namespace Unitycoding.LoginSystem{
 		public string resetPassword = "resetPassword.php";
 		public string addPhase2BiochemicalWhyInfo = "addPhase2BiochemicalWhyInfo.php";
 		public string addPlayerRatingInfo = "addPlayerRatingInfo.php";
-		public string accountKey = "Account";
+        public string savePlayerProgress = "savePlayerProgress.php";
+        public string loadPlayerProgress = "loadPlayerProgress.php";
+        public string accountKey = "Account";
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 namespace Unitycoding.LoginSystem
 {
@@ -149,7 +150,7 @@ namespace Unitycoding.LoginSystem
 		}
 
 		/// <summary>
-		/// Logins the account.
+		/// Logs into the account.
 		/// </summary>
 		/// <param name="username">Username.</param>
 		/// <param name="password">Password.</param>
@@ -160,11 +161,11 @@ namespace Unitycoding.LoginSystem
 			} 
 		}
 
-		private static IEnumerator LoginAccountInternal (string username, string password)
+		private static IEnumerator LoginAccountInternal(string username, string password)
 		{
 			if (LoginSystem.Settings == null) {
 				EventHandler.Execute ("OnFailedToLogin");
-				yield break;		
+				yield break;
 			}
 
 			LoginSystem.logger.LogInfo ("[LoginAccount] Trying to login using username: " + username + " and password: " + password + "!");
@@ -211,8 +212,68 @@ namespace Unitycoding.LoginSystem
 			}
 		}
 
-		//Added by ADS, is used to store info, need to add string for phase2BiochemicalWhyInfo from gamescreen
-		public static void SendPhase2BiochemicalWhyInfo (string username, string phase02BiochemicalWhyInfo) {
+        public static void SaveProgress(List<PersistencePayload> payload)
+        {
+            if (LoginSystem.current != null)
+            {
+                LoginSystem.current.StartCoroutine(SaveProgressInternal(payload));
+            }
+        }
+
+        private static IEnumerator SaveProgressInternal(List<PersistencePayload> payload)
+        {
+            if (LoginSystem.Settings == null)
+            {
+                EventHandler.Execute("OnFailedToLogin");
+                yield break;
+            }
+
+            LoginSystem.logger.LogInfo("[SaveProgress] Trying to save using playerId: " + LoginSystem.playerId.ToString());
+
+            WWWForm newForm = new WWWForm();
+            // Add payload to form.
+
+            int playerId = LoginSystem.playerId;
+
+            //newForm.AddField("name", username);
+            //newForm.AddField("password", password);
+            newForm.AddField("playerId", playerId.ToString());
+            foreach (PersistencePayload record in payload) {
+                newForm.AddField("recordName[]", record.recordName);
+                newForm.AddField("recordValue[]", record.recordValue);
+            }
+
+            WWW w = new WWW(LoginSystem.Settings.serverAddress + "/" + LoginSystem.Settings.savePlayerProgress, newForm);
+
+            while (!w.isDone)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            if (w.error != null)
+            {
+                Debug.LogError(w.error);
+            }
+
+            bool res = w.text.Trim().Equals ("true");
+            //string response = w.text.Trim();
+            //bool res = !response.Equals("-1");
+            if (res)
+            {
+                LoginSystem.logger.LogInfo("[SaveProgress] Save progress was successful!  PlayerId: " + playerId.ToString());
+                EventHandler.Execute("OnSaveProgress");
+            }
+            else
+            {
+                // Log failure.
+                // Game should continue anyway.
+                LoginSystem.logger.LogInfo("[SaveProgress] Failed to save progress. Result: " + w.text);
+                EventHandler.Execute("OnFailedToSaveProgress");
+            }
+        }
+
+        //Added by ADS, is used to store info, need to add string for phase2BiochemicalWhyInfo from gamescreen
+        public static void SendPhase2BiochemicalWhyInfo (string username, string phase02BiochemicalWhyInfo) {
 			if (LoginSystem.current != null) {
 				LoginSystem.current.StartCoroutine (SendPhase2BiochemicalWhyInfoInternal (username, phase02BiochemicalWhyInfo));
 			}

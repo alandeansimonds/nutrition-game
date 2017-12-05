@@ -3203,7 +3203,11 @@ public class MenuOptions : MonoBehaviour
                 ///TODO: Finish this.
                 //playerNameString;
                 // Phase completed.
-
+                var payload = new List<PersistencePayload>();
+                int playerId = Unitycoding.LoginSystem.LoginSystem.playerId;
+                payload.Add(new PersistencePayload(playerId, "playerName", this.playerNameString));
+                payload.Add(new PersistencePayload(playerId, "phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
             default:
                 break;

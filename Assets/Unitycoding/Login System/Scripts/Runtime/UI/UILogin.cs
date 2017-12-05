@@ -5,96 +5,126 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using Unitycoding.UIWidgets;
 
-namespace Unitycoding.LoginSystem{
-	/// <summary>
-	/// Login window
-	/// </summary>
-	public class UILogin : UIWidget {
-		[Header("Reference")]
-		/// <summary>
-		/// Referenced UI field
-		/// </summary>
-		[SerializeField]
-		private InputField username;
-		/// <summary>
-		/// Referenced UI field
-		/// </summary>
-		[SerializeField]
-		private InputField password;
-		/// <summary>
-		/// Referenced UI field
-		/// </summary>
-		[SerializeField]
-		private Toggle rememberMe;
-		/// <summary>
-		/// Referenced UI field
-		/// </summary>
-		[SerializeField]
-		private Button login;
+namespace Unitycoding.LoginSystem
+{
+    /// <summary>
+    /// Login window
+    /// </summary>
+    public class UILogin : UIWidget
+    {
+        [Header("Reference")]
+        /// <summary>
+        /// Referenced UI field
+        /// </summary>
+        [SerializeField]
+        private InputField username;
+        /// <summary>
+        /// Referenced UI field
+        /// </summary>
+        [SerializeField]
+        private InputField password;
+        /// <summary>
+        /// Referenced UI field
+        /// </summary>
+        [SerializeField]
+        private Toggle rememberMe;
+        /// <summary>
+        /// Referenced UI field
+        /// </summary>
+        [SerializeField]
+        private Button login;
 
-		private MessageBox messageBox;
+        private MessageBox messageBox;
 
-		protected override void OnStart ()
-		{
-			base.OnStart ();
-			if (LoginSystem.Settings == null) {
-				return;
-			}
+        protected override void OnStart()
+        {
+            base.OnStart();
+            if (LoginSystem.Settings == null)
+            {
+                return;
+            }
 
-			if (username == null || password == null || login == null) {
-				LoginSystem.logger.LogError("[UILogin] Please assign all fields in the inspector.(Required: Username, Password, Login)");
-				return;
-			}
+            if (username == null || password == null || login == null)
+            {
+                LoginSystem.logger.LogError("[UILogin] Please assign all fields in the inspector.(Required: Username, Password, Login)");
+                return;
+            }
 
-			messageBox = UIUtility.Find<MessageBox> (LoginSystem.Settings.messageBoxWindow);
+            messageBox = UIUtility.Find<MessageBox>(LoginSystem.Settings.messageBoxWindow);
 
-			if (messageBox == null) {
-				LoginSystem.logger.LogError("[UILogin] No message box found with name " + LoginSystem.Settings.messageBoxWindow+"!");
-				return;
-			}
+            if (messageBox == null)
+            {
+                LoginSystem.logger.LogError("[UILogin] No message box found with name " + LoginSystem.Settings.messageBoxWindow + "!");
+                return;
+            }
 
-			username.text = PlayerPrefs.GetString ("username", string.Empty);
-			password.text = PlayerPrefs.GetString ("password", string.Empty);
+            username.text = PlayerPrefs.GetString("username", string.Empty);
+            password.text = PlayerPrefs.GetString("password", string.Empty);
 
-			if (rememberMe != null) {
-				rememberMe.isOn = string.IsNullOrEmpty (username.text) ? false : true;
-			}
+            if (rememberMe != null)
+            {
+                rememberMe.isOn = string.IsNullOrEmpty(username.text) ? false : true;
+            }
 
-			EventHandler.Register ("OnLogin", OnLogin);
-			EventHandler.Register ("OnFailedToLogin", OnFailedToLogin);
+            EventHandler.Register("OnSaveProgress", OnSaveProgress);
+            EventHandler.Register("OnFailedToSaveProgress", OnFailedToSaveProgress);
 
-			login.onClick.AddListener (LoginUsingFields);
-		}
+            EventHandler.Register("OnLogin", OnLogin);
+            EventHandler.Register("OnFailedToLogin", OnFailedToLogin);
 
-		/// <summary>
-		/// Logins using data from referenced fields.
-		/// </summary>
-		public void LoginUsingFields(){
-			LoginSystem.LoginAccount (username.text, password.text);
-		}
+            login.onClick.AddListener(LoginUsingFields);
+        }
 
-		private void OnLogin(){
-			if (rememberMe != null && rememberMe.isOn) {
-				PlayerPrefs.SetString ("username", username.text);
-				PlayerPrefs.SetString ("password", password.text);
-			} else {				
-				PlayerPrefs.SetString ("username", username.text); //Added this and commented out delete key ADS
-				//PlayerPrefs.DeleteKey ("username");
-				PlayerPrefs.DeleteKey ("password");
-			}	
+        /// <summary>
+        /// Logins using data from referenced fields.
+        /// </summary>
+        public void LoginUsingFields()
+        {
+            LoginSystem.LoginAccount(username.text, password.text);
+        }
 
-			if (LoginSystem.Settings.loadLevelOnLogin ) {
-				#if UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
+        private void OnLogin()
+        {
+            if (rememberMe != null && rememberMe.isOn)
+            {
+                PlayerPrefs.SetString("username", username.text);
+                PlayerPrefs.SetString("password", password.text);
+            }
+            else
+            {
+                PlayerPrefs.SetString("username", username.text); //Added this and commented out delete key ADS
+                                                                  //PlayerPrefs.DeleteKey ("username");
+                PlayerPrefs.DeleteKey("password");
+            }
+
+            if (LoginSystem.Settings.loadLevelOnLogin)
+            {
+#if UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
 				Application.LoadLevel(LoginSystem.Settings.levelToLoad);
-				#else
-				UnityEngine.SceneManagement.SceneManager.LoadScene (LoginSystem.Settings.levelToLoad);
-				#endif
-			}
-		}
+#else
+                UnityEngine.SceneManagement.SceneManager.LoadScene(LoginSystem.Settings.levelToLoad);
+#endif
+            }
+        }
 
-		private void OnFailedToLogin(){
-			messageBox.Show (LoginSystem.Settings.loginFailed, delegate(string result){Show(); },"OK");
-			Close();
-		}
-	}
+        private void OnFailedToLogin()
+        {
+            messageBox.Show(LoginSystem.Settings.loginFailed, delegate (string result) { Show(); }, "OK");
+            Close();
+        }
+
+        private void OnSaveProgress()
+        {
+            // TODO: Notify that progress has been saved.
+            // This should use a similar technique to the phase notifications.
+
+        }
+
+        private void OnFailedToSaveProgress()
+        {
+            // Notify of an error saving.
+            messageBox.Show(LoginSystem.Settings.saveFailed, delegate (string result) { Show(); }, "OK");
+            Close();
+        }
+    }
 }
