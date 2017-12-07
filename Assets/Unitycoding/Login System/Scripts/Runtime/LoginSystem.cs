@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using System.Linq;
+using System;
 
 namespace Unitycoding.LoginSystem
 {
@@ -64,10 +66,12 @@ namespace Unitycoding.LoginSystem
 		/// </summary>
 		public bool dontDestroyOnLoad;
 
-		/// <summary>
-		/// Awake is called when the script instance is being loaded.
-		/// </summary>
-		private void Awake ()
+        public static List<PersistencePayload> progressToRestore;
+
+        /// <summary>
+        /// Awake is called when the script instance is being loaded.
+        /// </summary>
+        private void Awake ()
 		{
 			if (LoginSystem.m_Current != null) {
 				LoginSystem.logger.LogInfo ("Multiple LoginSystems in scene...this is not supported. Destroying instance!");
@@ -212,6 +216,81 @@ namespace Unitycoding.LoginSystem
 			}
 		}
 
+        public static void LoadProgress()
+        {
+            if (LoginSystem.current != null)
+            {
+                LoginSystem.current.StartCoroutine(LoadProgressInternal());
+            }
+        }
+
+        private static IEnumerator LoadProgressInternal()
+        {
+            // Clear any previously loaded progress.
+            LoginSystem.progressToRestore = null;
+
+            if (LoginSystem.Settings == null)
+            {
+                EventHandler.Execute("OnFailedToLoadProgress");
+                yield break;
+            }
+
+            int playerId = LoginSystem.playerId;
+
+            LoginSystem.logger.LogInfo("[LoadProgress] Trying to load using playerId: " + playerId.ToString());
+
+            WWWForm newForm = new WWWForm();
+            
+            // Add playerId to form.
+            newForm.AddField("playerId", playerId.ToString());
+
+            WWW w = new WWW(LoginSystem.Settings.serverAddress + "/" + LoginSystem.Settings.loadPlayerProgress, newForm);
+
+            while (!w.isDone)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+
+            if (w.error != null)
+            {
+                Debug.LogError(w.error);
+            }
+            
+            string response = w.text.Trim();
+            bool res = !response.Equals("false");
+            if (res)
+            {
+                // Existing data found.
+                // Restore game from previous checkpoint.
+                var result = from line in response.Split('\n')
+                             let tokens = line.Split(',')
+                             where tokens.Length >= 2
+                             let datemName = tokens[0]
+                             let datemValue = tokens[1]
+                             select new PersistencePayload(datemName, datemValue);
+
+                LoginSystem.progressToRestore = result.ToList();
+
+                // DEBUG:
+                LoginSystem.logger.LogInfo("[LoadProgress] Raw response: " + w.text);
+                LoginSystem.logger.LogInfo("[LoadProgress] Records found:");
+                foreach (PersistencePayload record in LoginSystem.progressToRestore)
+                {
+                    LoginSystem.logger.LogInfo("[LoadProgress] " + record.recordName + ": " + record.recordValue);
+                }
+
+                LoginSystem.logger.LogInfo("[LoadProgress] Load progress was successful!  PlayerId: " + playerId.ToString());
+                EventHandler.Execute("OnLoadProgress");
+            }
+            else
+            {
+                // Log failure.
+                // Game should just be loaded from the start.
+                LoginSystem.logger.LogInfo("[LoadProgress] Failed to load progress. Result: " + w.text);
+                EventHandler.Execute("OnFailedToLoadProgress");
+            }
+        }
+
         public static void SaveProgress(List<PersistencePayload> payload)
         {
             if (LoginSystem.current != null)
@@ -224,16 +303,16 @@ namespace Unitycoding.LoginSystem
         {
             if (LoginSystem.Settings == null)
             {
-                EventHandler.Execute("OnFailedToLogin");
+                EventHandler.Execute("OnFailedToSaveProgress");
                 yield break;
             }
 
-            LoginSystem.logger.LogInfo("[SaveProgress] Trying to save using playerId: " + LoginSystem.playerId.ToString());
+            int playerId = LoginSystem.playerId;
+
+            LoginSystem.logger.LogInfo("[SaveProgress] Trying to save using PlayerId: " + playerId.ToString());
 
             WWWForm newForm = new WWWForm();
             // Add payload to form.
-
-            int playerId = LoginSystem.playerId;
 
             //newForm.AddField("name", username);
             //newForm.AddField("password", password);

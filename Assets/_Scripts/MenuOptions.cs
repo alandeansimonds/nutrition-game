@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using Unitycoding.LoginSystem;
 
 public class MenuOptions : MonoBehaviour
 {
@@ -32,7 +34,7 @@ public class MenuOptions : MonoBehaviour
     public GameObject ClinpadRayCastBlockImage;
     public GameObject biochemicalCorrectAnswer01Text;
     public GameObject biochemicalCorrectAnswer02Text;
-	public GameObject clientHistoryCorrectAnswer00Text;
+    public GameObject clientHistoryCorrectAnswer00Text;
     public GameObject clientHistoryCorrectAnswer01Text;
     public GameObject clientHistoryCorrectAnswer02Text;
     public GameObject clientHistoryCorrectAnswer03Text;
@@ -204,7 +206,7 @@ public class MenuOptions : MonoBehaviour
     public GameObject Phase07Part03DropZone12;
     public GameObject Phase07Part03DropZone13;
     private List<string> Phase06Part03CausesStringArray = new List<string>();
-	private List<string> Phase06Part03IncorrectCauseSelectedStringArray = new List<string>();
+    private List<string> Phase06Part03IncorrectCauseSelectedStringArray = new List<string>();
     public List<string> Phase3InputTextStringArray = new List<string>();
     public List<string> Phase2MedicationIncorrectStringArray = new List<string>();
     [SerializeField]
@@ -234,7 +236,7 @@ public class MenuOptions : MonoBehaviour
     [SerializeField]
     private string[] Phase03AnthropometricMeasurementsStringArray;
     [SerializeField]
-    private string[] Phase03ClientHistoryStringArray;    
+    private string[] Phase03ClientHistoryStringArray;
     public GameObject phaseThreePresentFindingsInputGroup;
     public GameObject TranscribeNutitionDiagnosisTabButton;
     public GameObject TranscribeInterventionPlanTabButton;
@@ -394,7 +396,7 @@ public class MenuOptions : MonoBehaviour
     public Text Phase2SubmitFeedbackHeaderText;
     public Text Phase2SubmitIncorrectFeedbackListText;
     public Text PhaseReachedText;
-	public Text Phase06EndText;
+    public Text Phase06EndText;
     private string phase5AnalyseDietCollatedText;
     private string phase5EnergyAndNutrientsCollatedText;
     private string dieteticSupervisorNameString = "John Browne - Dietetic Supervisor";
@@ -463,7 +465,7 @@ public class MenuOptions : MonoBehaviour
     private bool Phase2ClientHistoryCompleted;
     private bool biochemicalCorrectAnswerSelected01;
     private bool biochemicalCorrectAnswerSelected02;
-	private bool clientHistoryCorrectAnswerSelected00;
+    private bool clientHistoryCorrectAnswerSelected00;
     private bool clientHistoryCorrectAnswerSelected01;
     private bool clientHistoryCorrectAnswerSelected02;
     private bool clientHistoryCorrectAnswerSelected03;
@@ -590,8 +592,8 @@ public class MenuOptions : MonoBehaviour
     private bool medicalHistoryWrongAnswer05HasBeenSelected;
     private bool medicalHistoryWrongAnswer06HasBeenSelected;
     private bool medicalHistoryWrongAnswer07HasBeenSelected;
-	private bool medicalHistoryWrongAnswer07bHasBeenSelected;
-	private bool medicalHistoryWrongAnswer07cHasBeenSelected;
+    private bool medicalHistoryWrongAnswer07bHasBeenSelected;
+    private bool medicalHistoryWrongAnswer07cHasBeenSelected;
     private bool medicalHistoryWrongAnswer08HasBeenSelected;
     private bool medicalHistoryWrongAnswer09HasBeenSelected;
     private bool medicalHistoryWrongAnswer10HasBeenSelected;
@@ -925,27 +927,27 @@ public class MenuOptions : MonoBehaviour
     public Animation Phase03CompletionInfoAnimClip;
     public Animator CanExamineMessageToggleAnim;
     private bool canExamNotificationShown;
-	private string playerRatingAdvancing = "Advancing";
-	private string playerRatingIntermediate = "Intermediate";
-	private string playerRatingNovice = "Novice";
-	public string phase02BiochemicalPlayerRating;
-	public string phase02BiochemicalWhyPlayerRating;
-	public string phase02MedicationPlayerRating;
-	public string phase02MedicalHistoryPlayerRating;
-	public string phase02AnthropometryPlayerRating;
-	public string phase03ParsingPlayerRating;
-	public string phase04ExamPlayerRating;
-	public string phase05QualatativeDietPlayerRating;
-	public string phase05QuantativeDietPlayerRating;
-	public string phase05EnergyActualPlayerRating;
-	public string phase05BodyWeightPlayerRating;
-	public string phase06Part01PlayerRating;
-	public string phase06EvidencePlayerRating;
-	public string phase08OverallGoalPlayerRating;
-	public float phase07SelectionsScore;
-	public string phase07SelectionRating; 
-	public string phase07FoodStrategiesRating;
-	public string phase07EducationalStrategiesRating;
+    private string playerRatingAdvancing = "Advancing";
+    private string playerRatingIntermediate = "Intermediate";
+    private string playerRatingNovice = "Novice";
+    public string phase02BiochemicalPlayerRating;
+    public string phase02BiochemicalWhyPlayerRating;
+    public string phase02MedicationPlayerRating;
+    public string phase02MedicalHistoryPlayerRating;
+    public string phase02AnthropometryPlayerRating;
+    public string phase03ParsingPlayerRating;
+    public string phase04ExamPlayerRating;
+    public string phase05QualatativeDietPlayerRating;
+    public string phase05QuantativeDietPlayerRating;
+    public string phase05EnergyActualPlayerRating;
+    public string phase05BodyWeightPlayerRating;
+    public string phase06Part01PlayerRating;
+    public string phase06EvidencePlayerRating;
+    public string phase08OverallGoalPlayerRating;
+    public float phase07SelectionsScore;
+    public string phase07SelectionRating;
+    public string phase07FoodStrategiesRating;
+    public string phase07EducationalStrategiesRating;
     public Image HospitalSceneImage;
     public Sprite HospitalSceneSprite;
     public Sprite InvestigationSceneSprite;
@@ -965,28 +967,28 @@ public class MenuOptions : MonoBehaviour
     private int phase05EnergyActualDietIncorrectScore;
     private int phase05BodyWeightIncorrectScore;
     private int phase06EvidenceIncorrectScore;
-	private string phase06part02PotentialIssue01String = "";
-	private string phase06part02PotentialIssue02String = "";
-	private string phase06part02PotentialIssue03String = "";
-	private string phase06part03Evidence01String = "";
-	private string phase06part03Evidence02String = "";
-	private string phase06part03Evidence03String = "";
-	private bool phase6Part03Selection01Selected;
-	private bool phase6Part03Selection02Selected;
-	private bool phase6Part03Selection03Selected;
-	private bool phase6Part03Selection04Selected;
-	private bool phase6Part03Selection05Selected;
-	private bool phase6Part03Selection06Selected;
-	private bool phase6Part03Selection07Selected;
-	private int phase06Part03SelectedAmount;
-	public Image phase6Part03Selection01SelectImage;
-	public Image phase6Part03Selection02SelectImage;
-	public Image phase6Part03Selection03SelectImage;
-	public Image phase6Part03Selection04SelectImage;
-	public Image phase6Part03Selection05SelectImage;
-	public Image phase6Part03Selection06SelectImage;
-	public Image phase6Part03Selection07SelectImage;
-	private string phase06CausesString;
+    private string phase06part02PotentialIssue01String = "";
+    private string phase06part02PotentialIssue02String = "";
+    private string phase06part02PotentialIssue03String = "";
+    private string phase06part03Evidence01String = "";
+    private string phase06part03Evidence02String = "";
+    private string phase06part03Evidence03String = "";
+    private bool phase6Part03Selection01Selected;
+    private bool phase6Part03Selection02Selected;
+    private bool phase6Part03Selection03Selected;
+    private bool phase6Part03Selection04Selected;
+    private bool phase6Part03Selection05Selected;
+    private bool phase6Part03Selection06Selected;
+    private bool phase6Part03Selection07Selected;
+    private int phase06Part03SelectedAmount;
+    public Image phase6Part03Selection01SelectImage;
+    public Image phase6Part03Selection02SelectImage;
+    public Image phase6Part03Selection03SelectImage;
+    public Image phase6Part03Selection04SelectImage;
+    public Image phase6Part03Selection05SelectImage;
+    public Image phase6Part03Selection06SelectImage;
+    public Image phase6Part03Selection07SelectImage;
+    private string phase06CausesString;
     public Animator phase07PartOnePopup;
     public GameObject Phase07NutritionGoal01;
     public GameObject Phase07NutritionGoal02;
@@ -1025,15 +1027,15 @@ public class MenuOptions : MonoBehaviour
     private int phase07Part02SelectedAmount;
     public List<string> phase07FoodStrategyStringArray = new List<string>();
     public List<string> phase07EducationalStrategyStringArray = new List<string>();
-	private int phase08ConversationTracker = 0;
-	public Sprite DietHistoryScheduleSprite;
-	public Sprite DietHistoryCrossCheckSprite;
-	public Image DietHistoryImage;
+    private int phase08ConversationTracker = 0;
+    public Sprite DietHistoryScheduleSprite;
+    public Sprite DietHistoryCrossCheckSprite;
+    public Image DietHistoryImage;
     public GameObject phase08ThoughtsInputBoxGroup;
     private string phase08Selection01FoodStrategy01;
-	private string phase08Selection01FoodStrategy02;
-	private string phase08Selection02FoodStrategy01;
-	private string phase08Selection02FoodStrategy02;
+    private string phase08Selection01FoodStrategy02;
+    private string phase08Selection02FoodStrategy01;
+    private string phase08Selection02FoodStrategy02;
     public DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy01;
     public DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy02;
     public DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy03;
@@ -1043,30 +1045,30 @@ public class MenuOptions : MonoBehaviour
     public DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy07;
     public Image NPCPatientImage;
     public Sprite NPCPatientCasualClothesSprite;
-	private int Phase07TotalDropZonesSelected;
-	private bool phase08Goal01AlreadyDiscussed;
-	public Animator phase08EndResultsMessageAnim;
-	public Text Phase08Phase02ResultText;
-	public Text Phase08Phase03ResultText;
-	public Text Phase08Phase04Phase05ResultText;
-	public Text Phase08Phase06ResultText;
-	public Text Phase08Phase07ResultText;
-	public Text Phase08Phase08ResultText;
-	public Text Phase08OverallResultsText;
-	public Text Phase08OverallSuggestionText;
-	private int phase08OverallScore;
-	public Animator phase08EndResultInformationDisplayAnim;
-	public Animator phase07ToPhase08TransitionAnim;
-	private float phase07StrategiesScore;
-	public Animator ExaminationContextHelperAnim;
-	private bool examinationHelperShown;
-	public int phase07EducationalStartegiesSelectionScore;
-	public Text investigationBackButtonText;
-	private bool phase08InsufficientFluidAddressed;
-	private bool phase08InadequateEnergyAndProteinIntakeAddressed;
-	private float phase06part02CombinedScore;
-	private float phase04Phase05CombinedScore;
-	private float phase02CombinedScore;
+    private int Phase07TotalDropZonesSelected;
+    private bool phase08Goal01AlreadyDiscussed;
+    public Animator phase08EndResultsMessageAnim;
+    public Text Phase08Phase02ResultText;
+    public Text Phase08Phase03ResultText;
+    public Text Phase08Phase04Phase05ResultText;
+    public Text Phase08Phase06ResultText;
+    public Text Phase08Phase07ResultText;
+    public Text Phase08Phase08ResultText;
+    public Text Phase08OverallResultsText;
+    public Text Phase08OverallSuggestionText;
+    private int phase08OverallScore;
+    public Animator phase08EndResultInformationDisplayAnim;
+    public Animator phase07ToPhase08TransitionAnim;
+    private float phase07StrategiesScore;
+    public Animator ExaminationContextHelperAnim;
+    private bool examinationHelperShown;
+    public int phase07EducationalStartegiesSelectionScore;
+    public Text investigationBackButtonText;
+    private bool phase08InsufficientFluidAddressed;
+    private bool phase08InadequateEnergyAndProteinIntakeAddressed;
+    private float phase06part02CombinedScore;
+    private float phase04Phase05CombinedScore;
+    private float phase02CombinedScore;
 
     // Use this for initialization
     void Start()
@@ -1078,7 +1080,8 @@ public class MenuOptions : MonoBehaviour
         Phase07NutritionGoal04.SetActive(false);
         Phase07NutritionGoal05.SetActive(false);
         Phase07NutritionGoal06.SetActive(false);
-        foreach (GameObject item in Phase07Selection01Group) {
+        foreach (GameObject item in Phase07Selection01Group)
+        {
             item.SetActive(false);
         }
         foreach (GameObject item in Phase07Selection02Group)
@@ -1114,14 +1117,16 @@ public class MenuOptions : MonoBehaviour
         phase05BodyWeightPlayerRating = playerRatingAdvancing;
         phase06Part01PlayerRating = playerRatingAdvancing;
         phase06EvidencePlayerRating = playerRatingAdvancing;
-		phase07SelectionRating = playerRatingAdvancing;
-		phase07FoodStrategiesRating = playerRatingAdvancing;
-		phase07EducationalStrategiesRating = playerRatingAdvancing;
-		phase08OverallGoalPlayerRating = playerRatingAdvancing;
-        foreach (GameObject phase6part3Evidence in phase6Part03EvidenceOptions) {
+        phase07SelectionRating = playerRatingAdvancing;
+        phase07FoodStrategiesRating = playerRatingAdvancing;
+        phase07EducationalStrategiesRating = playerRatingAdvancing;
+        phase08OverallGoalPlayerRating = playerRatingAdvancing;
+        foreach (GameObject phase6part3Evidence in phase6Part03EvidenceOptions)
+        {
             phase6part3Evidence.SetActive(false);
         }
-        foreach (GameObject phase07Part03Evidence in phase07Part03EvidenceOptions) {
+        foreach (GameObject phase07Part03Evidence in phase07Part03EvidenceOptions)
+        {
             phase07Part03Evidence.SetActive(false);
         }
         Phase03FeedingAbilityWordsCompleteBox.SetActive(false);
@@ -1175,7 +1180,7 @@ public class MenuOptions : MonoBehaviour
         Phase2BiochemicalClinpadText02.SetActive(false);
         biochemicalCorrectAnswer01Text.SetActive(false);
         biochemicalCorrectAnswer02Text.SetActive(false);
-		clientHistoryCorrectAnswer00Text.SetActive(false);
+        clientHistoryCorrectAnswer00Text.SetActive(false);
         clientHistoryCorrectAnswer01Text.SetActive(false);
         clientHistoryCorrectAnswer02Text.SetActive(false);
         clientHistoryCorrectAnswer03Text.SetActive(false);
@@ -1237,7 +1242,7 @@ public class MenuOptions : MonoBehaviour
         foodAndNutritionCorrectAnswer04Text.SetActive(false);
         foodAndNutritionCorrectAnswer05Text.SetActive(false);
         foodAndNutritionCorrectAnswer06Text.SetActive(false);
-        GameStart();
+        //GameStart();
         BMICalculatorCurrentHeight.text = "";
         BMICalculatorCurrentWeight.text = "";
         BMICalculatorCurrentSymbol.text = "+";
@@ -1307,34 +1312,120 @@ public class MenuOptions : MonoBehaviour
         phaseTwoStartInteractiveButtonGroup.SetActive(false);
         ActivateChatButton.interactable = false;
         ActivateInvestigationButton.interactable = false;
-        ChatTextRightHeaderImage.color = dietiticSupervisorChatHeaderColour;
-        ChatTextRightTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
-        ChatTextLeftTwoHeaderImage.color = new Color32(244, 66, 241, 255);
-        ChatNextButtonText.text = "ENTER NAME";
-        ChatRightNameText.text = dieteticSupervisorNameString;
-        ChatRightTwoNameText.text = dieteticSupervisorNameString;
-        ChatLeftNameText.text = playerNameString;
-        ChatLeftTwoNameText.text = nurseNameString;
-        soundVolumeSlider.value = PlayerPrefs.GetFloat("SoundVolume");
-        AudioListener.volume = soundVolumeSlider.value;
-        ChatRightText.text = "I'm John and I'll be supervising you during your placement at University Hospital. I have your name in my records, but what would you prefer to be called?";
-        NotesComputerGroup.SetActive(false);
-        TranscribeClientHistoryGroup.SetActive(false);
-        TranscribeAnthropometryGroup.SetActive(false);
-        TranscribeFoodAndNutritionGroup.SetActive(false);
-        TranscribeNutitionDiagnosisTabButton.SetActive(false);
-        TranscribeInterventionPlanTabButton.SetActive(false);
-        TranscribeMonitoringAndEvaluationTabButton.SetActive(false);
-        weightChangeCalculatorGroup.SetActive(false);
-        TranscribeAnthropometryGroupTab();
-        SetDateOnProgressNotes();
+
+        if (LoadExistingGame())
+        {
+            // Show clinpad, since the is normally enabled during the first conversation.
+            ClinpadButton.SetActive(true);
+
+            // Dietician is normally first enabled during the first conversation.
+            NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+            NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
+        } else
+        {
+            GameStart();
+
+            ChatTextRightHeaderImage.color = dietiticSupervisorChatHeaderColour;
+            ChatTextRightTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
+            ChatTextLeftTwoHeaderImage.color = new Color32(244, 66, 241, 255);
+            ChatNextButtonText.text = "ENTER NAME";
+            ChatRightNameText.text = dieteticSupervisorNameString;
+            ChatRightTwoNameText.text = dieteticSupervisorNameString;
+            ChatLeftNameText.text = playerNameString;
+            ChatLeftTwoNameText.text = nurseNameString;
+            soundVolumeSlider.value = PlayerPrefs.GetFloat("SoundVolume");
+            AudioListener.volume = soundVolumeSlider.value;
+            ChatRightText.text = "I'm John and I'll be supervising you during your placement at University Hospital. I have your name in my records, but what would you prefer to be called?";
+            NotesComputerGroup.SetActive(false);
+            TranscribeClientHistoryGroup.SetActive(false);
+            TranscribeAnthropometryGroup.SetActive(false);
+            TranscribeFoodAndNutritionGroup.SetActive(false);
+            TranscribeNutitionDiagnosisTabButton.SetActive(false);
+            TranscribeInterventionPlanTabButton.SetActive(false);
+            TranscribeMonitoringAndEvaluationTabButton.SetActive(false);
+            weightChangeCalculatorGroup.SetActive(false);
+            TranscribeAnthropometryGroupTab();
+            SetDateOnProgressNotes();
+        }
+
+        // Load existing game progress if present.
+        //LoadExistingGame();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns>True if a phase change was processed.  i.e Progress is not starting from the beginning.</returns>
+    private bool LoadExistingGame()
+    {
+        if (null != LoginSystem.progressToRestore)
+        {
+            bool phaseChanged = false;
+            foreach (var datem in LoginSystem.progressToRestore)
+            {
+                phaseChanged = ProcessProgressToken(datem.recordName, datem.recordValue) || phaseChanged;
+            }
+            return phaseChanged;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Processes a record from the database to update the current game state.
+    /// </summary>
+    /// <param name="datemName"></param>
+    /// <param name="datemValue"></param>
+    /// <returns>True if at least one phase had been completed.  i.e the player doesn't need to start from the beginning.</returns>
+    private bool ProcessProgressToken(string datemName, string datemValue)
+    {
+        LoginSystem.logger.LogInfo("[Debug]Processing token: " + datemName + ": " + datemValue);
+        switch (datemName)
+        {
+            case "playerName":
+                this.playerNameString = datemValue;
+                break;
+            case "phaseCompleted":
+                // Set phase to resume from.
+                //this.phase
+                if ("1" == datemValue)
+                {
+                    TransitionPhase1ToPhase2();
+                }
+                //break;
+                return true;
+            case "gameStartConversationTracker":
+                gameStartConversationTracker = SafeParse(datemValue, 0);
+                LoginSystem.logger.LogInfo("[Debug]gameStartConversationTracker set to: " + gameStartConversationTracker.ToString());
+                break;
+            default:
+                break;
+        }
+        return false;
+    }
+
+    int SafeParse(string input, int failsafe)
+    {
+        int result = failsafe;
+        if (int.TryParse(input, out result))
+        {
+            return result;
+        }
+        else
+        {
+            return failsafe;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Q)) {
-            if (PhaseManagement.gamePhase == 2) {                
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            if (PhaseManagement.gamePhase == 2)
+            {
                 currentPhaseText.text = "3rd";
                 currentPhaseProgressFillImage.fillAmount = 0;
                 totalProgressFillImage.fillAmount = 0.25f;
@@ -1351,7 +1442,8 @@ public class MenuOptions : MonoBehaviour
                 BMICalculatorGroup.SetActive(false);
                 PhaseManagement.gamePhase = 3;
             }
-            else if (PhaseManagement.gamePhase == 3) {                
+            else if (PhaseManagement.gamePhase == 3)
+            {
                 PhaseReachedText.text = "REACHED PHASE 4";
                 nextPhaseSource.Play();
                 PhaseReachedAnim.SetTrigger("PhaseReached");
@@ -1404,28 +1496,31 @@ public class MenuOptions : MonoBehaviour
                 Phase6ProgressGroup.SetActive(false);
                 TranscribeInterventionPlanTabButton.SetActive(true);
             }
-			else if (PhaseManagement.gamePhase == 7) {
-				PhaseManagement.gamePhase = 8;
-				nextPhaseSource.Play();
-				PhaseReachedAnim.SetTrigger("PhaseReached");
-				PhaseReachedText.text = "REACHED PHASE 8";
-				currentPhaseText.text = "8th";
-				currentPhaseProgressFillImage.fillAmount = 0;
-				totalProgressFillImage.fillAmount = 0.875f;
-				totalProgressAmountText.text = "87.5%";
-				Phase7ProgressGroup.SetActive(false);
+            else if (PhaseManagement.gamePhase == 7)
+            {
+                PhaseManagement.gamePhase = 8;
+                nextPhaseSource.Play();
+                PhaseReachedAnim.SetTrigger("PhaseReached");
+                PhaseReachedText.text = "REACHED PHASE 8";
+                currentPhaseText.text = "8th";
+                currentPhaseProgressFillImage.fillAmount = 0;
+                totalProgressFillImage.fillAmount = 0.875f;
+                totalProgressAmountText.text = "87.5%";
+                Phase7ProgressGroup.SetActive(false);
                 NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
-				canComputer = false;
-				canAnthropometry = false;
-				canMedicalHistory = false;
-			}
+                canComputer = false;
+                canAnthropometry = false;
+                canMedicalHistory = false;
+            }
         }
-        if (phase07Uploading == true) {
+        if (phase07Uploading == true)
+        {
             phase07UploadBarGroup.SetActive(true);
             phase07UploadBarImage.fillAmount += 1f / phase07LoadTime * Time.deltaTime;
-            phase07UploadButton.SetActive(false);            
+            phase07UploadButton.SetActive(false);
         }
-        if (phase07UploadBarImage.fillAmount == 1) {
+        if (phase07UploadBarImage.fillAmount == 1)
+        {
             phase07Uploading = false;
             phase07UploadComplete = true;
             phase07UploadButton.GetComponentInChildren<Text>().text = "CONTINUE";
@@ -1441,14 +1536,17 @@ public class MenuOptions : MonoBehaviour
             ActivateComputerButton.interactable = true;
             //ActivateComputerButtonText.color = new Color32(255, 255, 255, 255);
         }
-        else {
+        else
+        {
             ActivateComputerButton.interactable = false;
             //ActivateComputerButtonText.color = new Color32(255, 255, 255, 0);
         }
-        if (canMedicalHistory && currentScene == 1) {
+        if (canMedicalHistory && currentScene == 1)
+        {
             ActivateMedicalHistoryButton.interactable = true;
             ActivateMedicalHistoryButtonText.color = new Color32(35, 35, 35, 255);
-        } else
+        }
+        else
         {
             ActivateMedicalHistoryButton.interactable = false;
             ActivateMedicalHistoryButtonText.color = new Color32(35, 35, 35, 0);
@@ -1458,7 +1556,8 @@ public class MenuOptions : MonoBehaviour
             ActivateAnthropometryButton.interactable = true;
             ActivateAnthropometryButtonText.color = new Color32(35, 35, 35, 255);
         }
-        else {
+        else
+        {
             ActivateAnthropometryButton.interactable = false;
             ActivateAnthropometryButtonText.color = new Color32(35, 35, 35, 0);
         }
@@ -1571,8 +1670,10 @@ public class MenuOptions : MonoBehaviour
                     }
                 }
             }
-            else if (currentScene == 4) {
-                if (autoHints) {
+            else if (currentScene == 4)
+            {
+                if (autoHints)
+                {
                     if (!phase2Scene4HintShown)
                     {
                         if (!MenuButton.isOn)
@@ -1586,7 +1687,8 @@ public class MenuOptions : MonoBehaviour
             }
             else if (currentScene == 5)
             {
-                if (autoHints) {
+                if (autoHints)
+                {
                     if (!phase2Scene5HintShown)
                     {
                         if (!MenuButton.isOn)
@@ -1600,7 +1702,8 @@ public class MenuOptions : MonoBehaviour
             }
             else if (currentScene == 6)
             {
-                if (autoHints) {
+                if (autoHints)
+                {
                     if (!phase2Scene6HintShown)
                     {
                         if (!MenuButton.isOn)
@@ -1764,7 +1867,8 @@ public class MenuOptions : MonoBehaviour
             }
         }
 
-        else if (PhaseManagement.gamePhase == 3) {
+        else if (PhaseManagement.gamePhase == 3)
+        {
             //FOR ALL GAME PHASES I CAN TURN REPEAT CURRENTSCENE == x INFO INTO ITS ON FUNCTION
             //HAVE ADDED FUNCTIONALITY FOR PHASE 4, DO NOT REWRITE ONLY CHANGE TEXT INFORMATION ETC... MUCHO IMPORTANTE           
 
@@ -1982,21 +2086,25 @@ public class MenuOptions : MonoBehaviour
                 DieticianNavButton.interactable = true;
                 PatientNavButton.interactable = true;
             }
-            if (phase4Conversation1Done && phase4Conversation2Done && phase4Conversation3Done && phase4Conversation4Done) {                
-                if (!canExamNotificationShown) {
+            if (phase4Conversation1Done && phase4Conversation2Done && phase4Conversation3Done && phase4Conversation4Done)
+            {
+                if (!canExamNotificationShown)
+                {
                     investigateChatButton.SetActive(true);
                     CanExamineNotificationToggle();
                     canExamNotificationShown = true;
                 }
-                
+
             }
             if (canInvestigate && !inInvestigation)
             {
-                if (phase4Conversation5Done) {
-					if (!examinationHelperShown) {
-						ExaminationContextHelperAnim.SetTrigger ("ContextSensitiveHelperActivated");
-						examinationHelperShown = true;
-					}
+                if (phase4Conversation5Done)
+                {
+                    if (!examinationHelperShown)
+                    {
+                        ExaminationContextHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
+                        examinationHelperShown = true;
+                    }
                     ActivateInvestigationButton.interactable = true;
                     InvestigationButton.SetActive(true);
                 }
@@ -2104,14 +2212,15 @@ public class MenuOptions : MonoBehaviour
                 {
                     NPCRightOccupationalTherapistImage.SetBool("NPCRightAnimateIn", false);
                     NPCRightOccupationalTherapistImage.SetBool("NPCRightAnimateOut", true);
-                }                
+                }
             }
             else if (currentScene == 2)
             {
                 HospitalSceneImage.sprite = InvestigationSceneSprite;
                 canInvestigate = true;
                 ChatNextButtonText.text = "CONTINUE";
-                if (!phase4SpeakToOT) {
+                if (!phase4SpeakToOT)
+                {
                     if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
                     {
                         NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
@@ -2132,11 +2241,14 @@ public class MenuOptions : MonoBehaviour
                     //    NPCRightPatientImage.SetBool("NPCRightDefault", false);
                     //    NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
                     //}
-                    if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true) {
+                    if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
+                    {
                         NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
                         NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
                     }
-                } else {
+                }
+                else
+                {
                     if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
                     {
                         NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
@@ -2257,13 +2369,15 @@ public class MenuOptions : MonoBehaviour
                 ProgressNotesPage2Group.SetActive(false);
                 MedicalClipboardButtonGroup.SetActive(false);
             }
-            if (!inSGAForm) {
+            if (!inSGAForm)
+            {
                 NurseNavButton.interactable = true;
                 DieticianNavButton.interactable = true;
                 PatientNavButton.interactable = true;
                 HintText.text = "You may now fill out the rest of the SGA Form, which can be found in the Supervising Dietitian's office. \n \n Informatiopn from Marta's examination have been filled out based on the results you enter during the exam.";
             }
-            else if (inSGAForm) {
+            else if (inSGAForm)
+            {
                 NurseNavButton.interactable = false;
                 DieticianNavButton.interactable = false;
                 PatientNavButton.interactable = false;
@@ -2472,7 +2586,7 @@ public class MenuOptions : MonoBehaviour
                 ProgressNotesPage1Group.SetActive(false);
                 ProgressNotesPage2Group.SetActive(false);
                 MedicalClipboardButtonGroup.SetActive(false);
-            }            
+            }
             if (inChat)
             {
                 rayCastBlockImage.SetActive(true);
@@ -2668,7 +2782,8 @@ public class MenuOptions : MonoBehaviour
                 }
             }
         }
-        else if (PhaseManagement.gamePhase == 7) {
+        else if (PhaseManagement.gamePhase == 7)
+        {
             //FOR ALL GAME PHASES I CAN TURN REPEAT CURRENTSCENE == x INFO INTO ITS ON FUNCTION
             //HAVE ADDED FUNCTIONALITY FOR PHASE 4, DO NOT REWRITE ONLY CHANGE TEXT INFORMATION ETC... MUCHO IMPORTANTE           
 
@@ -2686,7 +2801,8 @@ public class MenuOptions : MonoBehaviour
                 PatientNavButton.interactable = true;
                 ComputerTwoBackButton.SetActive(false);
             }
-            if (!inComputerThree) {
+            if (!inComputerThree)
+            {
                 NurseNavButton.interactable = true;
                 DieticianNavButton.interactable = true;
                 PatientNavButton.interactable = true;
@@ -2917,277 +3033,286 @@ public class MenuOptions : MonoBehaviour
                     DieticianNavButton.interactable = false;
                     PatientNavButton.interactable = false;
                     ComputerThreeBackButton.SetActive(true);
-                    if (Phase7ConversationTracker < 1000) {
+                    if (Phase7ConversationTracker < 1000)
+                    {
                         HintText.text = "Once you have completed selecting your top 2 goals, and the selecting your 2 food related and 1 educational related strategies per goal, make sure you explain these to Marta before she is discharged later today.";
-                    } else if (Phase7ConversationTracker > 999) {
+                    }
+                    else if (Phase7ConversationTracker > 999)
+                    {
                         HintText.text = "Now that you have completed your goals and strategies, you can leave the hospital using the  <b><color=#0E78A5FF>LEAVE HOSPITAL</color></b> button to wait for Marta to return and see the results.";
-                    }                    
+                    }
                 }
             }
-		} else if (PhaseManagement.gamePhase == 8) {
-			//FOR ALL GAME PHASES I CAN TURN REPEAT CURRENTSCENE == x INFO INTO ITS ON FUNCTION
-			//HAVE ADDED FUNCTIONALITY FOR PHASE 4, DO NOT REWRITE ONLY CHANGE TEXT INFORMATION ETC... MUCHO IMPORTANTE           
+        }
+        else if (PhaseManagement.gamePhase == 8)
+        {
+            //FOR ALL GAME PHASES I CAN TURN REPEAT CURRENTSCENE == x INFO INTO ITS ON FUNCTION
+            //HAVE ADDED FUNCTIONALITY FOR PHASE 4, DO NOT REWRITE ONLY CHANGE TEXT INFORMATION ETC... MUCHO IMPORTANTE           
 
-			if (!inComputer)
-			{
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				biochemicalAnswersGroup.SetActive(false);
-			}
-			if (!inComputerTwo)
-			{
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				ComputerTwoBackButton.SetActive(false);
-			}
-			if (!inComputerThree) {
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				ComputerThreeBackButton.SetActive(false);
-			}
-			if (!inClipboard)
-			{
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				medicationAnswersGroup.SetActive(false);
-				anthropometryAnswersGroup.SetActive(false);
-				ClipboardButtonGroup.SetActive(false);
-			}
-			if (!inMedicalChart)
-			{
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				AssessmentFormGroup.SetActive(false);
-				AdmissionFormGroup.SetActive(false);
-				ProgressNotesPage1Group.SetActive(false);
-				ProgressNotesPage2Group.SetActive(false);
-				MedicalClipboardButtonGroup.SetActive(false);
-			}
-			if (!inSGAForm)
-			{
-				NurseNavButton.interactable = true;
-				DieticianNavButton.interactable = true;
-				PatientNavButton.interactable = true;
-				HintText.text = "You may now fill out the rest of the SGA Form, which can be found in the Supervising Dietitian's office. \n \n Informatiopn from Marta's examination have been filled out based on the results you enter during the exam.";
-			}
-			else if (inSGAForm)
-			{
-				NurseNavButton.interactable = false;
-				DieticianNavButton.interactable = false;
-				PatientNavButton.interactable = false;
-				ActivateChatButton.interactable = false;
-				HintText.text = "Click on the column A, B, or C based on the information you have gathered thus far. If you wish to select a different column the previously selected will be automatically deselected.";
-			}
-			if (inChat)
-			{
-				rayCastBlockImage.SetActive(true);
-				ChatNextButton.interactable = true;
-				ActivateChatButton.interactable = false;
-			}
-			else if (!inChat && currentScene != 3 && currentScene != 4 && currentScene != 5 && currentScene != 6 && currentScene != 7 && currentScene != 8 && currentScene != 9)
-			{
-				rayCastBlockImage.SetActive(false);
-				ChatNextButton.interactable = false;
-				ActivateChatButton.interactable = true;
-			}
-			if (currentScene != 4 && currentScene != 5 && currentScene != 6 && currentScene != 7 && currentScene != 8 && currentScene != 9)
-			{
-				HintText.text = "You can now talk to Marta to see how she has progressed after two weeks with your suggested goals and strategies. You can find Marta in the dietitians' office.";
-			}
-			if (currentScene == 0)
-			{
-				if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (NPCRightPatientImage.GetBool("NPCRightAnimateOut") == true)
-				{
-					NPCRightPatientImage.SetBool("NPCRightAnimateOut", false);
-					NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
-				}
+            if (!inComputer)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                biochemicalAnswersGroup.SetActive(false);
+            }
+            if (!inComputerTwo)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                ComputerTwoBackButton.SetActive(false);
+            }
+            if (!inComputerThree)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                ComputerThreeBackButton.SetActive(false);
+            }
+            if (!inClipboard)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                medicationAnswersGroup.SetActive(false);
+                anthropometryAnswersGroup.SetActive(false);
+                ClipboardButtonGroup.SetActive(false);
+            }
+            if (!inMedicalChart)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                AssessmentFormGroup.SetActive(false);
+                AdmissionFormGroup.SetActive(false);
+                ProgressNotesPage1Group.SetActive(false);
+                ProgressNotesPage2Group.SetActive(false);
+                MedicalClipboardButtonGroup.SetActive(false);
+            }
+            if (!inSGAForm)
+            {
+                NurseNavButton.interactable = true;
+                DieticianNavButton.interactable = true;
+                PatientNavButton.interactable = true;
+                HintText.text = "You may now fill out the rest of the SGA Form, which can be found in the Supervising Dietitian's office. \n \n Informatiopn from Marta's examination have been filled out based on the results you enter during the exam.";
+            }
+            else if (inSGAForm)
+            {
+                NurseNavButton.interactable = false;
+                DieticianNavButton.interactable = false;
+                PatientNavButton.interactable = false;
+                ActivateChatButton.interactable = false;
+                HintText.text = "Click on the column A, B, or C based on the information you have gathered thus far. If you wish to select a different column the previously selected will be automatically deselected.";
+            }
+            if (inChat)
+            {
+                rayCastBlockImage.SetActive(true);
+                ChatNextButton.interactable = true;
+                ActivateChatButton.interactable = false;
+            }
+            else if (!inChat && currentScene != 3 && currentScene != 4 && currentScene != 5 && currentScene != 6 && currentScene != 7 && currentScene != 8 && currentScene != 9)
+            {
+                rayCastBlockImage.SetActive(false);
+                ChatNextButton.interactable = false;
+                ActivateChatButton.interactable = true;
+            }
+            if (currentScene != 4 && currentScene != 5 && currentScene != 6 && currentScene != 7 && currentScene != 8 && currentScene != 9)
+            {
+                HintText.text = "You can now talk to Marta to see how she has progressed after two weeks with your suggested goals and strategies. You can find Marta in the dietitians' office.";
+            }
+            if (currentScene == 0)
+            {
+                if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (NPCRightPatientImage.GetBool("NPCRightAnimateOut") == true)
+                {
+                    NPCRightPatientImage.SetBool("NPCRightAnimateOut", false);
+                    NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
+                }
                 if (NPCRightPatientImage.GetBool("NPCRightDefault") == true)
                 {
                     NPCRightPatientImage.SetBool("NPCRightDefault", false);
                     NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
                 }
                 if (NPCLeftDieticianImage.GetBool("NPCLeftAnimateOut") == true)
-				{
-					NPCLeftDieticianImage.SetBool("NPCLeftAnimateOut", false);
-					NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", true);
-				}
-				if (NPCLeftDieticianImage.GetBool("NPCLeftDefault") == true)
-				{
-					NPCLeftDieticianImage.SetBool("NPCLeftDefault", false);
-					NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", true);
-				}
-			}
-			else if (currentScene == 1)
-			{
-				if (NPCLeftDieticianImage.GetBool("NPCLeftAnimateIn") == true)
-				{
-					NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", false);
-					NPCLeftDieticianImage.SetBool("NPCLeftAnimateOut", true);
-				}
-				if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (NPCRightNurseImage.GetBool("NPCRightAnimateOut") == true)
-				{
-					NPCRightNurseImage.SetBool("NPCRightAnimateOut", false);
-					NPCRightNurseImage.SetBool("NPCRightAnimateIn", true);
-				}
-				if (NPCRightNurseImage.GetBool("NPCRightDefault") == true)
-				{
-					NPCRightNurseImage.SetBool("NPCRightDefault", false);
-					NPCRightNurseImage.SetBool("NPCRightAnimateIn", true);
-				}
-			}
-			else if (currentScene == 2)
-			{
-				if (NPCLeftDieticianImage.GetBool("NPCLeftAnimateIn") == true)
-				{
+                {
+                    NPCLeftDieticianImage.SetBool("NPCLeftAnimateOut", false);
+                    NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", true);
+                }
+                if (NPCLeftDieticianImage.GetBool("NPCLeftDefault") == true)
+                {
+                    NPCLeftDieticianImage.SetBool("NPCLeftDefault", false);
+                    NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", true);
+                }
+            }
+            else if (currentScene == 1)
+            {
+                if (NPCLeftDieticianImage.GetBool("NPCLeftAnimateIn") == true)
+                {
                     NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", false);
                     NPCLeftDieticianImage.SetBool("NPCLeftAnimateOut", true);
-				}
-				if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
-				}
-			}
-			else if (currentScene == 3)
-			{
-				if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
-				}
-			}
-			else if (currentScene == 4)
-			{
-				if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inComputer)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					biochemicalAnswersGroup.SetActive(true);
-				}
-			}
-			else if (currentScene == 5)
-			{
-				if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inClipboard)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					ClipboardButtonGroup.SetActive(true);
-					if (!inClipboardObservation)
-					{
-						observationsAnswerGroup.SetActive(false);
-						medicationAnswersGroup.SetActive(true);
-						anthropometryAnswersGroup.SetActive(false);
-						ObservationButtonText.text = "OBSERVATIONS";
-					}
-					else if (inClipboardObservation)
-					{
-						medicationAnswersGroup.SetActive(false);
-						anthropometryAnswersGroup.SetActive(true);
-						observationsAnswerGroup.SetActive(true);
-						ObservationButtonText.text = "MEDICATION";
-					}
-				}
-			}
-			else if (currentScene == 6)
-			{
-				if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inMedicalChart)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					MedicalClipboardButtonGroup.SetActive(true);
-				}
-			}
-			else if (currentScene == 7)
-			{
-				if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inSGAForm)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					ActivateChatButton.interactable = false;
-				}
-			}
-			else if (currentScene == 8)
-			{
-				if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inComputerTwo)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					ComputerTwoBackButton.SetActive(true);
-				}
-			}
-			else if (currentScene == 9)
-			{
-				if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
-				{
-					NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
-					NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
-				}
-				if (inComputerThree)
-				{
-					NurseNavButton.interactable = false;
-					DieticianNavButton.interactable = false;
-					PatientNavButton.interactable = false;
-					ComputerThreeBackButton.SetActive(true);
-					if (Phase7ConversationTracker < 1000) {
-						HintText.text = "Once you have completed selecting your top 2 goals, and the selecting your 2 food related and 1 educational related strategies per goal, make sure you explain these to Marta before she is discharged later today.";
-					} else if (Phase7ConversationTracker > 999) {
-						HintText.text = "Now that you have completed your goals and strategies, you can leave the hospital using the  <b><color=#0E78A5FF>LEAVE HOSPITAL</color></b> button to wait for Marta to return and see the results.";
-					}                    
-				}
-			}
-		}    
+                }
+                if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (NPCRightNurseImage.GetBool("NPCRightAnimateOut") == true)
+                {
+                    NPCRightNurseImage.SetBool("NPCRightAnimateOut", false);
+                    NPCRightNurseImage.SetBool("NPCRightAnimateIn", true);
+                }
+                if (NPCRightNurseImage.GetBool("NPCRightDefault") == true)
+                {
+                    NPCRightNurseImage.SetBool("NPCRightDefault", false);
+                    NPCRightNurseImage.SetBool("NPCRightAnimateIn", true);
+                }
+            }
+            else if (currentScene == 2)
+            {
+                if (NPCLeftDieticianImage.GetBool("NPCLeftAnimateIn") == true)
+                {
+                    NPCLeftDieticianImage.SetBool("NPCLeftAnimateIn", false);
+                    NPCLeftDieticianImage.SetBool("NPCLeftAnimateOut", true);
+                }
+                if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
+                }
+            }
+            else if (currentScene == 3)
+            {
+                if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
+                }
+            }
+            else if (currentScene == 4)
+            {
+                if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inComputer)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    biochemicalAnswersGroup.SetActive(true);
+                }
+            }
+            else if (currentScene == 5)
+            {
+                if (NPCRightPatientImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightPatientImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightPatientImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inClipboard)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    ClipboardButtonGroup.SetActive(true);
+                    if (!inClipboardObservation)
+                    {
+                        observationsAnswerGroup.SetActive(false);
+                        medicationAnswersGroup.SetActive(true);
+                        anthropometryAnswersGroup.SetActive(false);
+                        ObservationButtonText.text = "OBSERVATIONS";
+                    }
+                    else if (inClipboardObservation)
+                    {
+                        medicationAnswersGroup.SetActive(false);
+                        anthropometryAnswersGroup.SetActive(true);
+                        observationsAnswerGroup.SetActive(true);
+                        ObservationButtonText.text = "MEDICATION";
+                    }
+                }
+            }
+            else if (currentScene == 6)
+            {
+                if (NPCRightNurseImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightNurseImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightNurseImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inMedicalChart)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    MedicalClipboardButtonGroup.SetActive(true);
+                }
+            }
+            else if (currentScene == 7)
+            {
+                if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inSGAForm)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    ActivateChatButton.interactable = false;
+                }
+            }
+            else if (currentScene == 8)
+            {
+                if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inComputerTwo)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    ComputerTwoBackButton.SetActive(true);
+                }
+            }
+            else if (currentScene == 9)
+            {
+                if (NPCRightDieticianImage.GetBool("NPCRightAnimateIn") == true)
+                {
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
+                    NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
+                }
+                if (inComputerThree)
+                {
+                    NurseNavButton.interactable = false;
+                    DieticianNavButton.interactable = false;
+                    PatientNavButton.interactable = false;
+                    ComputerThreeBackButton.SetActive(true);
+                    if (Phase7ConversationTracker < 1000)
+                    {
+                        HintText.text = "Once you have completed selecting your top 2 goals, and the selecting your 2 food related and 1 educational related strategies per goal, make sure you explain these to Marta before she is discharged later today.";
+                    }
+                    else if (Phase7ConversationTracker > 999)
+                    {
+                        HintText.text = "Now that you have completed your goals and strategies, you can leave the hospital using the  <b><color=#0E78A5FF>LEAVE HOSPITAL</color></b> button to wait for Marta to return and see the results.";
+                    }
+                }
+            }
+        }
     }
- 
+
     /// <summary>
     /// Handles saving the player's current progress.
     /// </summary>
@@ -3200,13 +3325,12 @@ public class MenuOptions : MonoBehaviour
         {
             case 1:
                 // Player name.
-                ///TODO: Finish this.
-                //playerNameString;
                 // Phase completed.
                 var payload = new List<PersistencePayload>();
-                int playerId = Unitycoding.LoginSystem.LoginSystem.playerId;
-                payload.Add(new PersistencePayload(playerId, "playerName", this.playerNameString));
-                payload.Add(new PersistencePayload(playerId, "phaseCompleted", phaseNumber.ToString()));
+                int playerId = LoginSystem.playerId;
+                payload.Add(new PersistencePayload("playerName", this.playerNameString));
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                payload.Add(new PersistencePayload("gameStartConversationTracker", gameStartConversationTracker.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
             default:
@@ -3214,50 +3338,60 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-	public void ChangeDietHistoryToSchedule() {
-		DietHistoryImage.sprite = DietHistoryScheduleSprite;
-	}
+    public void ChangeDietHistoryToSchedule()
+    {
+        DietHistoryImage.sprite = DietHistoryScheduleSprite;
+    }
 
-	public void ChangeDietHistoryToCrossCheck() {
-		DietHistoryImage.sprite = DietHistoryCrossCheckSprite;
-	}
+    public void ChangeDietHistoryToCrossCheck()
+    {
+        DietHistoryImage.sprite = DietHistoryCrossCheckSprite;
+    }
 
-    public void AutoHintsToggle() {
+    public void AutoHintsToggle()
+    {
         autoHints = !autoHints;
     }
 
-    public void Phase07StartUpload() {
+    public void Phase07StartUpload()
+    {
         if (!phase07UploadComplete)
         {
             phase07Uploading = true;
         }
-        else if (phase07UploadComplete) {
+        else if (phase07UploadComplete)
+        {
             phase07UploadPopup.SetTrigger("AnimateOut");
             phase07PartTwoPopup.SetTrigger("AnimateIn");
         }
     }
 
-    public void Phase07Part02ToPart03() {
+    public void Phase07Part02ToPart03()
+    {
         if (phase07Part02SelectedAmount > 0)
         {
             phase07PartTwoPopup.SetTrigger("AnimateOut");
             phase07PartThreePopup.SetTrigger("AnimateIn");
             phase07PartTwoComplete = true;
         }
-        else {
+        else
+        {
             phase6part01AlertMessageText.text = "Please select at least one goal before proceeding.";
             Phase06Part01AlertMessageToggle();
-        }        
+        }
     }
 
-    public void ClinpadHelperRunAnimation() {
-        if (!ClinpadHelperAnimationHasRun) {
+    public void ClinpadHelperRunAnimation()
+    {
+        if (!ClinpadHelperAnimationHasRun)
+        {
             ClinpadHelperAnim.SetTrigger("AnimateIn");
             ClinpadHelperAnimationHasRun = true;
         }
     }
 
-    public void BMIUpdateCurrentHeight() {
+    public void BMIUpdateCurrentHeight()
+    {
         BMICalculatorCurrentHeight.text = "(" + BMICalculatorHeightInputField.text + " x " + BMICalculatorHeightInputField.text + ")";
     }
 
@@ -3266,8 +3400,10 @@ public class MenuOptions : MonoBehaviour
         BMICalculatorCurrentWeight.text = BMICalculatorWeightInputField.text;
     }
 
-    public void BMIUpdateCurrentSymbol() {
-        if (BMICalculatorSymbolDropdown.value == 0) {
+    public void BMIUpdateCurrentSymbol()
+    {
+        if (BMICalculatorSymbolDropdown.value == 0)
+        {
             BMICalculatorCurrentSymbol.text = "+";
         }
         if (BMICalculatorSymbolDropdown.value == 1)
@@ -3284,7 +3420,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase2MedicationListCheck() {
+    public void Phase2MedicationListCheck()
+    {
         Phase2SubmitIncorrectFeedbackListText.text = "";
         if (phase2MedicationsCorrectSelected01)
         {
@@ -3326,7 +3463,8 @@ public class MenuOptions : MonoBehaviour
         {
             ClientHistoryCorrectAnswer26();
         }
-        if (phase2MedicationCorrectSelectedScore >= 10) {
+        if (phase2MedicationCorrectSelectedScore >= 10)
+        {
             if (phase2MedicationIncorrectSelectedScore <= 0)
             {
                 Phase2SubmitCheckBackgroundImage.color = dietiticSupervisorChatHeaderColour;
@@ -3335,19 +3473,23 @@ public class MenuOptions : MonoBehaviour
                 Phase2SubmitFeedbackHeaderText.text = "COMPLETE LIST";
                 notificationGoodSource.Play();
             }
-            else if (phase2MedicationIncorrectSelectedScore > 0) {
+            else if (phase2MedicationIncorrectSelectedScore > 0)
+            {
                 Phase2SubmitCheckBackgroundImage.color = dietiticSupervisorChatHeaderColour;
                 Phase2SubmitFeedbackText.text = "You have identified all of the factors that need further investigation. But you have incorrect selections and you will be penalised.";
                 Phase2SubmitCheckFeedbackImage.sprite = AlertIconSprite;
                 Phase2SubmitFeedbackHeaderText.text = "COMPLETE LIST + INCORRECT CHOICES";
                 Phase2SubmitIncorrectFeedbackListText.text = "INCORRECT CHOICES: \n";
-                foreach (string item in Phase2MedicationIncorrectStringArray) {
+                foreach (string item in Phase2MedicationIncorrectStringArray)
+                {
                     Phase2SubmitIncorrectFeedbackListText.text = Phase2SubmitIncorrectFeedbackListText.text + item + "\n";
                 }
             }
             phase2MedicationFinalScore = phase2MedicationCorrectSelectedScore - phase2MedicationIncorrectSelectedScore;
 
-        } else if (phase2MedicationCorrectSelectedScore < 10) {
+        }
+        else if (phase2MedicationCorrectSelectedScore < 10)
+        {
             if (phase2MedicationIncorrectSelectedScore <= 0)
             {
                 Phase2SubmitCheckBackgroundImage.color = alertColour;
@@ -3368,31 +3510,36 @@ public class MenuOptions : MonoBehaviour
                 }
             }
         }
-        if (phase2MedicationIncorrectSelectedScore == 1) {
+        if (phase2MedicationIncorrectSelectedScore == 1)
+        {
             phase02MedicationPlayerRating = playerRatingIntermediate;
-			phase08OverallScore = phase08OverallScore + 1;
+            phase08OverallScore = phase08OverallScore + 1;
         }
-        else if (phase2MedicationIncorrectSelectedScore > 1) {
+        else if (phase2MedicationIncorrectSelectedScore > 1)
+        {
             phase02MedicationPlayerRating = playerRatingNovice;
-			phase08OverallScore = phase08OverallScore + 2;
+            phase08OverallScore = phase08OverallScore + 2;
         }
         Phase2MedicationMessageBoxAnim.SetBool("MenuDefault", false);
         Phase2MedicationMessageBoxAnim.SetBool("MenuDeactivated", false);
         Phase2MedicationMessageBoxAnim.SetBool("MenuActivated", true);
     }
 
-    public void Phase2MedicationMessageBoxClose() {
+    public void Phase2MedicationMessageBoxClose()
+    {
         Phase2MedicationMessageBoxAnim.SetBool("MenuActivated", false);
         Phase2MedicationMessageBoxAnim.SetBool("MenuDeactivated", true);
     }
 
-    public void Phase2MedicationCorrectAddedToList01() {
+    public void Phase2MedicationCorrectAddedToList01()
+    {
         if (!phase2MedicationsCorrectSelected01)
         {
             phase2MedicationsCorrectSelected01 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected01 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3405,7 +3552,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected02 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected02 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3418,7 +3566,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected03 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected03 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3431,7 +3580,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected04 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected04 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3444,7 +3594,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected05 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected05 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3457,7 +3608,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected06 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected06 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3470,7 +3622,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected07 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected07 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3483,7 +3636,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected08 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected08 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3496,7 +3650,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected09 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected09 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3509,7 +3664,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsCorrectSelected10 = true;
             phase2MedicationCorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             phase2MedicationsCorrectSelected10 = false;
             phase2MedicationCorrectSelectedScore -= 1;
         }
@@ -3524,7 +3680,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationIncorrectSelectedScore += 1;
 
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Dietary folic acid deficiency");
             phase2MedicationsIncorrectSelected01 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3539,7 +3696,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected02 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Infection");
             phase2MedicationsIncorrectSelected02 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3554,7 +3712,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected03 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Headaches");
             phase2MedicationsIncorrectSelected03 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3569,7 +3728,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected04 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Pyrexia");
             phase2MedicationsIncorrectSelected04 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3584,7 +3744,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected05 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Dizziness");
             phase2MedicationsIncorrectSelected05 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3599,7 +3760,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected06 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Dyspnea");
             phase2MedicationsIncorrectSelected06 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3614,7 +3776,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected07 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Increased sweating");
             phase2MedicationsIncorrectSelected07 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3629,7 +3792,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected08 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Tremors");
             phase2MedicationsIncorrectSelected08 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3644,7 +3808,8 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected09 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Phosphate deficiency");
             phase2MedicationsIncorrectSelected09 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
@@ -3659,16 +3824,19 @@ public class MenuOptions : MonoBehaviour
             phase2MedicationsIncorrectSelected10 = true;
             phase2MedicationIncorrectSelectedScore += 1;
         }
-        else {
+        else
+        {
             Phase2MedicationIncorrectStringArray.Remove("Calcium deficiency");
             phase2MedicationsIncorrectSelected10 = false;
             phase2MedicationIncorrectSelectedScore -= 1;
         }
     }
 
-    public void WeightChangeCalculation() {
+    public void WeightChangeCalculation()
+    {
 
-        if (WeightChangeCalculatorTypicalWeightInputField.text != "") {
+        if (WeightChangeCalculatorTypicalWeightInputField.text != "")
+        {
             float typicalWeightFloat = float.Parse(WeightChangeCalculatorTypicalWeightInputField.text);
             WeightChangeCalculationText.text = "";
             if (WeightChangeCalculatorCurrentWeightInputField.text != "")
@@ -3680,17 +3848,20 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void WeightChangeWeightUpdate() {
+    public void WeightChangeWeightUpdate()
+    {
         if (WeightChangeCalculatorTypicalWeightInputField.text != "" && WeightChangeCalculatorCurrentWeightInputField.text != "")
         {
             WeightChangeCalculationText.text = "(" + WeightChangeCalculatorTypicalWeightInputField.text + " - " + WeightChangeCalculatorCurrentWeightInputField.text + ") " + " / " + WeightChangeCalculatorTypicalWeightInputField.text + " * 100";
         }
-        else {
+        else
+        {
             WeightChangeCalculationText.text = "ERR";
         }
     }
 
-    public void BMICalculation() {
+    public void BMICalculation()
+    {
         if (BMICalculatorHeightInputField.text != "")
         {
             float BMIHeightFloat = float.Parse(BMICalculatorHeightInputField.text);
@@ -3730,41 +3901,48 @@ public class MenuOptions : MonoBehaviour
                     ClinpadBMIInfo.text = BMIResultInt.ToString();
                 }
             }
-            else {
+            else
+            {
                 BMICalculatorAlertMessageGroupText.text = "Please Enter a weight in kilograms into the weight field";
                 BMICalculatorAlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             BMICalculatorAlertMessageGroupText.text = "Please Enter a height in centimeters into the height field";
             BMICalculatorAlertMessageToggle();
         }
-        if (!BMICalculated) {
+        if (!BMICalculated)
+        {
             if (BMIResultInt >= 20 && BMIResultInt <= 22)
             {
                 Phase2AnthropometryAnswerSelected += 1;
                 phase2AnthropometryProgressFillImage.fillAmount = Phase2AnthropometryAnswerSelected / Phase2AnthropometryAnswerTotal;
                 BMICalculated = true;
             }
-            else {
+            else
+            {
                 if (!bmiCalculatedWrongFirstTime)
                 {
                     phase02AnthropometryPlayerRating = playerRatingIntermediate;
-					phase08OverallScore = phase08OverallScore + 1;
+                    phase08OverallScore = phase08OverallScore + 1;
                     bmiCalculatedWrongFirstTime = true;
-					phase02CombinedScore++;
+                    phase02CombinedScore++;
                 }
-                else {
+                else
+                {
                     phase02AnthropometryPlayerRating = playerRatingNovice;
-					phase08OverallScore = phase08OverallScore + 2;
-					phase02CombinedScore++;
-                }                
-            } 
+                    phase08OverallScore = phase08OverallScore + 2;
+                    phase02CombinedScore++;
+                }
+            }
         }
     }
 
-    public void MedicalChartAdmissionForm() {
-        if (AdmissionFormGroup.activeSelf != true) {
+    public void MedicalChartAdmissionForm()
+    {
+        if (AdmissionFormGroup.activeSelf != true)
+        {
             AssessmentFormGroup.SetActive(false);
             ProgressNotesPage1Group.SetActive(false);
             ProgressNotesPage2Group.SetActive(false);
@@ -3809,8 +3987,10 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void SGAFormPage() {
-        if (SGAFormGroup.activeSelf != true) {
+    public void SGAFormPage()
+    {
+        if (SGAFormGroup.activeSelf != true)
+        {
             FoodGroupResourceGroup.SetActive(false);
             ReadyReckonerResourceGroup.SetActive(false);
             SGAFormGroup.SetActive(true);
@@ -3847,7 +4027,8 @@ public class MenuOptions : MonoBehaviour
             clinPadAnim.SetBool("MoveIn", true);
             ClinpadRayCastBlockImage.SetActive(true);
         }
-        else {
+        else
+        {
             clinPadAnim.SetBool("MoveIn", false);
             ClinpadRayCastBlockImage.SetActive(false);
         }
@@ -3886,18 +4067,24 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void GameStart() {
-        if (gameStartConversationTracker == 0) {
+    public void GameStart()
+    {
+        if (gameStartConversationTracker == 0)
+        {
             ChatNextButton.interactable = false;
             NotificationMessageBoxAnim.SetBool("MenuDefault", false);
             NotificationMessageBoxAnim.SetBool("MenuActivated", true);
             notificationGoodSource.Play();
             gameStartConversationTracker = 1;
-        } else if (gameStartConversationTracker == 1) {
+        }
+        else if (gameStartConversationTracker == 1)
+        {
             notificationButtonText.text = "OK";
             notificationInformationText.text = "You are a Student Dietitian on placement at University Hospital.  It’s your second week and you are seeing a patient on your own today, with help from your supervisor and other health professionals.";
             gameStartConversationTracker = 2;
-        } else if (gameStartConversationTracker == 2) {
+        }
+        else if (gameStartConversationTracker == 2)
+        {
             NotificationMessageBoxAnim.SetBool("MenuActivated", false);
             ChatStart();
             gameStartConversationTracker = 3;
@@ -3905,7 +4092,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void OpenSGADocument() {
+    public void OpenSGADocument()
+    {
         if (SGADocumentAnim.GetBool("MenuDefault") == true)
         {
             SGADocumentAnim.SetBool("MenuDefault", false);
@@ -3924,14 +4112,18 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void PlayerNamePrompt() {
-        if (gameStartConversationTracker == 3) {
+    public void PlayerNamePrompt()
+    {
+        if (gameStartConversationTracker == 3)
+        {
             PlayerNamePromptAnim.SetBool("MenuDefault", false);
             PlayerNamePromptAnim.SetBool("MenuActivated", true);
             notificationGoodSource.Play();
             gameStartConversationTracker = 4;
             playerNamePromptInputField.ActivateInputField();
-        } else if (gameStartConversationTracker == 4) {
+        }
+        else if (gameStartConversationTracker == 4)
+        {
             if (!ConsistsOfWhiteSpace(playerNamePromptInputField.text.ToString()) && playerNamePromptInputField.text.Length > 0)
             {
                 playerNameString = playerNamePromptInputField.text;
@@ -3942,7 +4134,8 @@ public class MenuOptions : MonoBehaviour
                 gameStartConversationTracker = 5;
                 ChatContinue();
             }
-            else {
+            else
+            {
                 playerNamePromptInfoText.text = "Please enter a valid name";
                 playerNamePromptInfoText.color = warningColour;
             }
@@ -3972,6 +4165,31 @@ public class MenuOptions : MonoBehaviour
                 introConversationTracker = 1;
             }
         }
+    }
+
+    public void TransitionPhase1ToPhase2()
+    {
+        // Internal (non-UI) related properties.
+        introConversationTracker = 15;
+        rayCastBlockImage.SetActive(false);
+        ActivateChatButton.interactable = false;
+        ActivateInvestigationButton.interactable = false;
+        ChatNextButton.interactable = false;
+        canComputer = true;
+        canAnthropometry = true;
+        canMedicalHistory = true;
+        inChat = false;
+
+        PhaseManagement.gamePhase = 2;
+
+        // UI Properties to be set upon restoration.
+        currentPhaseProgressFillImage.fillAmount = 0;
+        currentPhaseText.text = "2nd";
+        totalProgressFillImage.fillAmount = 0.125f;
+        totalProgressAmountText.text = "12.5%";
+        Phase1ProgressGroup.SetActive(false);
+
+        ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
     }
 
     public void ChatContinue()
@@ -4150,6 +4368,7 @@ public class MenuOptions : MonoBehaviour
 
             else if (introConversationTracker == 14)
             {
+                // Animation related changes.
                 ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", false);
                 ChatRightTwoAnim.SetBool("ChatDefault", true);
                 ChatLeftAnim.SetBool("ChatActivated", false);
@@ -4158,28 +4377,24 @@ public class MenuOptions : MonoBehaviour
                 NPCLeftNurseImage.SetBool("NPCLeftAnimateOut", true);
                 NPCRightDieticianImage.SetBool("NPCRightAnimateIn", false);
                 NPCRightDieticianImage.SetBool("NPCRightAnimateOut", true);
-                introConversationTracker = 15;
-                rayCastBlockImage.SetActive(false);
-                ActivateChatButton.interactable = false;
-                ActivateInvestigationButton.interactable = false;
-                ChatNextButton.interactable = false;
-                canComputer = true;
-                canAnthropometry = true;
-                canMedicalHistory = true;
-                inChat = false;
-
-                //PhaseTransitionSave(PhaseManagement.gamePhase);
-                PhaseTransitionSave(1);
-
-                PhaseManagement.gamePhase = 2;
                 nextPhaseSource.Play();
                 PhaseReachedAnim.SetTrigger("PhaseReached");
-                currentPhaseProgressFillImage.fillAmount = 0;
-                currentPhaseText.text = "2nd";
-                totalProgressFillImage.fillAmount = 0.125f;
-                totalProgressAmountText.text = "12.5%";
-                Phase1ProgressGroup.SetActive(false);
-                ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
+
+                PhaseTransitionSave(1);
+
+                TransitionPhase1ToPhase2();
+
+                //PhaseManagement.gamePhase = 2;
+
+                //nextPhaseSource.Play();
+                //PhaseReachedAnim.SetTrigger("PhaseReached");
+
+                //currentPhaseProgressFillImage.fillAmount = 0;
+                //currentPhaseText.text = "2nd";
+                //totalProgressFillImage.fillAmount = 0.125f;
+                //totalProgressAmountText.text = "12.5%";
+                //Phase1ProgressGroup.SetActive(false);
+                //ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
             }
         }
         else if (PhaseManagement.gamePhase == 2)
@@ -4524,7 +4739,7 @@ public class MenuOptions : MonoBehaviour
                 NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
                 ChatTextLeftHeaderImage.color = playerChatHeaderColour;
                 ChatLeftNameText.text = playerNameString;
-				ChatRightTwoText.text = "Well, you're eager! I like that. Now let's see if you're discerning. You're not going to talk to Marta about everything you already have gathered. What additional information do you need to gather from Marta to get a clearer picture of her nutritional concerns?";
+                ChatRightTwoText.text = "Well, you're eager! I like that. Now let's see if you're discerning. You're not going to talk to Marta about everything you already have gathered. What additional information do you need to gather from Marta to get a clearer picture of her nutritional concerns?";
                 ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                 ChatRightAnim.SetBool("ChatDefault", true);
                 ChatLeftAnim.SetBool("ChatActivated", false);
@@ -4548,7 +4763,8 @@ public class MenuOptions : MonoBehaviour
                 ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                 Phase3PresentFindingsConversationTracker = 3;
             }
-            else if (Phase3PresentFindingsConversationTracker == 3) {
+            else if (Phase3PresentFindingsConversationTracker == 3)
+            {
                 phaseThreePresentFindingsInputGroup.SetActive(false);
                 ChatNextButtonText.text = "END CHAT";
                 ChatLeftText.text = "I just want to go over a few of my findings first. I will be back shortly.";
@@ -4745,7 +4961,8 @@ public class MenuOptions : MonoBehaviour
                         }
                     }
                 }
-                else {
+                else
+                {
                     if (Phase4ConversationTracker == 0)
                     {
                         inChat = true;
@@ -4927,7 +5144,7 @@ public class MenuOptions : MonoBehaviour
                     Phase4PatientConversationTracker = 6;
                 }
                 else if (Phase4PatientConversationTracker == 6)
-                {               
+                {
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
@@ -5031,7 +5248,8 @@ public class MenuOptions : MonoBehaviour
                     phase4SavedText04.SetActive(true);
                     Phase4PatientConversationTracker = 113;
                 }
-                else if (Phase4PatientConversationTracker == 113) {
+                else if (Phase4PatientConversationTracker == 113)
+                {
                     ChatRightText.text = "Plus, its nice to have a quick chat with the drivers when they deliver the meal, they always ask how I am. I usually ring the day before the meal is delivered. I always get the dessert they have. Sometimes with the meal and other times with just a soup. I do have to <color=#6AB543FF>prepare food for myself on the weekend</color> because the meals are only delivered Monday to Friday. It’s a bit hard, but much better than if I had to do it all week.";
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
@@ -5627,7 +5845,8 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     Phase4PatientConversationTracker = 402;
                 }
-                else if (Phase4PatientConversationTracker == 402) {
+                else if (Phase4PatientConversationTracker == 402)
+                {
                     ChatLeftText.text = "I will then look at the muscle between your thumb and forefinger. I will also look if there is any fluid around your feet and ankles as this can be related to your body’s nutrition.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
@@ -6204,7 +6423,8 @@ public class MenuOptions : MonoBehaviour
                     {
                         Phase5DietitianConversationTracker = 5000;
                     }
-                    else {
+                    else
+                    {
                         Phase5DietitianConversationTracker = 2;
                     }
                     Phase5QualatativeButton.interactable = false;
@@ -6233,7 +6453,8 @@ public class MenuOptions : MonoBehaviour
                     {
                         Phase5DietitianConversationTracker = 5000;
                     }
-                    else {
+                    else
+                    {
                         Phase5DietitianConversationTracker = 2;
                     }
                     Phase5QuantatativeButton.interactable = false;
@@ -6492,7 +6713,8 @@ public class MenuOptions : MonoBehaviour
                     {
                         Phase5DietitianConversationTracker = 5000;
                     }
-                    else {
+                    else
+                    {
                         Phase5DietitianConversationTracker = 2;
                     }
                     Phase5EnergyActualButton.interactable = false;
@@ -6582,9 +6804,10 @@ public class MenuOptions : MonoBehaviour
                         phase5WeightEvaluationComplete = true;
                         Phase5DietitianConversationTracker = 2005;
                         ChatNextButtonText.text = "NEXT";
-                        phase5Part3Complete = true;                        
+                        phase5Part3Complete = true;
                     }
-                    else {
+                    else
+                    {
                         ChatRightText.text = "Well done, you correctly assessed Marta’s diet and identified the key nutrients that she may be lacking. When you are ready come back to me and we will complete the other evaluations.";
                         ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                         ChatLeftTwoAnim.SetBool("ChatDefault", true);
@@ -6595,12 +6818,15 @@ public class MenuOptions : MonoBehaviour
                         phase5WeightEvaluationComplete = true;
                         Phase5DietitianConversationTracker = 2005;
                     }
-                    if (phase05BodyWeightIncorrectScore == 1) {
+                    if (phase05BodyWeightIncorrectScore == 1)
+                    {
                         phase05BodyWeightPlayerRating = playerRatingIntermediate;
-						phase08OverallScore = phase08OverallScore + 1;
-                    } else if (phase05BodyWeightIncorrectScore > 1) {
+                        phase08OverallScore = phase08OverallScore + 1;
+                    }
+                    else if (phase05BodyWeightIncorrectScore > 1)
+                    {
                         phase05BodyWeightPlayerRating = playerRatingNovice;
-						phase08OverallScore = phase08OverallScore + 2;
+                        phase08OverallScore = phase08OverallScore + 2;
                     }
                 }
                 else if (Phase5DietitianConversationTracker == 2005)
@@ -6628,16 +6854,17 @@ public class MenuOptions : MonoBehaviour
                     {
                         Phase5DietitianConversationTracker = 5000;
                     }
-                    else {
+                    else
+                    {
                         Phase5DietitianConversationTracker = 2;
                     }
                 }
                 else if (Phase5DietitianConversationTracker == 5000)
                 {
-					inChat = true;
+                    inChat = true;
                     ChatRightText.text = "Hi, how can I help you?";
-					ChatNextButton.interactable = true;
-					ChatNextButtonText.text = "NEXT";
+                    ChatNextButton.interactable = true;
+                    ChatNextButtonText.text = "NEXT";
                     ChatRightAnim.SetBool("ChatDefault", false);
                     ChatRightAnim.SetBool("ChatActivated", true);
                     Phase5DietitianConversationTracker = 5001;
@@ -6947,8 +7174,9 @@ public class MenuOptions : MonoBehaviour
         else if (PhaseManagement.gamePhase == 6)
         {
             if (currentScene == 0)
-            {                
-                if (Phase6ConversationTracker == 0) {
+            {
+                if (Phase6ConversationTracker == 0)
+                {
                     ChatRightNameText.text = dieteticSupervisorNameString;
                     ChatTextRightHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCRightChatPortrait.sprite = DieticianPortraitImage;
@@ -6974,7 +7202,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
-                    ChatLeftAnim.SetBool("ChatActivated", true);                    
+                    ChatLeftAnim.SetBool("ChatActivated", true);
                     Phase6ConversationTracker = 2;
                 }
                 else if (Phase6ConversationTracker == 2)
@@ -7025,7 +7253,7 @@ public class MenuOptions : MonoBehaviour
                 ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
                 NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
                 if (Phase6ConversationTracker == 0)
-                {                    
+                {
                     inChat = true;
                     ChatRightText.text = "Hi " + playerNameString + ", is there something I can do for you?";
                     ChatRightAnim.SetBool("ChatDefault", false);
@@ -7824,7 +8052,7 @@ public class MenuOptions : MonoBehaviour
                 {
                     ChatRightTwoText.text = "Yes, I should be able to manage that.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
-					ChatRightAnim.SetBool("ChatDefault", true);
+                    ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
@@ -7862,8 +8090,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     inChat = false;
                     Phase7ConversationTracker = 1000;
-					phase07ToPhase08TransitionAnim.SetTrigger ("AnimateIn");
-					StartCoroutine ("Phase07ToPhase08GamephaseTransition");
+                    phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
+                    StartCoroutine("Phase07ToPhase08GamephaseTransition");
                 }
                 else if (Phase7ConversationTracker == 300)
                 {
@@ -8017,7 +8245,8 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     Phase7ConversationTracker = 206;
                 }
-                else if (Phase7ConversationTracker == 406) {
+                else if (Phase7ConversationTracker == 406)
+                {
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
@@ -8196,8 +8425,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     Phase7ConversationTracker = 1000;
                     inChat = false;
-					phase07ToPhase08TransitionAnim.SetTrigger ("AnimateIn");
-					StartCoroutine ("Phase07ToPhase08GamephaseTransition");
+                    phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
+                    StartCoroutine("Phase07ToPhase08GamephaseTransition");
                 }
                 else if (Phase7ConversationTracker == 600)
                 {
@@ -8623,8 +8852,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     Phase7ConversationTracker = 1000;
                     inChat = false;
-					phase07ToPhase08TransitionAnim.SetTrigger ("AnimateIn");
-					StartCoroutine ("Phase07ToPhase08GamephaseTransition");
+                    phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
+                    StartCoroutine("Phase07ToPhase08GamephaseTransition");
                 }
                 else if (Phase7ConversationTracker == 1000)
                 {
@@ -8676,15 +8905,19 @@ public class MenuOptions : MonoBehaviour
                     inChat = false;
                 }
             }
-		} else if (PhaseManagement.gamePhase == 8) {
-			if (currentScene == 0) {
-				ChatRightNameText.text = patientNameString;
-				ChatTextRightHeaderImage.color = patientChatHeaderColour;
-				NPCRightChatPortrait.sprite = PatientPortraitImage;
-				ChatRightTwoNameText.text = patientNameString;
-				ChatTextRightTwoHeaderImage.color = patientChatHeaderColour;
-				NPCRightTwoChatPortrait.sprite = PatientPortraitImage;
-                if (phase08ConversationTracker == 0) {
+        }
+        else if (PhaseManagement.gamePhase == 8)
+        {
+            if (currentScene == 0)
+            {
+                ChatRightNameText.text = patientNameString;
+                ChatTextRightHeaderImage.color = patientChatHeaderColour;
+                NPCRightChatPortrait.sprite = PatientPortraitImage;
+                ChatRightTwoNameText.text = patientNameString;
+                ChatTextRightTwoHeaderImage.color = patientChatHeaderColour;
+                NPCRightTwoChatPortrait.sprite = PatientPortraitImage;
+                if (phase08ConversationTracker == 0)
+                {
                     ChatLeftNameText.text = playerNameString;
                     ChatTextLeftHeaderImage.color = playerChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
@@ -8694,14 +8927,18 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     ChatNextButtonText.text = "CONTINUE";
                     phase08ConversationTracker = 1;
-                } else if (phase08ConversationTracker == 1) {
+                }
+                else if (phase08ConversationTracker == 1)
+                {
                     ChatRightText.text = "Hello " + playerNameString + ", good to see you too.";
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightAnim.SetBool("ChatDefault", false);
                     ChatRightAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 2;
-                } else if (phase08ConversationTracker == 2) {
+                }
+                else if (phase08ConversationTracker == 2)
+                {
                     ChatLeftTwoNameText.text = playerNameString;
                     ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
@@ -8713,7 +8950,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 3;
-                } else if (phase08ConversationTracker == 3) {
+                }
+                else if (phase08ConversationTracker == 3)
+                {
                     ChatRightTwoText.text = "Yes sure. Hello John.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
@@ -8722,7 +8961,9 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 4;
-                } else if (phase08ConversationTracker == 4) {
+                }
+                else if (phase08ConversationTracker == 4)
+                {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
@@ -8734,7 +8975,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatDefault", false);
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 5;
-                } else if (phase08ConversationTracker == 5) {
+                }
+                else if (phase08ConversationTracker == 5)
+                {
                     ChatLeftTwoText.text = "So today we will be revisiting the goals and strategies we set for you just before your discharge a couple of weeks ago. Is that alright with you?";
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
@@ -8743,7 +8986,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 6;
-                } else if (phase08ConversationTracker == 6) {
+                }
+                else if (phase08ConversationTracker == 6)
+                {
                     ChatRightText.text = "Yes, that sounds good.";
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
@@ -8752,208 +8997,313 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", false);
                     ChatRightAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 7;
-                } else if (phase08ConversationTracker == 7) {
+                }
+                else if (phase08ConversationTracker == 7)
+                {
                     ChatLeftNameText.text = playerNameString;
                     ChatTextLeftHeaderImage.color = playerChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					ChatLeftText.text = "Good, so I first would like to ask how you managed to " + Phase07Part03DropZoneArray.First().GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[0] + " and " + phase07FoodStrategyStringArray[1] + ". How did you manage to make these changes?";
+                    ChatLeftText.text = "Good, so I first would like to ask how you managed to " + Phase07Part03DropZoneArray.First().GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[0] + " and " + phase07FoodStrategyStringArray[1] + ". How did you manage to make these changes?";
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
                     ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone01)) {
-						if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "have cordial";
-							if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 100;
-							} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "orange juice, due to my arthritis";
-								phase08ConversationTracker = 200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "milky tea and coffee, due to my lactose intolerance";
-								phase08ConversationTracker = 200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "add more butter";
-							if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 100;
-							} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "orange juice, due to my arthritis";
-								phase07StrategiesScore += 1;
-								phase08ConversationTracker = 200;
-							} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "milky tea and coffee, due to my lactose intolerance";
-								phase08ConversationTracker = 200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 300;
-							phase07StrategiesScore += 2;
-						} 
-					} else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02)) {
-						if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "yogurt";
-							if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 1100;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "open the legumes";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "buy the bars";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "ham";
-							if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 1100;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "open the legumes";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "buy the bars";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 1300;
-							phase07StrategiesScore += 2;
-						}
-					} else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03)) {
-						phase08InadequateEnergyAndProteinIntakeAddressed = true;
-						if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "milk";
-							if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 2100;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "have all the delivered meal";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "buy the supplements";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "cheese";
-							if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 2100;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "have all the delivered meal";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "buy the supplements";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 2300;
-							phase07StrategiesScore += 2;
-						}
-					} else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "milk";
-							if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 3100;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "having 8 glasses of water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "replacing my tea with water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "cordial";
-							if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 3100;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "having 8 glasses of water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "replacing my tea with water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 3300;
-							phase07StrategiesScore += 2;
-						}
-					} else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05)) {
-						if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "have crackers and cheese";
-							if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 4100;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "smaller meals and snacks";
-							if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 4100;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 4300;
-							phase07StrategiesScore += 2;
-						}
-					} else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06)) {
-						if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection01FoodStrategy01 = "have crackers and cheese";
-							if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 5100;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection01FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection01FoodStrategy01 = "smaller meals and snacks";
-							if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 5100;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection01FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection01FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 5300;
-							phase07StrategiesScore += 2;
-						}
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone01))
+                    {
+                        if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "have cordial";
+                            if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 100;
+                            }
+                            else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "orange juice, due to my arthritis";
+                                phase08ConversationTracker = 200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "milky tea and coffee, due to my lactose intolerance";
+                                phase08ConversationTracker = 200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "add more butter";
+                            if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 100;
+                            }
+                            else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "orange juice, due to my arthritis";
+                                phase07StrategiesScore += 1;
+                                phase08ConversationTracker = 200;
+                            }
+                            else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "milky tea and coffee, due to my lactose intolerance";
+                                phase08ConversationTracker = 200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02))
+                    {
+                        if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "yogurt";
+                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 1100;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "open the legumes";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "buy the bars";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "ham";
+                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 1100;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "open the legumes";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "buy the bars";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 1300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        phase08InadequateEnergyAndProteinIntakeAddressed = true;
+                        if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "milk";
+                            if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 2100;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "have all the delivered meal";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "buy the supplements";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "cheese";
+                            if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 2100;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "have all the delivered meal";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "buy the supplements";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 2300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "milk";
+                            if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 3100;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "having 8 glasses of water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "replacing my tea with water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "cordial";
+                            if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 3100;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "having 8 glasses of water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "replacing my tea with water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 3300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "have crackers and cheese";
+                            if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 4100;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "smaller meals and snacks";
+                            if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 4100;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 4300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "have crackers and cheese";
+                            if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 5100;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection01FoodStrategy01 = "smaller meals and snacks";
+                            if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 5100;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection01FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 5300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
                     //    ^^^^^^^   HAVE A SECTION HERE THAT SETS THE CONVERSATION TRACKER TO THE FIRST GOAL SELECTED THEN THE FOOD STRATEGY = EXAMPLE IF GOAL 1 = AND THEN STRATEGIES SELECTED1 ARE 1 & 2 = 100, 1 AND 3 / 1 AND 4 / 2 AND 3 / 2 AND 4 == 200, 3 AND 4 == 300)
-                } else if (phase08ConversationTracker == 100) {
+                }
+                else if (phase08ConversationTracker == 100)
+                {
                     ChatRightTwoText.text = "I was able to take cordial instead of water with my tablets and add more butter to my bread.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
@@ -8962,7 +9312,9 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 101;
-                } else if (phase08ConversationTracker == 101) {
+                }
+                else if (phase08ConversationTracker == 101)
+                {
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
@@ -8974,7 +9326,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 102;
-                } else if (phase08ConversationTracker == 102) {
+                }
+                else if (phase08ConversationTracker == 102)
+                {
                     ChatLeftNameText.text = playerNameString;
                     ChatTextLeftHeaderImage.color = playerChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
@@ -8986,7 +9340,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatDefault", false);
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 103;
-                } else if (phase08ConversationTracker == 103) {
+                }
+                else if (phase08ConversationTracker == 103)
+                {
                     ChatRightText.text = "I have not lost any weight but I haven't gained much weight either.";
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
@@ -8995,7 +9351,9 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", false);
                     ChatRightAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 104;
-                } else if (phase08ConversationTracker == 104) {
+                }
+                else if (phase08ConversationTracker == 104)
+                {
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
@@ -9007,25 +9365,31 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 105;
-                } else if (phase08ConversationTracker == 105) {
+                }
+                else if (phase08ConversationTracker == 105)
+                {
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 400;
-                } else if (phase08ConversationTracker == 200) {					
-					ChatRightTwoText.text = "I was able to " + phase08Selection01FoodStrategy01 + " but did not have " + phase08Selection01FoodStrategy02 + ".";
+                }
+                else if (phase08ConversationTracker == 200)
+                {
+                    ChatRightTwoText.text = "I was able to " + phase08Selection01FoodStrategy01 + " but did not have " + phase08Selection01FoodStrategy02 + ".";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 201;
-                } else if (phase08ConversationTracker == 201) {
+                }
+                else if (phase08ConversationTracker == 201)
+                {
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
@@ -9037,7 +9401,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 202;
-                } else if (phase08ConversationTracker == 202) {
+                }
+                else if (phase08ConversationTracker == 202)
+                {
                     ChatLeftNameText.text = playerNameString;
                     ChatTextLeftHeaderImage.color = playerChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
@@ -9049,7 +9415,9 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatDefault", false);
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 203;
-                } else if (phase08ConversationTracker == 203) {
+                }
+                else if (phase08ConversationTracker == 203)
+                {
                     ChatRightText.text = "I actually think that I might have lost a little bit of weight.";
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
@@ -9058,7 +9426,9 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", false);
                     ChatRightAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 204;
-                } else if (phase08ConversationTracker == 204) {
+                }
+                else if (phase08ConversationTracker == 204)
+                {
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
@@ -9070,16 +9440,19 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 205;
-                } else if (phase08ConversationTracker == 205) {
+                }
+                else if (phase08ConversationTracker == 205)
+                {
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 400;
                 }
-                else if (phase08ConversationTracker == 300) {
+                else if (phase08ConversationTracker == 300)
+                {
                     ChatRightTwoText.text = "I didn’t drink orange juice as I was too scared that it will upset my arthritis and couldn't manage the milky tea and coffee as I was scared of my lactose intolerance.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
@@ -9088,7 +9461,9 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 301;
-                } else if (phase08ConversationTracker == 301) {
+                }
+                else if (phase08ConversationTracker == 301)
+                {
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
@@ -9100,36 +9475,44 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 302;
-                } else if (phase08ConversationTracker == 302) {
+                }
+                else if (phase08ConversationTracker == 302)
+                {
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 400;
-				} else if (phase08ConversationTracker == 400) {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy01.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "Yes I was able to make some of the changes you suggested.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy01.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 401;
-					} else if (dropZonePhase07EducationalStrategy01.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "Yes I was able to eat my favourite foods.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy01.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);
-				} 
-				else if (phase08ConversationTracker == 401) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
+                }
+                else if (phase08ConversationTracker == 400)
+                {
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy01.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "Yes I was able to make some of the changes you suggested.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy01.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy01.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "Yes I was able to eat my favourite foods.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy01.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
+                }
+                else if (phase08ConversationTracker == 401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightAnim.SetBool("ChatDefault", false);
-                    ChatRightAnim.SetBool("ChatActivated", true);                    
+                    ChatRightAnim.SetBool("ChatActivated", true);
                 }
                 else if (phase08ConversationTracker == 402)
                 {
@@ -9137,8 +9520,8 @@ public class MenuOptions : MonoBehaviour
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
                     ChatLeftText.text = "Although Marta was able to make these changes, you need to evaluate her energy levels and functional ability to evaluate if further education is needed.";
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
@@ -9170,7 +9553,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 405;
                 }
-                else if (phase08ConversationTracker == 405) {
+                else if (phase08ConversationTracker == 405)
+                {
                     ChatLeftText.text = "It seems that this strategy was only partly successful, write down your thoughts why it may not have resulted in restoration of energy and strength levels for Marta using the text box.";
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
@@ -9186,39 +9570,51 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone02)) {
-						phase08ConversationTracker = 1000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone03)) {
-						phase08InadequateEnergyAndProteinIntakeAddressed = true;
-						phase08ConversationTracker = 2000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02))
+                    {
+                        phase08ConversationTracker = 1000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        phase08InadequateEnergyAndProteinIntakeAddressed = true;
+                        phase08ConversationTracker = 2000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 410) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 411;
-				}
+                else if (phase08ConversationTracker == 410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 411;
+                }
                 else if (phase08ConversationTracker == 411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
                     ChatLeftText.text = "Although Marta followed your advice, there is a risk that her overall energy intake did not improve. You will need to check her energy levels and functional ability.";
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
@@ -9267,66 +9663,94 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone02)) {
-						phase08ConversationTracker = 1000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone03)) {
-						phase08InadequateEnergyAndProteinIntakeAddressed = true;
-						phase08ConversationTracker = 2000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02))
+                    {
+                        phase08ConversationTracker = 1000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        phase08InadequateEnergyAndProteinIntakeAddressed = true;
+                        phase08ConversationTracker = 2000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 1000) {
-					ChatLeftNameText.text = playerNameString;
-					ChatTextLeftHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
-					ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02)) {
-						if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection02FoodStrategy01 = "yogurt";
-							if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 1100;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection02FoodStrategy02 = "open the legumes";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "buy the bars";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection02FoodStrategy01 = "ham";
-							if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 1100;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection02FoodStrategy02 = "open the legumes";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "buy the bars";
-								phase08ConversationTracker = 1200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 1300;
-							phase07StrategiesScore += 2;
-						} 
-					}
-				}
+                else if (phase08ConversationTracker == 1000)
+                {
+                    ChatLeftNameText.text = playerNameString;
+                    ChatTextLeftHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
+                    GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
+                    ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02))
+                    {
+                        if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "yogurt";
+                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 1100;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "open the legumes";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "buy the bars";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "ham";
+                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 1100;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "open the legumes";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "buy the bars";
+                                phase08ConversationTracker = 1200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 1300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                }
                 else if (phase08ConversationTracker == 1100)
                 {
                     ChatRightTwoText.text = "I tried to make these changes, although I sometimes found it hard to have the whole serve.";
@@ -9397,24 +9821,27 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 1400;
                 }
                 else if (phase08ConversationTracker == 1200)
                 {
-					if (phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have some of the " + phase08Selection02FoodStrategy01 + " but couldn't manage to " + phase08Selection02FoodStrategy02 + ".";
-					} else if (!phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have some of the " + phase08Selection01FoodStrategy01 + " but couldn't manage to " + phase08Selection01FoodStrategy02 + ".";
-					}
+                    if (phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have some of the " + phase08Selection02FoodStrategy01 + " but couldn't manage to " + phase08Selection02FoodStrategy02 + ".";
+                    }
+                    else if (!phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have some of the " + phase08Selection01FoodStrategy01 + " but couldn't manage to " + phase08Selection01FoodStrategy02 + ".";
+                    }
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 1201;
                 }
                 else if (phase08ConversationTracker == 1201)
@@ -9476,7 +9903,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 1400;
                 }
@@ -9511,41 +9938,45 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 1400;
                 }
                 else if (phase08ConversationTracker == 1400)
                 {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy02.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "I tried to make these changes but I didn't have the appetite sometimes to have so much food at once.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy02.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 1401;
-					} else if (dropZonePhase07EducationalStrategy02.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "Well I tried to have more fruit and vegetables, my girlfriend gave me this great idea to vitaminise them so I've started to have a fruit and vegetable smoothie for morning tea instead of my tea.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy02.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 1410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);                    
-				}
-				else if (phase08ConversationTracker == 1401) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 1402;					
-				}
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy02.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "I tried to make these changes but I didn't have the appetite sometimes to have so much food at once.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy02.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 1401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy02.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "Well I tried to have more fruit and vegetables, my girlfriend gave me this great idea to vitaminise them so I've started to have a fruit and vegetable smoothie for morning tea instead of my tea.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy02.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 1410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
+                }
+                else if (phase08ConversationTracker == 1401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 1402;
+                }
                 else if (phase08ConversationTracker == 1402)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
-                    ChatLeftText.text = "It sounds like Marta did put an effort in to follow your advice but struggled to implement it. How can you tailor this advice so that Marta can achieve this? Take this opportunity to write down how you may adapt your education to help Marta achieve her protein requirement?";                    
+                    ChatLeftText.text = "It sounds like Marta did put an effort in to follow your advice but struggled to implement it. How can you tailor this advice so that Marta can achieve this? Take this opportunity to write down how you may adapt your education to help Marta achieve her protein requirement?";
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
@@ -9558,29 +9989,39 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone03)) {
-						phase08InadequateEnergyAndProteinIntakeAddressed = true;
-						phase08ConversationTracker = 2000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        phase08InadequateEnergyAndProteinIntakeAddressed = true;
+                        phase08ConversationTracker = 2000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 1410) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 1411;					
-				}
+                else if (phase08ConversationTracker == 1410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 1411;
+                }
                 else if (phase08ConversationTracker == 1411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
@@ -9601,64 +10042,90 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone03)) {
-						phase08InadequateEnergyAndProteinIntakeAddressed = true;
-						phase08ConversationTracker = 2000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        phase08InadequateEnergyAndProteinIntakeAddressed = true;
+                        phase08ConversationTracker = 2000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 2000) {
-					ChatLeftNameText.text = playerNameString;
-					ChatTextLeftHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
-					ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03)) {
-						if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection02FoodStrategy01 = "milk";
-							if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 2100;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection02FoodStrategy02 = "have all of the delivered meal";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "buy the supplements";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection02FoodStrategy01 = "cheese";
-							if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 2100;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection02FoodStrategy02 = "have all of the delivered meal";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "buy the supplements";
-								phase08ConversationTracker = 2200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 2300;
-							phase07StrategiesScore += 2;
-						} 
-					}
-				}
+                else if (phase08ConversationTracker == 2000)
+                {
+                    ChatLeftNameText.text = playerNameString;
+                    ChatTextLeftHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
+                    GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
+                    ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone03))
+                    {
+                        if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "milk";
+                            if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 2100;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "have all of the delivered meal";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "buy the supplements";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "cheese";
+                            if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 2100;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "have all of the delivered meal";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "buy the supplements";
+                                phase08ConversationTracker = 2200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone03.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 2300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                }
                 else if (phase08ConversationTracker == 2100)
                 {
                     ChatRightTwoText.text = "Yes I was able to make these changes and found them easy enough to include in my diet. I actually like a warm mug of milk before bed.";
@@ -9729,24 +10196,27 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
-					phase08ThoughtsInputBoxGroup.SetActive (true);
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 2400;
                 }
                 else if (phase08ConversationTracker == 2200)
                 {
-					if (phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have the " + phase08Selection02FoodStrategy01 + " but couldn't manage to " + phase08Selection02FoodStrategy02 + ".";
-					} else if (!phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have the " + phase08Selection01FoodStrategy01 + " but couldn't manage to " + phase08Selection01FoodStrategy02 + ".";
-					}
+                    if (phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have the " + phase08Selection02FoodStrategy01 + " but couldn't manage to " + phase08Selection02FoodStrategy02 + ".";
+                    }
+                    else if (!phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have the " + phase08Selection01FoodStrategy01 + " but couldn't manage to " + phase08Selection01FoodStrategy02 + ".";
+                    }
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 2201;
                 }
                 else if (phase08ConversationTracker == 2201)
@@ -9808,7 +10278,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 2400;
                 }
@@ -9843,43 +10313,47 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 2400;
                 }
                 else if (phase08ConversationTracker == 2400)
                 {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy03.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "This really worked well for me. I found it easy to have small snacks between my meals. I like having a bit of nuts or cheese and crackers some days.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy03.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 2401;
-					} else if (dropZonePhase07EducationalStrategy03.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "I actually struggled to eat more, I tried a few times to have more vegetables at dinner and have more food at breakfast but I couldn't keep this up as my appetite just isn't good.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy03.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 2410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy03.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "This really worked well for me. I found it easy to have small snacks between my meals. I like having a bit of nuts or cheese and crackers some days.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy03.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 2401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy03.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "I actually struggled to eat more, I tried a few times to have more vegetables at dinner and have more food at breakfast but I couldn't keep this up as my appetite just isn't good.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy03.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 2410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
                 }
-				else if (phase08ConversationTracker == 2401) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 2402;					
-				}
+                else if (phase08ConversationTracker == 2401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 2402;
+                }
                 else if (phase08ConversationTracker == 2402)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
                     ChatLeftText.text = "It sounds like this was an appropriate strategy for Marta and easy to implement.";
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
@@ -9898,32 +10372,42 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 2404;
-				} else if (phase08ConversationTracker == 2404) {
-					ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
-					ChatLeftAnim.SetBool("ChatDefault", true);
-					ChatLeftTwoAnim.SetBool("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
-					phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
-				}
-				else if (phase08ConversationTracker == 2410) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 2411;					
-				}
+                    phase08ConversationTracker = 2404;
+                }
+                else if (phase08ConversationTracker == 2404)
+                {
+                    ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftAnim.SetBool("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.SetActive(true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
+                }
+                else if (phase08ConversationTracker == 2410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 2411;
+                }
                 else if (phase08ConversationTracker == 2411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
@@ -9944,61 +10428,85 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
-					phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone04)) {
-						phase08InsufficientFluidAddressed = true;
-						phase08ConversationTracker = 3000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.SetActive(true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        phase08InsufficientFluidAddressed = true;
+                        phase08ConversationTracker = 3000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 3000) {
-					ChatLeftNameText.text = playerNameString;
-					ChatTextLeftHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
-					ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04)) {
-						if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection02FoodStrategy01 = "milk";
-							if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 3100;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection02FoodStrategy02 = "having 8 glasses of water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "replacing my tea with water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection02FoodStrategy01 = "cordial";
-							if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 3100;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection02FoodStrategy02 = "having 8 glasses of water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "replacing my tea with water";
-								phase08ConversationTracker = 3200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 3300;
-							phase07StrategiesScore += 2;
-						} 
-					}
-				}
+                else if (phase08ConversationTracker == 3000)
+                {
+                    ChatLeftNameText.text = playerNameString;
+                    ChatTextLeftHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
+                    GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
+                    ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone04))
+                    {
+                        if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "milk";
+                            if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 3100;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "having 8 glasses of water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "replacing my tea with water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "cordial";
+                            if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 3100;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "having 8 glasses of water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "replacing my tea with water";
+                                phase08ConversationTracker = 3200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone04.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 3300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                }
                 else if (phase08ConversationTracker == 3100)
                 {
                     ChatRightTwoText.text = "Yes I have been able to include the milk at bedtime and had cordial between meals some days.";
@@ -10069,24 +10577,27 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
-					phase08ThoughtsInputBoxGroup.SetActive (true);
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 3400;
                 }
                 else if (phase08ConversationTracker == 3200)
                 {
-					if (phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have " + phase08Selection02FoodStrategy01 + " but I struggled with " + phase08Selection02FoodStrategy02 + ".";
-					} else if (!phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have " + phase08Selection01FoodStrategy01 + " but I struggled with " + phase08Selection01FoodStrategy02 + ".";
-					}
+                    if (phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have " + phase08Selection02FoodStrategy01 + " but I struggled with " + phase08Selection02FoodStrategy02 + ".";
+                    }
+                    else if (!phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have " + phase08Selection01FoodStrategy01 + " but I struggled with " + phase08Selection01FoodStrategy02 + ".";
+                    }
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 3201;
                 }
                 else if (phase08ConversationTracker == 3201)
@@ -10148,7 +10659,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 3400;
                 }
@@ -10183,44 +10694,47 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatDefault", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 3400;
                 }
                 else if (phase08ConversationTracker == 3400)
                 {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy04.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "Yes, I have been more aware of trying to get some fluids in between my meals, I find having them with my meals filled me up and I couldn't really eat all of my food.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 3401;
-					} else if (dropZonePhase07EducationalStrategy04.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "Well this I found challenging. I really like my tea and didn't want to give this up and just have water. I just couldn't have eight cups of water a day.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 3410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true); 
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy04.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "Yes, I have been more aware of trying to get some fluids in between my meals, I find having them with my meals filled me up and I couldn't really eat all of my food.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 3401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy04.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "Well this I found challenging. I really like my tea and didn't want to give this up and just have water. I just couldn't have eight cups of water a day.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 3410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
                 }
-				else if (phase08ConversationTracker == 3401)
-				{
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 3402;
-				}
+                else if (phase08ConversationTracker == 3401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 3402;
+                }
                 else if (phase08ConversationTracker == 3402)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
                     ChatLeftText.text = "It sounds like this education helped Marta and she was able to implement it during times that worked for her.";
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
                     ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
@@ -10239,31 +10753,37 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatDefault", false);
                     ChatLeftTwoAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 3404;
+                    phase08ConversationTracker = 3404;
                 }
-				else if (phase08ConversationTracker == 3404) {
-					ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
-					ChatLeftAnim.SetBool("ChatDefault", true);
-					ChatLeftTwoAnim.SetBool("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
-					phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
-				}
-				else if (phase08ConversationTracker == 3410)
-				{
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 3411;
-				}
+                else if (phase08ConversationTracker == 3404)
+                {
+                    ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftAnim.SetBool("ChatDefault", true);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.SetActive(true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
+                }
+                else if (phase08ConversationTracker == 3410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 3411;
+                }
                 else if (phase08ConversationTracker == 3411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
@@ -10284,60 +10804,83 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone05)) {
-						phase08ConversationTracker = 4000;
-					} else if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        phase08ConversationTracker = 4000;
+                    }
+                    else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 4000) {
-					ChatLeftNameText.text = playerNameString;
-					ChatTextLeftHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					print (Phase07Part03DropZoneArray [2].name);
-					GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
-					ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05)) {
-						if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection02FoodStrategy01 = "have crackers and cheese";
-							if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 4100;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection02FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection02FoodStrategy01 = "smaller meals and snacks";
-							if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 4100;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection02FoodStrategy02 = "cold meal";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "no butter on my bread";
-								phase08ConversationTracker = 4200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 4300;
-							phase07StrategiesScore += 2;
-						} 
-					}
-				}
-                else if (phase08ConversationTracker == 4100) {
+                else if (phase08ConversationTracker == 4000)
+                {
+                    ChatLeftNameText.text = playerNameString;
+                    ChatTextLeftHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
+                    print(Phase07Part03DropZoneArray[2].name);
+                    GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
+                    ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone05))
+                    {
+                        if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "have crackers and cheese";
+                            if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 4100;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "smaller meals and snacks";
+                            if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 4100;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "cold meal";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "no butter on my bread";
+                                phase08ConversationTracker = 4200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone05.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 4300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                }
+                else if (phase08ConversationTracker == 4100)
+                {
                     ChatRightTwoText.text = "Yes I found this really helpful, especially on the days that I felt a bit sick in the stomach. I would then have cheese and crackers for morning tea and a smaller lunch.";
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
@@ -10367,23 +10910,26 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                 }
                 else if (phase08ConversationTracker == 4200)
                 {
-					if (phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have " + phase08Selection02FoodStrategy01 + " but I struggled with " + phase08Selection02FoodStrategy02 + ".";
-					} else if (!phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I was able to have " + phase08Selection01FoodStrategy01 + " but I struggled with " + phase08Selection01FoodStrategy02 + ".";
-					}
+                    if (phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have " + phase08Selection02FoodStrategy01 + " but I struggled with " + phase08Selection02FoodStrategy02 + ".";
+                    }
+                    else if (!phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I was able to have " + phase08Selection01FoodStrategy01 + " but I struggled with " + phase08Selection01FoodStrategy02 + ".";
+                    }
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 4201;
                 }
                 else if (phase08ConversationTracker == 4201)
@@ -10406,7 +10952,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                 }
                 else if (phase08ConversationTracker == 4300)
@@ -10440,35 +10986,41 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 4400;
                 }
-                else if (phase08ConversationTracker == 4400) {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "I found this advice really helped me to cope better with my nausea.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 4401;
-					} else if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "I don't think this really affected my nausea and I do like my coffee with my breakfast and tea with my lunch.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 4410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);                                      
+                else if (phase08ConversationTracker == 4400)
+                {
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "I found this advice really helped me to cope better with my nausea.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 4401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "I don't think this really affected my nausea and I do like my coffee with my breakfast and tea with my lunch.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 4410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
                 }
-				else if (phase08ConversationTracker == 4401) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true); 
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);  
-					phase08ConversationTracker = 4402;
-				}
-                else if (phase08ConversationTracker == 4402) {
+                else if (phase08ConversationTracker == 4401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 4402;
+                }
+                else if (phase08ConversationTracker == 4402)
+                {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
@@ -10481,26 +11033,31 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftAnim.SetBool("ChatActivated", true);
                     phase08ConversationTracker = 4403;
                 }
-                else if (phase08ConversationTracker == 4403) {
+                else if (phase08ConversationTracker == 4403)
+                {
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 4410) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true); 
-					ChatRightAnim.SetBool("ChatDefault", false);
-					ChatRightAnim.SetBool("ChatActivated", true);  
-					phase08ConversationTracker = 4411;
-				}
+                else if (phase08ConversationTracker == 4410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 4411;
+                }
                 else if (phase08ConversationTracker == 4411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
@@ -10521,56 +11078,76 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					if (Phase07Part03DropZoneArray.Contains (Phase07Part03DropZone06)) {
-						phase08ConversationTracker = 5000;
-					} else {
-						phase08ConversationTracker = 6000;
-					}
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        phase08ConversationTracker = 5000;
+                    }
+                    else
+                    {
+                        phase08ConversationTracker = 6000;
+                    }
                 }
-				else if (phase08ConversationTracker == 5000) {
-					ChatLeftNameText.text = playerNameString;
-					ChatTextLeftHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
-					GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
-					ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06)) {
-						if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-							phase08Selection02FoodStrategy01 = "nothing";
-							if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-								phase08ConversationTracker = 5100;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {								
-								phase08Selection02FoodStrategy02 = "can't open the tinned fish";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "don't know what to replace the delivered meal with in the week";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy02Selected) {
-							phase08Selection02FoodStrategy01 = "nuffin";
-							if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy01Selected) {
-								phase08ConversationTracker = 5100;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {
-								phase08Selection02FoodStrategy02 = "can't open the tinned fish";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy04Selected) {
-								phase08Selection02FoodStrategy02 = "don't know what to replace the delivered meal with in the week";
-								phase08ConversationTracker = 5200;
-								phase07StrategiesScore += 1;
-							}
-						} else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07> ().phase07FoodStrategy03Selected) {							
-							phase08ConversationTracker = 5300;
-							phase07StrategiesScore += 2;
-						} 
-					}
-				}
+                else if (phase08ConversationTracker == 5000)
+                {
+                    ChatLeftNameText.text = playerNameString;
+                    ChatTextLeftHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
+                    GameObject phase07Part03SecondResult = Phase07Part03DropZoneArray[2];
+                    ChatLeftText.text = "Next, I would like to ask how you managed to " + phase07Part03SecondResult.GetComponent<DropZonePhase07>().goalString01 + ". We decided you were going to " + phase07FoodStrategyStringArray[2] + " and " + phase07FoodStrategyStringArray[3] + ". How did you manage to make these changes?";
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone06))
+                    {
+                        if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "nothing";
+                            if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            {
+                                phase08ConversationTracker = 5100;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "can't open the tinned fish";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "don't know what to replace the delivered meal with in the week";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        {
+                            phase08Selection02FoodStrategy01 = "nuffin";
+                            if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            {
+                                phase08ConversationTracker = 5100;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "can't open the tinned fish";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                            else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            {
+                                phase08Selection02FoodStrategy02 = "don't know what to replace the delivered meal with in the week";
+                                phase08ConversationTracker = 5200;
+                                phase07StrategiesScore += 1;
+                            }
+                        }
+                        else if (Phase07Part03DropZone06.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        {
+                            phase08ConversationTracker = 5300;
+                            phase07StrategiesScore += 2;
+                        }
+                    }
+                }
                 else if (phase08ConversationTracker == 5100)
                 {
                     ChatRightTwoText.text = "Oh I am actually happy with the meals I have on the weekends, I cope well with them and can't afford too many ready-made frozen meals.";
@@ -10602,23 +11179,26 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                 }
                 else if (phase08ConversationTracker == 5200)
                 {
-					if (phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I found this a bit challenging as I feel I cope well with my weekend meals as it currently is and " + phase08Selection02FoodStrategy02 + ".";
-					} else if (!phase08Goal01AlreadyDiscussed) {
-						ChatRightTwoText.text = "I found this a bit challenging as I feel I cope well with my weekend meals as it currently is and " + phase08Selection01FoodStrategy02 + ".";
-					}
+                    if (phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I found this a bit challenging as I feel I cope well with my weekend meals as it currently is and " + phase08Selection02FoodStrategy02 + ".";
+                    }
+                    else if (!phase08Goal01AlreadyDiscussed)
+                    {
+                        ChatRightTwoText.text = "I found this a bit challenging as I feel I cope well with my weekend meals as it currently is and " + phase08Selection01FoodStrategy02 + ".";
+                    }
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatRightTwoAnim.SetBool("ChatDefault", false);
                     ChatRightTwoAnim.SetBool("ChatActivated", true);
-					phase08Goal01AlreadyDiscussed = true;
+                    phase08Goal01AlreadyDiscussed = true;
                     phase08ConversationTracker = 5201;
                 }
                 else if (phase08ConversationTracker == 5201)
@@ -10626,7 +11206,7 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
-					ChatLeftTwoText.text = "It sounds like the strategies for Marta was not appropriate which resulted in non-compliance. This goal was also not a top priority to address in the short-term. Careful consideration of her needs and her current meals will help you assess the importance of this goal and these strategies.";
+                    ChatLeftTwoText.text = "It sounds like the strategies for Marta was not appropriate which resulted in non-compliance. This goal was also not a top priority to address in the short-term. Careful consideration of her needs and her current meals will help you assess the importance of this goal and these strategies.";
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
                     ChatRightTwoAnim.SetBool("ChatActivated", false);
@@ -10641,7 +11221,7 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                 }
                 else if (phase08ConversationTracker == 5300)
@@ -10660,7 +11240,7 @@ public class MenuOptions : MonoBehaviour
                     ChatLeftTwoNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
-					ChatLeftTwoText.text = "It sounds like the strategies for Marta was not appropriate which resulted in non-compliance. This goal was also not a top priority to address in the short-term. Careful consideration of her needs and her current meals will help you assess the importance of this goal and these strategies.";
+                    ChatLeftTwoText.text = "It sounds like the strategies for Marta was not appropriate which resulted in non-compliance. This goal was also not a top priority to address in the short-term. Careful consideration of her needs and her current meals will help you assess the importance of this goal and these strategies.";
                     ChatLeftAnim.SetBool("ChatFinishedMoveUp", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
                     ChatRightTwoAnim.SetBool("ChatActivated", false);
@@ -10675,44 +11255,48 @@ public class MenuOptions : MonoBehaviour
                     ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftTwoAnim.SetBool("ChatActivated", false);
                     ChatLeftTwoAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
                     phase08ConversationTracker = 5400;
                 }
                 else if (phase08ConversationTracker == 5400)
                 {
-					phase08ThoughtsInputBoxGroup.SetActive(false);
-					ChatLeftTwoNameText.text = playerNameString;
-					ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
-					if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy01Selected == true) {
-						ChatRightText.text = "Yes I have continued with receiving my meals, it is a real help for me.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
-						phase08ConversationTracker = 5401;
-					} else if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy02Selected == true) {
-						ChatRightText.text = "Oh I just don't have the energy at this point in time t prepare meals in bulk so I couldn'y get to this.";
-						ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
-						phase08ConversationTracker = 5410;
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);                    
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = playerNameString;
+                    ChatTextLeftTwoHeaderImage.color = playerChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = PlayerPortraitImage;
+                    if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy01Selected == true)
+                    {
+                        ChatRightText.text = "Yes I have continued with receiving my meals, it is a real help for me.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString01 + ". How did you manage this change?";
+                        phase08ConversationTracker = 5401;
+                    }
+                    else if (dropZonePhase07EducationalStrategy05.phase07EducationalStrategy02Selected == true)
+                    {
+                        ChatRightText.text = "Oh I just don't have the energy at this point in time t prepare meals in bulk so I couldn'y get to this.";
+                        ChatLeftTwoText.text = "Okay Marta, so the next strategy we spoke about was to " + dropZonePhase07EducationalStrategy04.educationalStrategyString02 + ". How did you manage this change?";
+                        phase08ConversationTracker = 5410;
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
                 }
-				else if (phase08ConversationTracker == 5401) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool ("ChatDefault", false);
-					ChatRightAnim.SetBool ("ChatActivated", false);
-					phase08ConversationTracker = 5402;
-				}
+                else if (phase08ConversationTracker == 5401)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", false);
+                    phase08ConversationTracker = 5402;
+                }
                 else if (phase08ConversationTracker == 5402)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
                     ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
                     NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
-                    ChatLeftText.text = "Marta already had home delivered meals in place. Although it is good to confirm as an alternative, another education strategy which will add to her current knowledge and skills to improve her nutrition status would be more appropriate. This goal was also not a top priority to address in the short-term as Marta is coping well with her current food.";                    
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
-					ChatRightAnim.SetBool("ChatActivated", false);
+                    ChatLeftText.text = "Marta already had home delivered meals in place. Although it is good to confirm as an alternative, another education strategy which will add to her current knowledge and skills to improve her nutrition status would be more appropriate. This goal was also not a top priority to address in the short-term as Marta is coping well with her current food.";
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
+                    ChatRightAnim.SetBool("ChatActivated", false);
                     ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
                     ChatLeftAnim.SetBool("ChatDefault", false);
                     ChatLeftAnim.SetBool("ChatActivated", true);
@@ -10724,17 +11308,18 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					phase08ConversationTracker = 6000;
+                    phase08ConversationTracker = 6000;
                 }
-				else if (phase08ConversationTracker == 5410) {
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatRightAnim.SetBool ("ChatDefault", false);
-					ChatRightAnim.SetBool ("ChatActivated", false);
-					phase08ConversationTracker = 5411;
-				}
+                else if (phase08ConversationTracker == 5410)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatRightAnim.SetBool("ChatDefault", false);
+                    ChatRightAnim.SetBool("ChatActivated", false);
+                    phase08ConversationTracker = 5411;
+                }
                 else if (phase08ConversationTracker == 5411)
                 {
                     ChatLeftNameText.text = dieteticSupervisorNameString;
@@ -10755,57 +11340,65 @@ public class MenuOptions : MonoBehaviour
                     ChatRightAnim.SetBool("ChatDefault", true);
                     ChatLeftAnim.SetBool("ChatActivated", false);
                     ChatLeftAnim.SetBool("ChatDefault", true);
-					phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
+                    phase08ThoughtsInputBoxGroup.GetComponentInChildren<Text>().text = "";
                     phase08ThoughtsInputBoxGroup.SetActive(true);
-					phase08ConversationTracker = 6000;
+                    phase08ConversationTracker = 6000;
                 }
-				else if (phase08ConversationTracker == 6000) {
-					phase08ThoughtsInputBoxGroup.SetActive (false);
-					ChatLeftTwoNameText.text = dieteticSupervisorNameString;
-					ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
-					NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
-					if (!phase08InsufficientFluidAddressed) {
-						ChatLeftTwoText.text = "You missed that Marta was dehydrated in hospital. This was an important nutrition concern to address and will result in a more favourable outcome for Marta.";
-						if (!phase08InadequateEnergyAndProteinIntakeAddressed) {
-							ChatLeftTwoText.text = ChatLeftTwoText.text + " Marta is moderately malnourished and not meeting her energy and protein needs. She needs to increase her energy and protein intake using energy and nutrient rich meals and snacks. She also complains of appetite loss, so prescribing food that is not big in volume but rich in energy and nutrients will be important to consider.";
-						}
-					}
-					else if (phase08InsufficientFluidAddressed && !phase08InadequateEnergyAndProteinIntakeAddressed) {
-						ChatLeftTwoText.text = "Marta is moderately malnourished and not meeting her energy and protein needs. She needs to increase her energy and protein intake using energy and nutrient rich meals and snacks. She also complains of appetite loss, so prescribing food that is not big in volume but rich in energy and nutrients will be important to consider.";
-					}
-					else if (phase08InsufficientFluidAddressed && phase08InadequateEnergyAndProteinIntakeAddressed) {
-						ChatLeftTwoText.text = "Okay, let's continue.";
-					}
-					ChatLeftTwoAnim.SetBool ("ChatDefault", false);
-					ChatLeftTwoAnim.SetBool ("ChatActivated", true);
-					phase08ConversationTracker = 6001;
-				}
-				else if (phase08ConversationTracker == 6001) {					
-					ChatLeftNameText.text = dieteticSupervisorNameString;
-					ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
-					NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
-					ChatLeftText.text = playerNameString + ", you have now provided nutrition care for Marta and experienced her progress at two week follow-up. Her progress to date links to your ability to identify key nutritional concerns to address in the short therm. Let’s look at your overall performance through each step in the nutrition care process.";
-					ChatLeftTwoAnim.SetBool ("ChatActivated", false);
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", true);
-					ChatLeftAnim.SetBool("ChatDefault", false);
-					ChatLeftAnim.SetBool("ChatActivated", true);
-					phase08ConversationTracker = 6002;
-					ChatNextButtonText.text = "END CHAT";
-				}
-				else if (phase08ConversationTracker == 6002) {
-					ChatLeftTwoAnim.SetBool ("ChatFinishedMoveUp", false);
-					ChatLeftTwoAnim.SetBool ("ChatDefault", true);
-					ChatLeftAnim.SetBool ("ChatActivated", false);
-					ChatLeftAnim.SetBool ("ChatDefault", true);
-					inChat = false;
-					Phase08EndResultsMessageToggle ();
-					StartCoroutine ("Phase08DelayAnimation");
-				}
+                else if (phase08ConversationTracker == 6000)
+                {
+                    phase08ThoughtsInputBoxGroup.SetActive(false);
+                    ChatLeftTwoNameText.text = dieteticSupervisorNameString;
+                    ChatTextLeftTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
+                    NPCLeftChatTwoPortraitImage.sprite = DieticianPortraitImage;
+                    if (!phase08InsufficientFluidAddressed)
+                    {
+                        ChatLeftTwoText.text = "You missed that Marta was dehydrated in hospital. This was an important nutrition concern to address and will result in a more favourable outcome for Marta.";
+                        if (!phase08InadequateEnergyAndProteinIntakeAddressed)
+                        {
+                            ChatLeftTwoText.text = ChatLeftTwoText.text + " Marta is moderately malnourished and not meeting her energy and protein needs. She needs to increase her energy and protein intake using energy and nutrient rich meals and snacks. She also complains of appetite loss, so prescribing food that is not big in volume but rich in energy and nutrients will be important to consider.";
+                        }
+                    }
+                    else if (phase08InsufficientFluidAddressed && !phase08InadequateEnergyAndProteinIntakeAddressed)
+                    {
+                        ChatLeftTwoText.text = "Marta is moderately malnourished and not meeting her energy and protein needs. She needs to increase her energy and protein intake using energy and nutrient rich meals and snacks. She also complains of appetite loss, so prescribing food that is not big in volume but rich in energy and nutrients will be important to consider.";
+                    }
+                    else if (phase08InsufficientFluidAddressed && phase08InadequateEnergyAndProteinIntakeAddressed)
+                    {
+                        ChatLeftTwoText.text = "Okay, let's continue.";
+                    }
+                    ChatLeftTwoAnim.SetBool("ChatDefault", false);
+                    ChatLeftTwoAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 6001;
+                }
+                else if (phase08ConversationTracker == 6001)
+                {
+                    ChatLeftNameText.text = dieteticSupervisorNameString;
+                    ChatTextLeftHeaderImage.color = dietiticSupervisorChatHeaderColour;
+                    NPCLeftChatPortraitImage.sprite = DieticianPortraitImage;
+                    ChatLeftText.text = playerNameString + ", you have now provided nutrition care for Marta and experienced her progress at two week follow-up. Her progress to date links to your ability to identify key nutritional concerns to address in the short therm. Let’s look at your overall performance through each step in the nutrition care process.";
+                    ChatLeftTwoAnim.SetBool("ChatActivated", false);
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
+                    ChatLeftAnim.SetBool("ChatDefault", false);
+                    ChatLeftAnim.SetBool("ChatActivated", true);
+                    phase08ConversationTracker = 6002;
+                    ChatNextButtonText.text = "END CHAT";
+                }
+                else if (phase08ConversationTracker == 6002)
+                {
+                    ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", false);
+                    ChatLeftTwoAnim.SetBool("ChatDefault", true);
+                    ChatLeftAnim.SetBool("ChatActivated", false);
+                    ChatLeftAnim.SetBool("ChatDefault", true);
+                    inChat = false;
+                    Phase08EndResultsMessageToggle();
+                    StartCoroutine("Phase08DelayAnimation");
+                }
             }
-		}
+        }
     }
 
-    void SetDateOnProgressNotes() {
+    void SetDateOnProgressNotes()
+    {
         System.DateTime PreviousTime2daysAgo = time.AddDays(-2);
         ProgressNotesDate01Text.text = PreviousTime2daysAgo.ToString("MMM dd") + ", 1:30pm";
         ProgressNotesDate02Text.text = PreviousTime2daysAgo.ToString("MMM dd") + ", 3:10pm";
@@ -10823,8 +11416,10 @@ public class MenuOptions : MonoBehaviour
         ProgressNotesDate10Text.text = PreviousTime1dayAgo.ToString("MMM dd") + ", 3:00pm";
     }
 
-    public void BicepScrollSnapToggle() {
-        if (BicepScrollSnapAnim.GetBool("ScrollSnapDefault")) {
+    public void BicepScrollSnapToggle()
+    {
+        if (BicepScrollSnapAnim.GetBool("ScrollSnapDefault"))
+        {
             BicepScrollSnapAnim.SetBool("ScrollSnapDefault", false);
             BicepScrollSnapAnim.SetBool("ScrollSnapAnimateIn", true);
         }
@@ -11060,7 +11655,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void CanExamineNotificationToggle() {
+    public void CanExamineNotificationToggle()
+    {
         if (CanExamineMessageToggleAnim.GetBool("MenuDefault") == true)
         {
             CanExamineMessageToggleAnim.SetBool("MenuDefault", false);
@@ -11110,14 +11706,17 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase07CompleteCheck() {		
+    public void Phase07CompleteCheck()
+    {
         Phase07Part04Complete = true;
         phase07PartThreePopup.SetTrigger("AnimateOut");
-        Phase07Part05CompletedAnim.SetTrigger("AnimateIn");        
+        Phase07Part05CompletedAnim.SetTrigger("AnimateIn");
     }
 
-    public void phase06CompleteCheck() {
-        if (phase6Part04Complete) {
+    public void phase06CompleteCheck()
+    {
+        if (phase6Part04Complete)
+        {
             PhaseManagement.gamePhase = 7;
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
@@ -11148,7 +11747,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase06Part01AlertMessageToggle() {
+    public void Phase06Part01AlertMessageToggle()
+    {
         if (Phase6PartOneAlertMessageGroupAnim.GetBool("MenuDefault") == true)
         {
             Phase6PartOneAlertMessageGroupAnim.SetBool("MenuDefault", false);
@@ -11164,23 +11764,25 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-	public void Phase08EndResultsMessageToggle() {
-		if (phase08EndResultsMessageAnim.GetBool("MenuDefault") == true)
-		{
-			phase08EndResultsMessageAnim.SetBool("MenuDefault", false);
-			phase08EndResultsMessageAnim.SetBool("MenuActivated", true);
-		}
-		else if (phase08EndResultsMessageAnim.GetBool("MenuActivated") == false)
-		{
-			phase08EndResultsMessageAnim.SetBool("MenuActivated", true);
-		}
-		else if (phase08EndResultsMessageAnim.GetBool("MenuActivated") == true)
-		{
-			phase08EndResultsMessageAnim.SetBool("MenuActivated", false);
-		}
-	}
+    public void Phase08EndResultsMessageToggle()
+    {
+        if (phase08EndResultsMessageAnim.GetBool("MenuDefault") == true)
+        {
+            phase08EndResultsMessageAnim.SetBool("MenuDefault", false);
+            phase08EndResultsMessageAnim.SetBool("MenuActivated", true);
+        }
+        else if (phase08EndResultsMessageAnim.GetBool("MenuActivated") == false)
+        {
+            phase08EndResultsMessageAnim.SetBool("MenuActivated", true);
+        }
+        else if (phase08EndResultsMessageAnim.GetBool("MenuActivated") == true)
+        {
+            phase08EndResultsMessageAnim.SetBool("MenuActivated", false);
+        }
+    }
 
-    public void Phase5WeightEvaluationAlertMessageToggle() {
+    public void Phase5WeightEvaluationAlertMessageToggle()
+    {
         if (Phase5BodyWeightAlertMessageGroup.GetBool("MenuDefault") == true)
         {
             Phase5BodyWeightAlertMessageGroup.SetBool("MenuDefault", false);
@@ -11196,7 +11798,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void ReceivedItemToggle() {
+    public void ReceivedItemToggle()
+    {
         if (receivedItemMessageToggleAnim.GetBool("MenuDefault") == true)
         {
             receivedItemMessageToggleAnim.SetBool("MenuDefault", false);
@@ -11212,7 +11815,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void NutritionalRequirementsToggle() {
+    public void NutritionalRequirementsToggle()
+    {
         if (NutrionalRequirementsAnim.GetBool("NutritionalRequirementsDefault") == true)
         {
             NutrionalRequirementsAnim.SetBool("NutritionalRequirementsDefault", false);
@@ -11252,7 +11856,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase06Part02Restart() {
+    public void Phase06Part02Restart()
+    {
         phase6Part01Selection01Selected = false;
         phase6Part01Selection02Selected = false;
         phase6Part01Selection03Selected = false;
@@ -11282,11 +11887,11 @@ public class MenuOptions : MonoBehaviour
         phase6Part01Selection12SelectImage.sprite = Phase6DeselectedOptionSprite;
         phase6Part01Selection13SelectImage.sprite = Phase6DeselectedOptionSprite;
         phase6Part01Selection14SelectImage.sprite = Phase6DeselectedOptionSprite;
-        phase6Part01Selection15SelectImage.sprite = Phase6DeselectedOptionSprite;        
+        phase6Part01Selection15SelectImage.sprite = Phase6DeselectedOptionSprite;
         Phase6Part01SelectedAmount = 0;
         phase6Part01Complete = false;
         Phase6Part01CurrentTransformInt = 0;
-		Phase6Part02CurrentTransformInt = 0;
+        Phase6Part02CurrentTransformInt = 0;
         Phase07NutritionGoal01.SetActive(false);
         Phase07NutritionGoal02.SetActive(false);
         Phase07NutritionGoal03.SetActive(false);
@@ -11323,35 +11928,38 @@ public class MenuOptions : MonoBehaviour
         Phase6PartOneToTwoSelectionGameObjectArray.Clear();
         Phase6Part02Group.SetTrigger("AnimateOut");
         Phase6Part01Group.SetTrigger("AnimateIn");
-		phase6Part01Complete = false;
-		phase6Part02Complete = false;
-		phase6Part03Complete = false;
-		phase6Part04Complete = false;
+        phase6Part01Complete = false;
+        phase6Part02Complete = false;
+        phase6Part03Complete = false;
+        phase6Part04Complete = false;
     }
 
-    public void Phase06Part01Selection01() {
+    public void Phase06Part01Selection01()
+    {
         if (!phase6Part01Selection01Selected)
-        {			
+        {
             if (Phase6Part01SelectedAmount < 5)
             {
                 phase6Part01Selection01Selected = true;
                 phase6Part01Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject01);
-                Phase07NutritionGoal04.SetActive(true);                
+                Phase07NutritionGoal04.SetActive(true);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection01Selected = false;
             phase6Part01Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject01);
             Phase07NutritionGoal04.SetActive(false);
             Phase6Part01SelectedAmount--;
-        }                
+        }
     }
 
     public void Phase06Part01Selection02()
@@ -11362,117 +11970,140 @@ public class MenuOptions : MonoBehaviour
             {
                 phase6Part01Selection02Selected = true;
                 phase6Part01Selection02SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-                Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject02);                
+                Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject02);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection02Selected = false;
             phase6Part01Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject02);            
+            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject02);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection03()
     {
         if (!phase6Part01Selection03Selected)
         {
-			if (phase6Part01Selection05Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else if (phase6Part01Selection15Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else {
-				if (Phase6Part01SelectedAmount < 5)
-				{
-					phase6Part01Selection03Selected = true;
-					phase6Part01Selection03SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-					Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject03);                
-					Phase6Part01SelectedAmount++;
-				}
-				else {
-					phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-					Phase06Part01AlertMessageToggle();
-				}
-			}                       
+            if (phase6Part01Selection05Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else if (phase6Part01Selection15Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else
+            {
+                if (Phase6Part01SelectedAmount < 5)
+                {
+                    phase6Part01Selection03Selected = true;
+                    phase6Part01Selection03SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                    Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject03);
+                    Phase6Part01SelectedAmount++;
+                }
+                else
+                {
+                    phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                    Phase06Part01AlertMessageToggle();
+                }
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection03Selected = false;
             phase6Part01Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject03);            
+            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject03);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection04()
     {
         if (!phase6Part01Selection04Selected)
         {
-			if (phase6Part01Selection05Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else if (phase6Part01Selection15Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else {
-				if (Phase6Part01SelectedAmount < 5)
-				{
-					phase6Part01Selection04Selected = true;
-					phase6Part01Selection04SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-					Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject04);                
-					Phase6Part01SelectedAmount++;
-				}
-				else {
-					phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-					Phase06Part01AlertMessageToggle();
-				} 
-			}                       
+            if (phase6Part01Selection05Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else if (phase6Part01Selection15Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else
+            {
+                if (Phase6Part01SelectedAmount < 5)
+                {
+                    phase6Part01Selection04Selected = true;
+                    phase6Part01Selection04SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                    Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject04);
+                    Phase6Part01SelectedAmount++;
+                }
+                else
+                {
+                    phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                    Phase06Part01AlertMessageToggle();
+                }
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection04Selected = false;
             phase6Part01Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject04);            
+            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject04);
             Phase6Part01SelectedAmount--;
-        }       
+        }
     }
 
     public void Phase06Part01Selection05()
     {
         if (!phase6Part01Selection05Selected)
         {
-			if (phase6Part01Selection03Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else if (phase6Part01Selection04Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else {
-				if (Phase6Part01SelectedAmount < 5)
-				{
-					phase6Part01Selection05Selected = true;
-					phase6Part01Selection05SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-					Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject05);                
-					Phase6Part01SelectedAmount++;
-				}
-				else {
-					phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-					Phase06Part01AlertMessageToggle();
-				} 
-			}                       
+            if (phase6Part01Selection03Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else if (phase6Part01Selection04Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else
+            {
+                if (Phase6Part01SelectedAmount < 5)
+                {
+                    phase6Part01Selection05Selected = true;
+                    phase6Part01Selection05SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                    Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject05);
+                    Phase6Part01SelectedAmount++;
+                }
+                else
+                {
+                    phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                    Phase06Part01AlertMessageToggle();
+                }
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection05Selected = false;
             phase6Part01Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject05);            
+            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject05);
             Phase6Part01SelectedAmount--;
         }
-        
+
     }
 
     public void Phase06Part01Selection06()
@@ -11486,17 +12117,19 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject06);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection06Selected = false;
             phase6Part01Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject06);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection07()
@@ -11510,18 +12143,20 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject07);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection07Selected = false;
             phase6Part01Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject07);
             Phase6Part01SelectedAmount--;
         }
-        
+
     }
 
     public void Phase06Part01Selection08()
@@ -11535,17 +12170,19 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject08);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection08Selected = false;
             phase6Part01Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject08);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection09()
@@ -11556,18 +12193,20 @@ public class MenuOptions : MonoBehaviour
             {
                 phase6Part01Selection09Selected = true;
                 phase6Part01Selection09SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-                Phase6Part01SelectedAmount++;                
+                Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection09Selected = false;
             phase6Part01Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection10()
@@ -11581,17 +12220,19 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject09);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection10Selected = false;
             phase6Part01Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject09);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection11()
@@ -11605,17 +12246,19 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject10);
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection11Selected = false;
             phase6Part01Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject10);
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection12()
@@ -11628,16 +12271,18 @@ public class MenuOptions : MonoBehaviour
                 phase6Part01Selection12SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection12Selected = false;
             phase6Part01Selection12SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection13()
@@ -11650,17 +12295,19 @@ public class MenuOptions : MonoBehaviour
                 phase6Part01Selection13SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection13Selected = false;
             phase6Part01Selection13SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part01SelectedAmount--;
         }
-        
+
     }
 
     public void Phase06Part01Selection14()
@@ -11673,49 +12320,58 @@ public class MenuOptions : MonoBehaviour
                 phase6Part01Selection14SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part01SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection14Selected = false;
             phase6Part01Selection14SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part01Selection15()
     {
         if (!phase6Part01Selection15Selected)
         {
-			if (phase6Part01Selection03Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else if (phase6Part01Selection04Selected) {
-				phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
-				Phase06Part01AlertMessageToggle ();
-			} else {
-				if (Phase6Part01SelectedAmount < 5)
-				{
-					phase6Part01Selection15Selected = true;
-					phase6Part01Selection15SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-					Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject11);                
-					Phase6Part01SelectedAmount++;
-				}
-				else {
-					phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-					Phase06Part01AlertMessageToggle();
-				}
-			}                        
+            if (phase6Part01Selection03Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else if (phase6Part01Selection04Selected)
+            {
+                phase6part01AlertMessageText.text = "RECONSIDER THE APPROPRIATENESS OF YOUR SELECTED NUTRITION PROBLEMS";
+                Phase06Part01AlertMessageToggle();
+            }
+            else
+            {
+                if (Phase6Part01SelectedAmount < 5)
+                {
+                    phase6Part01Selection15Selected = true;
+                    phase6Part01Selection15SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                    Phase6PartOneToTwoSelectionGameObjectArray.Add(Phase6PartSelectionGameObject11);
+                    Phase6Part01SelectedAmount++;
+                }
+                else
+                {
+                    phase6part01AlertMessageText.text = "Please only select up to Five (5) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                    Phase06Part01AlertMessageToggle();
+                }
+            }
         }
-        else {
+        else
+        {
             phase6Part01Selection15Selected = false;
             phase6Part01Selection15SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject11);           
-                       
+            Phase6PartOneToTwoSelectionGameObjectArray.Remove(Phase6PartSelectionGameObject11);
+
             Phase6Part01SelectedAmount--;
-        }        
+        }
     }
 
     public void Phase06Part02Selection01()
@@ -11725,22 +12381,24 @@ public class MenuOptions : MonoBehaviour
             if (Phase6Part02SelectedAmount < 3)
             {
                 phase6Part02Selection01Selected = true;
-                phase6Part02Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;                
+                phase6Part02Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
-				phase06part02CombinedScore += 2;
+                phase06part02CombinedScore += 2;
 
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection01Selected = false;
-            phase6Part02Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;            
+            phase6Part02Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-			phase06part02CombinedScore -= 2;
-        }        
+            phase06part02CombinedScore -= 2;
+        }
     }
 
     public void Phase06Part02Selection02()
@@ -11755,56 +12413,78 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartThreeToFourSelectionGameObjectArray.Add(Phase6Part4SelectionGameObject02);
                 Phase6PartThreeDropZonesArray.Add(Phase6Part3DropZone02);
                 Phase6Part02SelectedAmount++;
-				if (phase06part02PotentialIssue01String == "") {
-					phase06part02PotentialIssue01String = "Insufficient fluid intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")  {
-					phase06part02PotentialIssue02String = "Insufficient fluid intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "") {
-					phase06part02PotentialIssue03String = "Insufficient fluid intake";
-				}
-				if (phase06part03Evidence01String == "") {
-					phase06part03Evidence01String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")  {
-					phase06part03Evidence02String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "") {
-					phase06part03Evidence03String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
-				}
+                if (phase06part02PotentialIssue01String == "")
+                {
+                    phase06part02PotentialIssue01String = "Insufficient fluid intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")
+                {
+                    phase06part02PotentialIssue02String = "Insufficient fluid intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "")
+                {
+                    phase06part02PotentialIssue03String = "Insufficient fluid intake";
+                }
+                if (phase06part03Evidence01String == "")
+                {
+                    phase06part03Evidence01String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")
+                {
+                    phase06part03Evidence02String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "")
+                {
+                    phase06part03Evidence03String = "meeting less than 60% of her needs, increased serum potassium and sodium levels.";
+                }
                 Phase07NutritionGoal04.SetActive(true);
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection02Selected = false;
             phase6Part02Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartTwoToThreeSelectionGameObjectArray.Remove(Phase6Part2SelectionGameObject02);
             Phase6PartThreeToFourSelectionGameObjectArray.Remove(Phase6Part4SelectionGameObject02);
             Phase6PartThreeDropZonesArray.Remove(Phase6Part3DropZone02);
             Phase6Part02SelectedAmount--;
-			if (phase06part02PotentialIssue03String == "Insufficient fluid intake") {
-				phase06part02PotentialIssue03String = "";
-			} else if (phase06part02PotentialIssue02String == "Insufficient fluid intake") {
-				phase06part02PotentialIssue02String = "";
-			} else if (phase06part02PotentialIssue01String == "Insufficient fluid intake") {
-				phase06part02PotentialIssue01String = "";
-			}
-			if (phase06part03Evidence03String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.") {
-				phase06part03Evidence03String = "";
-			} else if (phase06part03Evidence02String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.") {
-				phase06part03Evidence02String = "";
-			} else if (phase06part03Evidence01String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.") {
-				phase06part03Evidence01String = "";
-			}
+            if (phase06part02PotentialIssue03String == "Insufficient fluid intake")
+            {
+                phase06part02PotentialIssue03String = "";
+            }
+            else if (phase06part02PotentialIssue02String == "Insufficient fluid intake")
+            {
+                phase06part02PotentialIssue02String = "";
+            }
+            else if (phase06part02PotentialIssue01String == "Insufficient fluid intake")
+            {
+                phase06part02PotentialIssue01String = "";
+            }
+            if (phase06part03Evidence03String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.")
+            {
+                phase06part03Evidence03String = "";
+            }
+            else if (phase06part03Evidence02String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.")
+            {
+                phase06part03Evidence02String = "";
+            }
+            else if (phase06part03Evidence01String == "meeting less than 60% of her needs, increased serum potassium and sodium levels.")
+            {
+                phase06part03Evidence01String = "";
+            }
             Phase07NutritionGoal04.SetActive(false);
-        }        
+        }
     }
     public void Phase06Part02Selection03()
     {
         if (!phase6Part02Selection03Selected)
         {
-			phase06part02CombinedScore += 1;
+            phase06part02CombinedScore += 1;
             if (Phase6Part02SelectedAmount < 3)
             {
                 phase6Part02Selection03Selected = true;
@@ -11813,57 +12493,79 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartThreeToFourSelectionGameObjectArray.Add(Phase6Part4SelectionGameObject03);
                 Phase6PartThreeDropZonesArray.Add(Phase6Part3DropZone03);
                 Phase6Part02SelectedAmount++;
-				if (phase06part02PotentialIssue01String == "") {
-					phase06part02PotentialIssue01String = "Insufficient energy intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")  {
-					phase06part02PotentialIssue02String = "Insufficient energy intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "") {
-					phase06part02PotentialIssue03String = "Insufficient energy intake";
-				}
-				if (phase06part03Evidence01String == "") {
-					phase06part03Evidence01String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")  {
-					phase06part03Evidence02String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "") {
-					phase06part03Evidence03String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
-				}
+                if (phase06part02PotentialIssue01String == "")
+                {
+                    phase06part02PotentialIssue01String = "Insufficient energy intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")
+                {
+                    phase06part02PotentialIssue02String = "Insufficient energy intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "")
+                {
+                    phase06part02PotentialIssue03String = "Insufficient energy intake";
+                }
+                if (phase06part03Evidence01String == "")
+                {
+                    phase06part03Evidence01String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")
+                {
+                    phase06part03Evidence02String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "")
+                {
+                    phase06part03Evidence03String = "meeting less than 75 % of her needs, recent weight loss of 8.5%";
+                }
                 Phase07NutritionGoal01.SetActive(true);
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
-			phase06part02CombinedScore -= 1;
+        else
+        {
+            phase06part02CombinedScore -= 1;
             phase6Part02Selection03Selected = false;
             phase6Part02Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartTwoToThreeSelectionGameObjectArray.Remove(Phase6Part2SelectionGameObject03);
             Phase6PartThreeToFourSelectionGameObjectArray.Remove(Phase6Part4SelectionGameObject03);
             Phase6PartThreeDropZonesArray.Remove(Phase6Part3DropZone03);
             Phase6Part02SelectedAmount--;
-			if (phase06part02PotentialIssue03String == "Insufficient energy intake") {
-				phase06part02PotentialIssue03String = "";
-			} else if (phase06part02PotentialIssue02String == "Insufficient energy intake") {
-				phase06part02PotentialIssue02String = "";
-			} else if (phase06part02PotentialIssue01String == "Insufficient energy intake") {
-				phase06part02PotentialIssue01String = "";
-			}
-			if (phase06part03Evidence03String == "meeting less than 75 % of her needs, recent weight loss of 8.5%") {
-				phase06part03Evidence03String = "";
-			} else if (phase06part03Evidence02String == "meeting less than 75 % of her needs, recent weight loss of 8.5%") {
-				phase06part03Evidence02String = "";
-			} else if (phase06part03Evidence01String == "meeting less than 75 % of her needs, recent weight loss of 8.5%") {
-				phase06part03Evidence01String = "";
-			}
+            if (phase06part02PotentialIssue03String == "Insufficient energy intake")
+            {
+                phase06part02PotentialIssue03String = "";
+            }
+            else if (phase06part02PotentialIssue02String == "Insufficient energy intake")
+            {
+                phase06part02PotentialIssue02String = "";
+            }
+            else if (phase06part02PotentialIssue01String == "Insufficient energy intake")
+            {
+                phase06part02PotentialIssue01String = "";
+            }
+            if (phase06part03Evidence03String == "meeting less than 75 % of her needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence03String = "";
+            }
+            else if (phase06part03Evidence02String == "meeting less than 75 % of her needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence02String = "";
+            }
+            else if (phase06part03Evidence01String == "meeting less than 75 % of her needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence01String = "";
+            }
             Phase07NutritionGoal01.SetActive(false);
-        }        
+        }
     }
     public void Phase06Part02Selection04()
     {
         if (!phase6Part02Selection04Selected)
         {
-			phase06part02CombinedScore += 1;
+            phase06part02CombinedScore += 1;
             if (Phase6Part02SelectedAmount < 3)
             {
                 phase6Part02Selection04Selected = true;
@@ -11872,51 +12574,73 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartThreeToFourSelectionGameObjectArray.Add(Phase6Part4SelectionGameObject04);
                 Phase6PartThreeDropZonesArray.Add(Phase6Part3DropZone04);
                 Phase6Part02SelectedAmount++;
-				if (phase06part02PotentialIssue01String == "") {
-					phase06part02PotentialIssue01String = "Insufficient protein intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")  {
-					phase06part02PotentialIssue02String = "Insufficient protein intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "") {
-					phase06part02PotentialIssue03String = "Insufficient protein intake";
-				}
-				if (phase06part03Evidence01String == "") {
-					phase06part03Evidence01String = "meeting less than 67% of her needs.";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")  {
-					phase06part03Evidence02String = "meeting less than 67% of her needs.";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "") {
-					phase06part03Evidence03String = "meeting less than 67% of her needs.";
-				}
+                if (phase06part02PotentialIssue01String == "")
+                {
+                    phase06part02PotentialIssue01String = "Insufficient protein intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")
+                {
+                    phase06part02PotentialIssue02String = "Insufficient protein intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "")
+                {
+                    phase06part02PotentialIssue03String = "Insufficient protein intake";
+                }
+                if (phase06part03Evidence01String == "")
+                {
+                    phase06part03Evidence01String = "meeting less than 67% of her needs.";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")
+                {
+                    phase06part03Evidence02String = "meeting less than 67% of her needs.";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "")
+                {
+                    phase06part03Evidence03String = "meeting less than 67% of her needs.";
+                }
                 Phase07NutritionGoal02.SetActive(true);
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
-			phase06part02CombinedScore -= 1;
+        else
+        {
+            phase06part02CombinedScore -= 1;
             phase6Part02Selection04Selected = false;
             phase6Part02Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartTwoToThreeSelectionGameObjectArray.Remove(Phase6Part2SelectionGameObject04);
             Phase6PartThreeToFourSelectionGameObjectArray.Remove(Phase6Part4SelectionGameObject04);
             Phase6PartThreeDropZonesArray.Remove(Phase6Part3DropZone04);
             Phase6Part02SelectedAmount--;
-			if (phase06part02PotentialIssue03String == "Insufficient protein intake") {
-				phase06part02PotentialIssue03String = "";
-			} else if (phase06part02PotentialIssue02String == "Insufficient protein intake") {
-				phase06part02PotentialIssue02String = "";
-			} else if (phase06part02PotentialIssue01String == "Insufficient protein intake") {
-				phase06part02PotentialIssue01String = "";
-			}
-			if (phase06part03Evidence03String == "meeting less than 67% of her needs.") {
-				phase06part03Evidence03String = "";
-			} else if (phase06part03Evidence02String == "meeting less than 67% of her needs.") {
-				phase06part03Evidence02String = "";
-			} else if (phase06part03Evidence01String == "meeting less than 67% of her needs.") {
-				phase06part03Evidence01String = "";
-			}
+            if (phase06part02PotentialIssue03String == "Insufficient protein intake")
+            {
+                phase06part02PotentialIssue03String = "";
+            }
+            else if (phase06part02PotentialIssue02String == "Insufficient protein intake")
+            {
+                phase06part02PotentialIssue02String = "";
+            }
+            else if (phase06part02PotentialIssue01String == "Insufficient protein intake")
+            {
+                phase06part02PotentialIssue01String = "";
+            }
+            if (phase06part03Evidence03String == "meeting less than 67% of her needs.")
+            {
+                phase06part03Evidence03String = "";
+            }
+            else if (phase06part03Evidence02String == "meeting less than 67% of her needs.")
+            {
+                phase06part03Evidence02String = "";
+            }
+            else if (phase06part03Evidence01String == "meeting less than 67% of her needs.")
+            {
+                phase06part03Evidence01String = "";
+            }
             Phase07NutritionGoal02.SetActive(false);
-        }        
+        }
     }
     public void Phase06Part02Selection05()
     {
@@ -11930,54 +12654,78 @@ public class MenuOptions : MonoBehaviour
                 Phase6PartThreeToFourSelectionGameObjectArray.Add(Phase6Part4SelectionGameObject05);
                 Phase6PartThreeDropZonesArray.Add(Phase6Part3DropZone05);
                 Phase6Part02SelectedAmount++;
-				if (phase06part02PotentialIssue01String == "") {
-					phase06part02PotentialIssue01String = "Insufficient energy and protein intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")  {
-					phase06part02PotentialIssue02String = "Insufficient energy and protein intake";
-				} else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "") {
-					phase06part02PotentialIssue03String = "Insufficient energy and protein intake";
-				}
-				if (phase06part03Evidence01String == "") {
-					phase06part03Evidence01String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")  {
-					phase06part03Evidence02String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
-				} else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "") {
-					phase06part03Evidence03String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
-				}
-                if (!phase6Part02Selection11Selected) {
+                if (phase06part02PotentialIssue01String == "")
+                {
+                    phase06part02PotentialIssue01String = "Insufficient energy and protein intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String == "")
+                {
+                    phase06part02PotentialIssue02String = "Insufficient energy and protein intake";
+                }
+                else if (phase06part02PotentialIssue01String != "" && phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "")
+                {
+                    phase06part02PotentialIssue03String = "Insufficient energy and protein intake";
+                }
+                if (phase06part03Evidence01String == "")
+                {
+                    phase06part03Evidence01String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String == "")
+                {
+                    phase06part03Evidence02String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
+                }
+                else if (phase06part03Evidence01String != "" && phase06part03Evidence02String != "" && phase06part03Evidence03String == "")
+                {
+                    phase06part03Evidence03String = "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%";
+                }
+                if (!phase6Part02Selection11Selected)
+                {
                     Phase07NutritionGoal03.SetActive(true);
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection05Selected = false;
             phase6Part02Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartTwoToThreeSelectionGameObjectArray.Remove(Phase6Part2SelectionGameObject05);
             Phase6PartThreeToFourSelectionGameObjectArray.Remove(Phase6Part4SelectionGameObject05);
             Phase6PartThreeDropZonesArray.Remove(Phase6Part3DropZone05);
             Phase6Part02SelectedAmount--;
-			if (phase06part02PotentialIssue03String == "Insufficient energy and protein intake") {
-				phase06part02PotentialIssue03String = "";
-			} else if (phase06part02PotentialIssue02String == "Insufficient energy and protein intake") {
-				phase06part02PotentialIssue02String = "";
-			} else if (phase06part02PotentialIssue01String == "Insufficient energy and protein intake") {
-				phase06part02PotentialIssue01String = "";
-			}
-			if (phase06part03Evidence03String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%") {
-				phase06part03Evidence03String = "";
-			} else if (phase06part03Evidence02String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%") {
-				phase06part03Evidence02String = "";
-			} else if (phase06part03Evidence01String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%") {
-				phase06part03Evidence01String = "";
-			}
-            if (!phase6Part02Selection11Selected) {
+            if (phase06part02PotentialIssue03String == "Insufficient energy and protein intake")
+            {
+                phase06part02PotentialIssue03String = "";
+            }
+            else if (phase06part02PotentialIssue02String == "Insufficient energy and protein intake")
+            {
+                phase06part02PotentialIssue02String = "";
+            }
+            else if (phase06part02PotentialIssue01String == "Insufficient energy and protein intake")
+            {
+                phase06part02PotentialIssue01String = "";
+            }
+            if (phase06part03Evidence03String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence03String = "";
+            }
+            else if (phase06part03Evidence02String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence02String = "";
+            }
+            else if (phase06part03Evidence01String == "meeting less than 75% of her energy and less than 67% of her protein needs, recent weight loss of 8.5%")
+            {
+                phase06part03Evidence01String = "";
+            }
+            if (!phase6Part02Selection11Selected)
+            {
                 Phase07NutritionGoal03.SetActive(false);
             }
-        }        
+        }
     }
     public void Phase06Part02Selection06()
     {
@@ -11989,16 +12737,18 @@ public class MenuOptions : MonoBehaviour
                 phase6Part02Selection06SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection06Selected = false;
             phase6Part02Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-        }        
+        }
     }
     public void Phase06Part02Selection07()
     {
@@ -12010,16 +12760,18 @@ public class MenuOptions : MonoBehaviour
                 phase6Part02Selection07SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection07Selected = false;
             phase6Part02Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-        }        
+        }
     }
     public void Phase06Part02Selection08()
     {
@@ -12031,16 +12783,18 @@ public class MenuOptions : MonoBehaviour
                 phase6Part02Selection08SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection08Selected = false;
             phase6Part02Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-        }        
+        }
     }
     public void Phase06Part02Selection09()
     {
@@ -12052,16 +12806,18 @@ public class MenuOptions : MonoBehaviour
                 phase6Part02Selection09SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection09Selected = false;
             phase6Part02Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-        }        
+        }
     }
     public void Phase06Part02Selection10()
     {
@@ -12073,17 +12829,19 @@ public class MenuOptions : MonoBehaviour
                 phase6Part02Selection10SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part02SelectedAmount++;
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
-            
+
         }
-        else {
+        else
+        {
             phase6Part02Selection10Selected = false;
             phase6Part02Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part02SelectedAmount--;
-        }        
+        }
     }
     public void Phase06Part02Selection11()
     {
@@ -12121,16 +12879,19 @@ public class MenuOptions : MonoBehaviour
                 {
                     phase06part03Evidence03String = "having a BMI of < 22 kg/m2, an SGA score of B, wasting of temple, clavicle, shoulder, and calf.";
                 }
-                if (!phase6Part02Selection05Selected) {
+                if (!phase6Part02Selection05Selected)
+                {
                     Phase07NutritionGoal03.SetActive(true);
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Three (3) problems. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
         }
-        else {
+        else
+        {
             phase6Part02Selection11Selected = false;
             phase6Part02Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6PartTwoToThreeSelectionGameObjectArray.Remove(Phase6Part2SelectionGameObject06);
@@ -12165,217 +12926,223 @@ public class MenuOptions : MonoBehaviour
             {
                 Phase07NutritionGoal03.SetActive(false);
             }
-        }        
+        }
     }
 
-	public void Phase06Part03Selection01() {
-		if (!phase6Part03Selection01Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection01Selected = true;
-				Phase06Part03IncorrectCauseSelectedStringArray.Add("Although Rheumatoid Arthritis can increase energy needs, this is less likely to be the root cause for Marta’s current nutrition problem/s.");
-				phase6Part03Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
-                phase06Part03SelectedAmount++;
-			}
-			else if (phase06Part03SelectedAmount > 2) {
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else {
-			phase6Part03Selection01Selected = false;
-			phase6Part03Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
-			Phase06Part03IncorrectCauseSelectedStringArray.Remove("Although Rheumatoid Arthritis can increase energy needs, this is less likely to be the root cause for Marta’s current nutrition problem/s.");
-            phase06Part03SelectedAmount--;
-		}
-	}
-
-	public void Phase06Part03Selection02()
-	{
-		if (!phase6Part03Selection02Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection02Selected = true;
-				Phase06Part03CausesStringArray.Add("Reduced intake due to some of the nutrition-impact symptoms she is experiencing such as appetite loss and nausea.");
-                Phase07NutritionGoal05.SetActive(true);                
-                phase6Part03Selection02SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;                
+    public void Phase06Part03Selection01()
+    {
+        if (!phase6Part03Selection01Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection01Selected = true;
+                Phase06Part03IncorrectCauseSelectedStringArray.Add("Although Rheumatoid Arthritis can increase energy needs, this is less likely to be the root cause for Marta’s current nutrition problem/s.");
+                phase6Part03Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection02Selected = false;
-			phase6Part03Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
-            Phase07NutritionGoal05.SetActive(false);            
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection01Selected = false;
+            phase6Part03Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
+            Phase06Part03IncorrectCauseSelectedStringArray.Remove("Although Rheumatoid Arthritis can increase energy needs, this is less likely to be the root cause for Marta’s current nutrition problem/s.");
+            phase06Part03SelectedAmount--;
+        }
+    }
+
+    public void Phase06Part03Selection02()
+    {
+        if (!phase6Part03Selection02Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection02Selected = true;
+                Phase06Part03CausesStringArray.Add("Reduced intake due to some of the nutrition-impact symptoms she is experiencing such as appetite loss and nausea.");
+                Phase07NutritionGoal05.SetActive(true);
+                phase6Part03Selection02SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                phase06Part03SelectedAmount++;
+            }
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection02Selected = false;
+            phase6Part03Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
+            Phase07NutritionGoal05.SetActive(false);
             Phase06Part03CausesStringArray.Remove("Reduced intake due to some of the nutrition-impact symptoms she is experiencing such as appetite loss and nausea.");
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part03Selection03()
-	{
-		if (!phase6Part03Selection03Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection03Selected = true;
-				Phase06Part03CausesStringArray.Add("Reduced ability to prepare food and feed herself due to complications of Rheumatoid Arthritis.");
+    public void Phase06Part03Selection03()
+    {
+        if (!phase6Part03Selection03Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection03Selected = true;
+                Phase06Part03CausesStringArray.Add("Reduced ability to prepare food and feed herself due to complications of Rheumatoid Arthritis.");
                 phase6Part03Selection03SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase07NutritionGoal06.SetActive(true);
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection03Selected = false;
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection03Selected = false;
             phase6Part03Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
-			Phase06Part03CausesStringArray.Remove("Reduced ability to prepare food and feed herself due to complications of Rheumatoid Arthritis.");
+            Phase06Part03CausesStringArray.Remove("Reduced ability to prepare food and feed herself due to complications of Rheumatoid Arthritis.");
             Phase07NutritionGoal06.SetActive(false);
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part03Selection04()
-	{
-		if (!phase6Part03Selection04Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection04Selected = true;
+    public void Phase06Part03Selection04()
+    {
+        if (!phase6Part03Selection04Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection04Selected = true;
                 Phase06Part03IncorrectCauseSelectedStringArray.Add("Not knowing how much food and the types of food she needs on a daily basis is important, however there are more important options.");
-				phase6Part03Selection04SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+                phase6Part03Selection04SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection04Selected = false;
-			phase6Part03Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection04Selected = false;
+            phase6Part03Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase06Part03IncorrectCauseSelectedStringArray.Remove("Not knowing how much food and the types of food she needs on a daily basis is important, however there are more important options.");
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part03Selection05()
-	{
-		if (!phase6Part03Selection05Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection05Selected = true;
-				Phase06Part03IncorrectCauseSelectedStringArray.Add("Marta has a friend who can take her to do her grocery shopping thus this not likely the cause of her current state.");
-				phase6Part03Selection05SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+    public void Phase06Part03Selection05()
+    {
+        if (!phase6Part03Selection05Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection05Selected = true;
+                Phase06Part03IncorrectCauseSelectedStringArray.Add("Marta has a friend who can take her to do her grocery shopping thus this not likely the cause of her current state.");
+                phase6Part03Selection05SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection05Selected = false;
-			phase6Part03Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
-			Phase06Part03IncorrectCauseSelectedStringArray.Remove("Marta has a friend who can take her to do her grocery shopping thus this not likely the cause of her current state.");
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection05Selected = false;
+            phase6Part03Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
+            Phase06Part03IncorrectCauseSelectedStringArray.Remove("Marta has a friend who can take her to do her grocery shopping thus this not likely the cause of her current state.");
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part03Selection06()
-	{
-		if (!phase6Part03Selection06Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection06Selected = true;
-				Phase06Part03IncorrectCauseSelectedStringArray.Add("Although Marta is on a full pension there are cheaper food options that she can purchase and are therefore highly likely to meet her needs.");
-				phase6Part03Selection06SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+    public void Phase06Part03Selection06()
+    {
+        if (!phase6Part03Selection06Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection06Selected = true;
+                Phase06Part03IncorrectCauseSelectedStringArray.Add("Although Marta is on a full pension there are cheaper food options that she can purchase and are therefore highly likely to meet her needs.");
+                phase6Part03Selection06SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection06Selected = false;
-			phase6Part03Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
-			Phase06Part03IncorrectCauseSelectedStringArray.Remove("Although Marta is on a full pension there are cheaper food options that she can purchase and are therefore highly likely to meet her needs.");
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection06Selected = false;
+            phase6Part03Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
+            Phase06Part03IncorrectCauseSelectedStringArray.Remove("Although Marta is on a full pension there are cheaper food options that she can purchase and are therefore highly likely to meet her needs.");
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part03Selection07()
-	{
-		if (!phase6Part03Selection07Selected)
-		{
-			if (phase06Part03SelectedAmount < 3)
-			{
-				phase6Part03Selection07Selected = true;
-				Phase06Part03IncorrectCauseSelectedStringArray.Add("Marta has an extensive social network on which she can call if she needs help, she also receives food from a home delivery service in the week. This is therefore less likely to be a cause of her current state.");
-				phase6Part03Selection07SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
+    public void Phase06Part03Selection07()
+    {
+        if (!phase6Part03Selection07Selected)
+        {
+            if (phase06Part03SelectedAmount < 3)
+            {
+                phase6Part03Selection07Selected = true;
+                Phase06Part03IncorrectCauseSelectedStringArray.Add("Marta has an extensive social network on which she can call if she needs help, she also receives food from a home delivery service in the week. This is therefore less likely to be a cause of her current state.");
+                phase6Part03Selection07SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 phase06Part03SelectedAmount++;
             }
-			else if (phase06Part03SelectedAmount > 2)
-			{
-				phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
-				Phase06Part01AlertMessageToggle();
-			}
-		}
-		else
-		{
-			phase6Part03Selection07Selected = false;
-			phase6Part03Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
-			Phase06Part03IncorrectCauseSelectedStringArray.Remove("Marta has an extensive social network on which she can call if she needs help, she also receives food from a home delivery service in the week. This is therefore less likely to be a cause of her current state.");
+            else if (phase06Part03SelectedAmount > 2)
+            {
+                phase6part01AlertMessageText.text = "Please only select up to Three (3) causes as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+        else
+        {
+            phase6Part03Selection07Selected = false;
+            phase6Part03Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
+            Phase06Part03IncorrectCauseSelectedStringArray.Remove("Marta has an extensive social network on which she can call if she needs help, she also receives food from a home delivery service in the week. This is therefore less likely to be a cause of her current state.");
             phase06Part03SelectedAmount--;
         }
-	}
+    }
 
-	public void Phase06Part04Selection01()
+    public void Phase06Part04Selection01()
     {
         if (!phase6Part04Selection01Selected)
         {
             if (Phase6Part04SelectedAmount < 2)
             {
                 phase6Part04Selection01Selected = true;
-                phase6Part04Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;                
+                phase6Part04Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 Phase6Part04SelectedAmount++;
                 if (phase6nutritiondiagnosis01 != "")
                 {
                     phase6nutritiondiagnosis02 = "Insufficient fibre intake";
                 }
-                else if (phase6nutritiondiagnosis01 == "") {
+                else if (phase6nutritiondiagnosis01 == "")
+                {
                     phase6nutritiondiagnosis01 = "Insufficient fibre intake";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection01Selected = false;
-            phase6Part04Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;            
+            phase6Part04Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
             if (phase6nutritiondiagnosis02 != "")
             {
@@ -12405,12 +13172,14 @@ public class MenuOptions : MonoBehaviour
                     phase6nutritiondiagnosis01 = "Insufficient fluid intake";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection02Selected = false;
             phase6Part04Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
@@ -12442,12 +13211,14 @@ public class MenuOptions : MonoBehaviour
                     phase6nutritiondiagnosis01 = "Insufficient energy intake";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection03Selected = false;
             phase6Part04Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
@@ -12479,12 +13250,14 @@ public class MenuOptions : MonoBehaviour
                     phase6nutritiondiagnosis01 = "Insufficient protein intake";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection04Selected = false;
             phase6Part04Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
@@ -12516,12 +13289,14 @@ public class MenuOptions : MonoBehaviour
                     phase6nutritiondiagnosis01 = "Insufficient energy and protein intake";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection05Selected = false;
             phase6Part04Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
@@ -12553,12 +13328,14 @@ public class MenuOptions : MonoBehaviour
                     phase6nutritiondiagnosis01 = "Malnourished";
                 }
             }
-            else {
+            else
+            {
                 phase6part01AlertMessageText.text = "Please only select up to Two (2) problems as your top choices. If you are happy with your selection press  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
                 Phase06Part01AlertMessageToggle();
             }
         }
-        else {
+        else
+        {
             phase6Part04Selection06Selected = false;
             phase6Part04Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
             Phase6Part04SelectedAmount--;
@@ -12573,7 +13350,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase06Part01CompleteCheck() {
+    public void Phase06Part01CompleteCheck()
+    {
         if (phase6Part01Selection09Selected || phase6Part01Selection12Selected || phase6Part01Selection13Selected || phase6Part01Selection14Selected)
         {
             if (!phase6Part01CompleteFirstCheck)
@@ -12581,27 +13359,30 @@ public class MenuOptions : MonoBehaviour
                 phase6part01AlertMessageText.text = "Carefully consider whether the nutrition problems you have selected can be resolved through nutrition intervention only.";
                 Phase06Part01AlertMessageToggle();
                 phase06EvidencePlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
                 phase6Part01CompleteFirstCheck = true;
             }
-            else if (phase6Part01CompleteFirstCheck) {
+            else if (phase6Part01CompleteFirstCheck)
+            {
                 phase6part01AlertMessageText.text = "Functional problems such as constipation and physical ability can be influenced by factors unrelated to nutrition. It is therefore recommended to rather focus on a problem that relates to food or nutrient intake in the first instance as these can be resolved through nutrition intervention. Please try again.";
                 Phase06Part01AlertMessageToggle();
-				phase08OverallScore = phase08OverallScore + 2;
+                phase08OverallScore = phase08OverallScore + 2;
                 phase06EvidencePlayerRating = playerRatingNovice;
             }
         }
-        else {
+        else
+        {
             Phase6Part01Group.SetTrigger("AnimateOut");
-            Phase6Part02Group.SetTrigger("AnimateIn");            
-            foreach (GameObject phase6Part01GameObject in Phase6PartOneToTwoSelectionGameObjectArray) {                
+            Phase6Part02Group.SetTrigger("AnimateIn");
+            foreach (GameObject phase6Part01GameObject in Phase6PartOneToTwoSelectionGameObjectArray)
+            {
                 phase6Part01GameObject.SetActive(true);
                 Transform currentTransform = Phase6PartTwoSelectionTransforms[Phase6Part01CurrentTransformInt];
                 phase6Part01GameObject.transform.position = new Vector2(currentTransform.position.x, currentTransform.position.y);
                 Phase6Part01CurrentTransformInt++;
                 Debug.Log(Phase6Part01CurrentTransformInt + " " + currentTransform);
-            }            
-            phase6Part01Complete = true;            
+            }
+            phase6Part01Complete = true;
         }
     }
 
@@ -12714,7 +13495,7 @@ public class MenuOptions : MonoBehaviour
             {
                 phase6part01AlertMessageText.text = "Although Marta has problems with her fibre intake, there are more pressing issues to be resolved.";
                 Phase06Part01AlertMessageToggle();
-            }            
+            }
             else
             {
                 Phase6Part02Group.SetTrigger("AnimateOut");
@@ -12731,41 +13512,52 @@ public class MenuOptions : MonoBehaviour
                 phase6part01AlertMessageText.text = "";
             }
         }
-        else {
+        else
+        {
             phase6part01AlertMessageText.text = "Please select at least one potential issue before continuing. If the one you want is not available press the restart button to select again.";
             Phase06Part01AlertMessageToggle();
         }
-        		
+
     }
 
-	public void Phase06Part03NewCompleteCheck() {
-		phase6part01AlertMessageText.text = "";
-		if (Phase06Part03IncorrectCauseSelectedStringArray.Count() > 0) {
-			foreach (string incorrectCause in Phase06Part03IncorrectCauseSelectedStringArray) {
-				phase6part01AlertMessageText.text = phase6part01AlertMessageText.text + incorrectCause + "\n";
-			}
-			phase6part01AlertMessageText.text = "Please select different causes as these causes are not valid:\n\n" + phase6part01AlertMessageText.text;
-			Phase06Part01AlertMessageToggle();
-		} else {
-			if (Phase06Part03CausesStringArray.Count > 0)
-			{
-				foreach (string cause in Phase06Part03CausesStringArray) {
-					phase06CausesString = phase06CausesString + cause + "\n";
-				}
-				phase6Part03Complete = true;
-				Phase6Part03Group.SetTrigger("AnimateOut");
-				Phase6Part04Group.SetTrigger("AnimateIn");
-			}
-			else {
-				phase6part01AlertMessageText.text = "Please select at least one cause before continuing.";
-				Phase06Part01AlertMessageToggle();
-			}			
-		}
-	}
+    public void Phase06Part03NewCompleteCheck()
+    {
+        phase6part01AlertMessageText.text = "";
+        if (Phase06Part03IncorrectCauseSelectedStringArray.Count() > 0)
+        {
+            foreach (string incorrectCause in Phase06Part03IncorrectCauseSelectedStringArray)
+            {
+                phase6part01AlertMessageText.text = phase6part01AlertMessageText.text + incorrectCause + "\n";
+            }
+            phase6part01AlertMessageText.text = "Please select different causes as these causes are not valid:\n\n" + phase6part01AlertMessageText.text;
+            Phase06Part01AlertMessageToggle();
+        }
+        else
+        {
+            if (Phase06Part03CausesStringArray.Count > 0)
+            {
+                foreach (string cause in Phase06Part03CausesStringArray)
+                {
+                    phase06CausesString = phase06CausesString + cause + "\n";
+                }
+                phase6Part03Complete = true;
+                Phase6Part03Group.SetTrigger("AnimateOut");
+                Phase6Part04Group.SetTrigger("AnimateIn");
+            }
+            else
+            {
+                phase6part01AlertMessageText.text = "Please select at least one cause before continuing.";
+                Phase06Part01AlertMessageToggle();
+            }
+        }
+    }
 
-    public void Phase07Part03CompleteCheck() {
-        foreach (GameObject dropZone in Phase07Part03DropZoneArray) {
-            if (dropZone.GetComponent<DropZonePhase07>() != null) {
+    public void Phase07Part03CompleteCheck()
+    {
+        foreach (GameObject dropZone in Phase07Part03DropZoneArray)
+        {
+            if (dropZone.GetComponent<DropZonePhase07>() != null)
+            {
                 if (!dropZone.GetComponent<DropZonePhase07>().dropZoneComplete)
                 {
                     Phase07Part03Part01Complete = false;
@@ -12775,7 +13567,9 @@ public class MenuOptions : MonoBehaviour
                 {
                     Phase07Part03Part01Complete = true;
                 }
-            } else if (dropZone.GetComponent<DropZonePhase07EducationalStrategy>() != null) {
+            }
+            else if (dropZone.GetComponent<DropZonePhase07EducationalStrategy>() != null)
+            {
                 if (!dropZone.GetComponent<DropZonePhase07EducationalStrategy>().dropZoneComplete)
                 {
                     Phase07Part03Part02Complete = false;
@@ -12785,18 +13579,20 @@ public class MenuOptions : MonoBehaviour
                 {
                     Phase07Part03Part02Complete = true;
                 }
-            }            
+            }
         }
         if (!Phase07Part03Part01Complete)
         {
             phase6part01AlertMessageText.text = "You have not provided all of the strategies for the goals, please go back and try again.";
             Phase06Part01AlertMessageToggle();
         }
-        else if (!Phase07Part03Part02Complete) {
+        else if (!Phase07Part03Part02Complete)
+        {
             phase6part01AlertMessageText.text = "You have provided all the food stategies, but still need to provide the educational strategies.";
             Phase06Part01AlertMessageToggle();
         }
-        else if (Phase07Part03Part01Complete && Phase07Part03Part02Complete) {
+        else if (Phase07Part03Part01Complete && Phase07Part03Part02Complete)
+        {
             string foodRelatedStrategies = "";
             string educationalRelatedStrategies = "";
             foreach (string stringItem in phase07FoodStrategyStringArray)
@@ -12811,113 +13607,162 @@ public class MenuOptions : MonoBehaviour
             {
                 Phase07ClinpadSavedText.text = Phase07ClinpadSavedText.text + stringText;
             }
-			phase02CombinedScore = phase2MedicationIncorrectSelectedScore + Phase2SelectWrongAnswerBiochemicalScore + Phase2WhySelectWrongAnswerBiochemicalScore + Phase2SelectWrongAnswerMedicalHistoryScore;
-			if (phase02CombinedScore < 3) {
-				Phase08Phase02ResultText.text = "You demonstrated the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
-			} else if (phase02CombinedScore > 2 && phase02CombinedScore < 6) {
-				Phase08Phase02ResultText.text = "You mostly demonstrated the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
-			} else if (phase02CombinedScore > 5) {
-				Phase08Phase02ResultText.text = "You mostly failed to demonstrate the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
-			}
-			if (phase07Part02SelectedAmount > 1) {
-				phase07SelectionsScore = phase07SelectionsScore / 2;
-			}
-			if (phase07SelectionsScore < 3 && phase07SelectionsScore > 1) {
-				phase07SelectionRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-				Phase08Phase07ResultText.text = "You identified some of the most important goals to address Marta's key nutrition problems.";
-			} else if (phase07SelectionsScore <= 1) {
-				phase07SelectionRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
-				Phase08Phase07ResultText.text = "You failed to indentify the most important goals to address Marta's key nutrition problems.";
-			} else if (phase07SelectionsScore >= 3) {
-				Phase08Phase07ResultText.text = "You identified the most important goals to address Marta's key nutrition problems.";
-			}
-			phase04Phase05CombinedScore = phase04Phase05CombinedScore + phase05EnergyActualDietIncorrectScore + phase05BodyWeightIncorrectScore + phase05QualatativeDietIncorrectScore + phase05QuantatativeDietIncorrectScore;
-			if (phase04Phase05CombinedScore > 3) {
-				Phase08Phase04Phase05ResultText.text = "You failed to demonstrate the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs.";
-			} else if (phase04Phase05CombinedScore > 1 && phase04Phase05CombinedScore < 4) {
-				Phase08Phase04Phase05ResultText.text = "You managed to demonstrate the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs with some errors in some sections.";
-			} else if (phase04Phase05CombinedScore < 2) {
-				Phase08Phase04Phase05ResultText.text = "You flawlessly demonstrated the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs.";
-			}
+            phase02CombinedScore = phase2MedicationIncorrectSelectedScore + Phase2SelectWrongAnswerBiochemicalScore + Phase2WhySelectWrongAnswerBiochemicalScore + Phase2SelectWrongAnswerMedicalHistoryScore;
+            if (phase02CombinedScore < 3)
+            {
+                Phase08Phase02ResultText.text = "You demonstrated the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
+            }
+            else if (phase02CombinedScore > 2 && phase02CombinedScore < 6)
+            {
+                Phase08Phase02ResultText.text = "You mostly demonstrated the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
+            }
+            else if (phase02CombinedScore > 5)
+            {
+                Phase08Phase02ResultText.text = "You mostly failed to demonstrate the ability to distinguish between relevant and irrelevant as well as important and unimportant nutrition information.";
+            }
+            if (phase07Part02SelectedAmount > 1)
+            {
+                phase07SelectionsScore = phase07SelectionsScore / 2;
+            }
+            if (phase07SelectionsScore < 3 && phase07SelectionsScore > 1)
+            {
+                phase07SelectionRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
+                Phase08Phase07ResultText.text = "You identified some of the most important goals to address Marta's key nutrition problems.";
+            }
+            else if (phase07SelectionsScore <= 1)
+            {
+                phase07SelectionRating = playerRatingNovice;
+                phase08OverallScore = phase08OverallScore + 2;
+                Phase08Phase07ResultText.text = "You failed to indentify the most important goals to address Marta's key nutrition problems.";
+            }
+            else if (phase07SelectionsScore >= 3)
+            {
+                Phase08Phase07ResultText.text = "You identified the most important goals to address Marta's key nutrition problems.";
+            }
+            phase04Phase05CombinedScore = phase04Phase05CombinedScore + phase05EnergyActualDietIncorrectScore + phase05BodyWeightIncorrectScore + phase05QualatativeDietIncorrectScore + phase05QuantatativeDietIncorrectScore;
+            if (phase04Phase05CombinedScore > 3)
+            {
+                Phase08Phase04Phase05ResultText.text = "You failed to demonstrate the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs.";
+            }
+            else if (phase04Phase05CombinedScore > 1 && phase04Phase05CombinedScore < 4)
+            {
+                Phase08Phase04Phase05ResultText.text = "You managed to demonstrate the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs with some errors in some sections.";
+            }
+            else if (phase04Phase05CombinedScore < 2)
+            {
+                Phase08Phase04Phase05ResultText.text = "You flawlessly demonstrated the ability to draw appropriate interpretations from your analysis linking to Marta's individualised needs.";
+            }
             Phase07ClinpadSavedText.text = "Goals: " + Phase07ClinpadSavedText.text + "\n Food related strategies: " + foodRelatedStrategies + "\n Educational related strategies: " + educationalRelatedStrategies;
             phase07Part04MessageAlertText.text = Phase07ClinpadSavedText.text;
             Phase07Part04AlertMessageToggle();
-			Phase7ConversationTracker = 100;
-			if (Phase6Part02SelectedAmount > 1) {
-				phase06part02CombinedScore = phase06part02CombinedScore / 2;
-			}
-			if (phase06part02CombinedScore == 1) {
-				phase06Part01PlayerRating = playerRatingIntermediate;
-			} else if (phase06part02CombinedScore == 2) {
-				phase06Part01PlayerRating = playerRatingNovice;
-			}
-			phase06part02CombinedScore = phase06EvidenceIncorrectScore + phase06part02CombinedScore;
-			if (phase06part02CombinedScore > 3) {
-				Phase08Phase06ResultText.text = "Your nutrition problem/s did not reflect an appropriate interpretation or prioritisation of Marta's assessment data.";
-			} else if (phase06part02CombinedScore < 4 && phase06part02CombinedScore > 1) {
-				Phase08Phase06ResultText.text = "Your nutrition problem/s somewhat reflect an appropriate interpretation or prioritisation of Marta's assessment data.";
-			} else if (phase06part02CombinedScore < 2) {
-				Phase08Phase06ResultText.text = "Your nutrition problem/s accurately reflects an appropriate interpretation or prioritisation of Marta's assessment data.";
-			}
-			if (phase07EducationalStartegiesSelectionScore == 1) {
-				phase07EducationalStrategiesRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-			} else if (phase07EducationalStartegiesSelectionScore > 1) {
-				phase07EducationalStrategiesRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
-			}
-			if (phase07Part02SelectedAmount > 1) {
-				phase07StrategiesScore = phase07StrategiesScore / 2;
-			}
-			if (phase07StrategiesScore > 0 && phase07StrategiesScore < 1) {
-				phase07FoodStrategiesRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-			} else if (phase07StrategiesScore > 0.99f) {
-				phase07FoodStrategiesRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
-			}
-			float phase07CombinedScore = phase07StrategiesScore + phase07EducationalStartegiesSelectionScore - phase07SelectionsScore;
-			if (phase07CombinedScore > 4) {
-				Phase08Phase08ResultText.text = "You did not demonstrate following a patient centered approach in your chosen dietary strategies.";
-			} else if (phase07CombinedScore > 2 && phase07CombinedScore < 5) {
-				Phase08Phase08ResultText.text = "You demonstrated following a patient-centered approach in some, but not all, of your chosen dietary strategies.";
-			} else if (phase07CombinedScore < 3) {
-				Phase08Phase08ResultText.text = "You demonstrated following a patient-centered approach in all of your chosen dietary strategies.";
-			}
-			if (phase08OverallScore > 14) {
-				Phase08OverallResultsText.text = playerRatingNovice;
-				phase08OverallGoalPlayerRating = playerRatingNovice;
-				Phase08OverallSuggestionText.text = "Please Play Again";
-			} else if (phase08OverallScore > 9 && phase08OverallScore < 15) {
-				Phase08OverallResultsText.text = playerRatingIntermediate;
-				phase08OverallGoalPlayerRating = playerRatingIntermediate;
-				Phase08OverallSuggestionText.text = "Please Play Again";
-			} else if (phase08OverallScore < 10) {
-				Phase08OverallResultsText.text = playerRatingAdvancing;
-				Phase08OverallSuggestionText.text = "Well Done";
-			}
+            Phase7ConversationTracker = 100;
+            if (Phase6Part02SelectedAmount > 1)
+            {
+                phase06part02CombinedScore = phase06part02CombinedScore / 2;
+            }
+            if (phase06part02CombinedScore == 1)
+            {
+                phase06Part01PlayerRating = playerRatingIntermediate;
+            }
+            else if (phase06part02CombinedScore == 2)
+            {
+                phase06Part01PlayerRating = playerRatingNovice;
+            }
+            phase06part02CombinedScore = phase06EvidenceIncorrectScore + phase06part02CombinedScore;
+            if (phase06part02CombinedScore > 3)
+            {
+                Phase08Phase06ResultText.text = "Your nutrition problem/s did not reflect an appropriate interpretation or prioritisation of Marta's assessment data.";
+            }
+            else if (phase06part02CombinedScore < 4 && phase06part02CombinedScore > 1)
+            {
+                Phase08Phase06ResultText.text = "Your nutrition problem/s somewhat reflect an appropriate interpretation or prioritisation of Marta's assessment data.";
+            }
+            else if (phase06part02CombinedScore < 2)
+            {
+                Phase08Phase06ResultText.text = "Your nutrition problem/s accurately reflects an appropriate interpretation or prioritisation of Marta's assessment data.";
+            }
+            if (phase07EducationalStartegiesSelectionScore == 1)
+            {
+                phase07EducationalStrategiesRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (phase07EducationalStartegiesSelectionScore > 1)
+            {
+                phase07EducationalStrategiesRating = playerRatingNovice;
+                phase08OverallScore = phase08OverallScore + 2;
+            }
+            if (phase07Part02SelectedAmount > 1)
+            {
+                phase07StrategiesScore = phase07StrategiesScore / 2;
+            }
+            if (phase07StrategiesScore > 0 && phase07StrategiesScore < 1)
+            {
+                phase07FoodStrategiesRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (phase07StrategiesScore > 0.99f)
+            {
+                phase07FoodStrategiesRating = playerRatingNovice;
+                phase08OverallScore = phase08OverallScore + 2;
+            }
+            float phase07CombinedScore = phase07StrategiesScore + phase07EducationalStartegiesSelectionScore - phase07SelectionsScore;
+            if (phase07CombinedScore > 4)
+            {
+                Phase08Phase08ResultText.text = "You did not demonstrate following a patient centered approach in your chosen dietary strategies.";
+            }
+            else if (phase07CombinedScore > 2 && phase07CombinedScore < 5)
+            {
+                Phase08Phase08ResultText.text = "You demonstrated following a patient-centered approach in some, but not all, of your chosen dietary strategies.";
+            }
+            else if (phase07CombinedScore < 3)
+            {
+                Phase08Phase08ResultText.text = "You demonstrated following a patient-centered approach in all of your chosen dietary strategies.";
+            }
+            if (phase08OverallScore > 14)
+            {
+                Phase08OverallResultsText.text = playerRatingNovice;
+                phase08OverallGoalPlayerRating = playerRatingNovice;
+                Phase08OverallSuggestionText.text = "Please Play Again";
+            }
+            else if (phase08OverallScore > 9 && phase08OverallScore < 15)
+            {
+                Phase08OverallResultsText.text = playerRatingIntermediate;
+                phase08OverallGoalPlayerRating = playerRatingIntermediate;
+                Phase08OverallSuggestionText.text = "Please Play Again";
+            }
+            else if (phase08OverallScore < 10)
+            {
+                Phase08OverallResultsText.text = playerRatingAdvancing;
+                Phase08OverallSuggestionText.text = "Well Done";
+            }
         }
     }
 
     public void Phase06Part04CompleteCheck()
     {
-        foreach (GameObject dropZone in Phase6PartThreeDropZonesArray) {
+        foreach (GameObject dropZone in Phase6PartThreeDropZonesArray)
+        {
             if (!dropZone.GetComponent<DropZone>().dropZoneComplete)
             {
                 phase6Part04Complete = false;
                 phase06EvidenceIncorrectScore++;
             }
-            else {
+            else
+            {
                 phase6Part04Complete = true;
-				if (phase06part02PotentialIssue02String == "") {
-					Phase06EndText.text = "Based on your selection, you have identified the following nutrition problem and their evidence, as well as potential causes for the problem:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + "\r\nPotential causes include: " + phase06CausesString;
-				} else if (phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "") {
-					Phase06EndText.text = "Based on your selection, you have identified the following nutrition problems and their evidence, as well as potential causes for the problems:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\r\n" + phase06part02PotentialIssue02String + ", supported by evidence of " + phase06part03Evidence02String + ".\r\n Potential causes include: " + phase06CausesString; 
-				} else if (phase06part02PotentialIssue03String != "") {
-					Phase06EndText.text = "Based on your selection, you have identified the following nutrition problems and their evidence, as well as potential causes for the problems:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\r\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\n" + phase06part02PotentialIssue02String + ", supported by evidence of " + phase06part03Evidence02String + ".\r\n\n Potential causes include: " + phase06CausesString;
-				}
+                if (phase06part02PotentialIssue02String == "")
+                {
+                    Phase06EndText.text = "Based on your selection, you have identified the following nutrition problem and their evidence, as well as potential causes for the problem:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + "\r\nPotential causes include: " + phase06CausesString;
+                }
+                else if (phase06part02PotentialIssue02String != "" && phase06part02PotentialIssue03String == "")
+                {
+                    Phase06EndText.text = "Based on your selection, you have identified the following nutrition problems and their evidence, as well as potential causes for the problems:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\r\n" + phase06part02PotentialIssue02String + ", supported by evidence of " + phase06part03Evidence02String + ".\r\n Potential causes include: " + phase06CausesString;
+                }
+                else if (phase06part02PotentialIssue03String != "")
+                {
+                    Phase06EndText.text = "Based on your selection, you have identified the following nutrition problems and their evidence, as well as potential causes for the problems:\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\r\n" + phase06part02PotentialIssue01String + ", supported by evidence of " + phase06part03Evidence01String + ".\n" + phase06part02PotentialIssue02String + ", supported by evidence of " + phase06part03Evidence02String + ".\r\n\n Potential causes include: " + phase06CausesString;
+                }
                 Phase06ClinpadSavedText.text = Phase06EndText.text;
             }
         }
@@ -12926,13 +13771,17 @@ public class MenuOptions : MonoBehaviour
             phase6part01AlertMessageText.text = "You have not provided all of the evidence for your chosen problems, please go back and try again.";
             Phase06Part01AlertMessageToggle();
         }
-        else {            
-            if (phase06EvidenceIncorrectScore == 3) {
+        else
+        {
+            if (phase06EvidenceIncorrectScore == 3)
+            {
                 phase06EvidencePlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-            } else if (phase06EvidenceIncorrectScore > 3) {
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (phase06EvidenceIncorrectScore > 3)
+            {
                 phase06EvidencePlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
+                phase08OverallScore = phase08OverallScore + 2;
             }
             foreach (GameObject phase6Part04GameObject in Phase6PartThreeToFourSelectionGameObjectArray)
             {
@@ -12941,13 +13790,16 @@ public class MenuOptions : MonoBehaviour
                 phase6Part04GameObject.transform.position = new Vector2(currentTransform.position.x, currentTransform.position.y);
                 Phase6Part04CurrentTransformInt++;
             }
-            if (phase6Part02Selection01Selected) {
+            if (phase6Part02Selection01Selected)
+            {
                 phase7DietaryStrategies02OptionSelected = true;
             }
-            if (phase6Part02Selection02Selected) {
+            if (phase6Part02Selection02Selected)
+            {
                 phase7DietaryStrategies03OptionSelected = true;
             }
-            if (phase6Part02Selection03Selected) {
+            if (phase6Part02Selection03Selected)
+            {
                 phase7DietaryStrategies01OptionSelected = true;
             }
             if (phase6Part02Selection04Selected)
@@ -12964,96 +13816,98 @@ public class MenuOptions : MonoBehaviour
             }
 
             Phase06Part04AlertMessageToggle();
-		}
+        }
     }
 
-	public void Phase06Part04CompleteCheckPartTwo() {
-		Phase06Part04AlertMessageToggle();
-		Phase6Part04Group.SetTrigger("AnimateOut");
-		Phase6Part05Group.SetTrigger("AnimateIn");
-	}
+    public void Phase06Part04CompleteCheckPartTwo()
+    {
+        Phase06Part04AlertMessageToggle();
+        Phase6Part04Group.SetTrigger("AnimateOut");
+        Phase6Part05Group.SetTrigger("AnimateIn");
+    }
 
-	public void Phase06Part04ResetChoices() {
-		Phase06Part04AlertMessageToggle();
-		phase6Part01Selection01Selected = false;
-		phase6Part01Selection02Selected = false;
-		phase6Part01Selection03Selected = false;
-		phase6Part01Selection04Selected = false;
-		phase6Part01Selection05Selected = false;
-		phase6Part01Selection06Selected = false;
-		phase6Part01Selection07Selected = false;
-		phase6Part01Selection08Selected = false;
-		phase6Part01Selection09Selected = false;
-		phase6Part01Selection10Selected = false;
-		phase6Part01Selection11Selected = false;
-		phase6Part01Selection12Selected = false;
-		phase6Part01Selection13Selected = false;
-		phase6Part01Selection14Selected = false;
-		phase6Part01Selection15Selected = false;
-		phase6Part02Selection01Selected = false;
-		phase6Part02Selection02Selected = false;
-		phase6Part02Selection03Selected = false;
-		phase6Part02Selection04Selected = false;
-		phase6Part02Selection05Selected = false;
-		phase6Part02Selection06Selected = false;
-		phase6Part02Selection07Selected = false;
-		phase6Part02Selection08Selected = false;
-		phase6Part02Selection09Selected = false;
-		phase6Part02Selection10Selected = false;
-		phase6Part02Selection11Selected = false;
-		phase6Part03Selection01Selected = false;
-		phase6Part03Selection02Selected = false;
-		phase6Part03Selection03Selected = false;
-		phase6Part03Selection04Selected = false;
-		phase6Part03Selection05Selected = false;
-		phase6Part03Selection06Selected = false;
-		phase6Part03Selection07Selected = false;
-		phase6Part01Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection12SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection13SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection14SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part01Selection15SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part02Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
-		phase6Part03Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
-		Phase6Part01SelectedAmount = 0;
-		Phase6Part02SelectedAmount = 0;
-		phase06Part03SelectedAmount = 0;
-		Phase6Part04Group.SetTrigger("AnimateOut");
-		Phase6Part01Group.SetTrigger("AnimateIn");
-		phase6part01AlertMessageText.text = "";
+    public void Phase06Part04ResetChoices()
+    {
+        Phase06Part04AlertMessageToggle();
+        phase6Part01Selection01Selected = false;
+        phase6Part01Selection02Selected = false;
+        phase6Part01Selection03Selected = false;
+        phase6Part01Selection04Selected = false;
+        phase6Part01Selection05Selected = false;
+        phase6Part01Selection06Selected = false;
+        phase6Part01Selection07Selected = false;
+        phase6Part01Selection08Selected = false;
+        phase6Part01Selection09Selected = false;
+        phase6Part01Selection10Selected = false;
+        phase6Part01Selection11Selected = false;
+        phase6Part01Selection12Selected = false;
+        phase6Part01Selection13Selected = false;
+        phase6Part01Selection14Selected = false;
+        phase6Part01Selection15Selected = false;
+        phase6Part02Selection01Selected = false;
+        phase6Part02Selection02Selected = false;
+        phase6Part02Selection03Selected = false;
+        phase6Part02Selection04Selected = false;
+        phase6Part02Selection05Selected = false;
+        phase6Part02Selection06Selected = false;
+        phase6Part02Selection07Selected = false;
+        phase6Part02Selection08Selected = false;
+        phase6Part02Selection09Selected = false;
+        phase6Part02Selection10Selected = false;
+        phase6Part02Selection11Selected = false;
+        phase6Part03Selection01Selected = false;
+        phase6Part03Selection02Selected = false;
+        phase6Part03Selection03Selected = false;
+        phase6Part03Selection04Selected = false;
+        phase6Part03Selection05Selected = false;
+        phase6Part03Selection06Selected = false;
+        phase6Part03Selection07Selected = false;
+        phase6Part01Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection12SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection13SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection14SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part01Selection15SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection08SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection09SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection10SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part02Selection11SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection01SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection02SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection03SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection04SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection05SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection06SelectImage.sprite = Phase6DeselectedOptionSprite;
+        phase6Part03Selection07SelectImage.sprite = Phase6DeselectedOptionSprite;
+        Phase6Part01SelectedAmount = 0;
+        Phase6Part02SelectedAmount = 0;
+        phase06Part03SelectedAmount = 0;
+        Phase6Part04Group.SetTrigger("AnimateOut");
+        Phase6Part01Group.SetTrigger("AnimateIn");
+        phase6part01AlertMessageText.text = "";
         Phase07Part03DropZoneArray.Clear();
         Phase07NutritionGoal01.SetActive(false);
         Phase07NutritionGoal02.SetActive(false);
         Phase07NutritionGoal03.SetActive(false);
         Phase07NutritionGoal04.SetActive(false);
         Phase07NutritionGoal05.SetActive(false);
-        Phase07NutritionGoal06.SetActive(false);        
+        Phase07NutritionGoal06.SetActive(false);
         foreach (GameObject item in Phase07Selection01Group)
         {
             item.SetActive(false);
@@ -13078,55 +13932,62 @@ public class MenuOptions : MonoBehaviour
         {
             item.SetActive(false);
         }
-		foreach (GameObject phase6Part01GameObject in Phase6PartOneToTwoSelectionGameObjectArray)
-		{
-			phase6Part01GameObject.SetActive(false);
-		}
-		foreach (GameObject phase6Part02GameObject in Phase6PartTwoToThreeSelectionGameObjectArray)
-		{
-			phase6Part02GameObject.SetActive(false);
-		}
-		Phase06Part03IncorrectCauseSelectedStringArray.Clear();
-		Phase6PartThreeToFourSelectionGameObjectArray.Clear();
-		Phase6PartOneToTwoSelectionGameObjectArray.Clear();
-		Phase6PartTwoToThreeSelectionGameObjectArray.Clear();
-		Phase06Part03CausesStringArray.Clear();
-		Phase6Part01CurrentTransformInt = 0;
-		Phase6Part02CurrentTransformInt = 0;
-		phase06part03Evidence01String = "";
-		phase06part03Evidence02String = "";
-		phase06part03Evidence03String = "";
-		phase06part02PotentialIssue01String = "";
-		phase06part02PotentialIssue02String = "";
-		phase06part02PotentialIssue03String = "";
-		phase06CausesString = "";
-		phase6Part01Complete = false;
-		phase6Part02Complete = false;
-		phase6Part03Complete = false;
-		phase6Part04Complete = false;
+        foreach (GameObject phase6Part01GameObject in Phase6PartOneToTwoSelectionGameObjectArray)
+        {
+            phase6Part01GameObject.SetActive(false);
+        }
+        foreach (GameObject phase6Part02GameObject in Phase6PartTwoToThreeSelectionGameObjectArray)
+        {
+            phase6Part02GameObject.SetActive(false);
+        }
+        Phase06Part03IncorrectCauseSelectedStringArray.Clear();
+        Phase6PartThreeToFourSelectionGameObjectArray.Clear();
+        Phase6PartOneToTwoSelectionGameObjectArray.Clear();
+        Phase6PartTwoToThreeSelectionGameObjectArray.Clear();
+        Phase06Part03CausesStringArray.Clear();
+        Phase6Part01CurrentTransformInt = 0;
+        Phase6Part02CurrentTransformInt = 0;
+        phase06part03Evidence01String = "";
+        phase06part03Evidence02String = "";
+        phase06part03Evidence03String = "";
+        phase06part02PotentialIssue01String = "";
+        phase06part02PotentialIssue02String = "";
+        phase06part02PotentialIssue03String = "";
+        phase06CausesString = "";
+        phase6Part01Complete = false;
+        phase6Part02Complete = false;
+        phase6Part03Complete = false;
+        phase6Part04Complete = false;
     }
 
-    public void Phase06Part04CompleteCheckStage01() {
-        if (Phase6Part04SelectedAmount > 0) {
+    public void Phase06Part04CompleteCheckStage01()
+    {
+        if (Phase6Part04SelectedAmount > 0)
+        {
             Phase06Part04AlertMessageToggle();
-        } else {
+        }
+        else
+        {
             phase6part01AlertMessageText.text = "Please select up to two (2) choices before continuing on. Once you have made your selection press the  <b><color=#54A4CCFF>CHECK</color></b>  button to continue.";
             Phase06Part01AlertMessageToggle();
         }
     }
 
-    public void Phase06Part04CompleteCheckStage02() {
+    public void Phase06Part04CompleteCheckStage02()
+    {
         Phase06Part04AlertMessageToggle();
         phase6Part04Complete = true;
         Phase6Part04Group.SetTrigger("AnimateOut");
         Phase6Part05Group.SetTrigger("AnimateIn");
     }
 
-    public void Phase07Part02Select01() {
-        if (!phase07Part02Selection01Selected) {
+    public void Phase07Part02Select01()
+    {
+        if (!phase07Part02Selection01Selected)
+        {
             if (phase07Part02SelectedAmount < 2)
             {
-                phase07Part02SelectImage01.sprite = BiochemicalCorrectAnswerSelectedSprite;                
+                phase07Part02SelectImage01.sprite = BiochemicalCorrectAnswerSelectedSprite;
                 foreach (GameObject item in Phase07Selection01Group)
                 {
                     item.SetActive(true);
@@ -13136,13 +13997,16 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Increase total energy intake. ");
                 phase07Part02SelectedAmount++;
                 phase07Part02Selection01Selected = true;
-				phase07SelectionsScore = phase07SelectionsScore + 2;
+                phase07SelectionsScore = phase07SelectionsScore + 2;
             }
-            else if (phase07Part02SelectedAmount > 1) {
+            else if (phase07Part02SelectedAmount > 1)
+            {
                 phase6part01AlertMessageText.text = "Only selected your top 2 choices, if you are happy with your selections press confirm to move to the next section.";
                 Phase06Part01AlertMessageToggle();
             }
-        } else if (phase07Part02Selection01Selected) {
+        }
+        else if (phase07Part02Selection01Selected)
+        {
             phase07Part02SelectImage01.sprite = Phase6DeselectedOptionSprite;
             foreach (GameObject item in Phase07Selection01Group)
             {
@@ -13153,8 +14017,8 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Increase total energy intake. ");
             phase07Part02SelectedAmount--;
             phase07Part02Selection01Selected = false;
-			phase07SelectionsScore = phase07SelectionsScore - 2;
-        }        
+            phase07SelectionsScore = phase07SelectionsScore - 2;
+        }
     }
 
     public void Phase07Part02Select02()
@@ -13173,7 +14037,7 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Increase dietary protein intake. ");
                 phase07Part02SelectedAmount++;
                 phase07Part02Selection02Selected = true;
-				phase07SelectionsScore = phase07SelectionsScore + 2;
+                phase07SelectionsScore = phase07SelectionsScore + 2;
             }
             else if (phase07Part02SelectedAmount > 1)
             {
@@ -13193,7 +14057,7 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Increase dietary protein intake. ");
             phase07Part02Selection02Selected = false;
             phase07Part02SelectedAmount--;
-			phase07SelectionsScore = phase07SelectionsScore - 2;
+            phase07SelectionsScore = phase07SelectionsScore - 2;
         }
     }
 
@@ -13213,7 +14077,7 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Increase total energy and dietary protein intake. ");
                 phase07Part02Selection03Selected = true;
                 phase07Part02SelectedAmount++;
-				phase07SelectionsScore = phase07SelectionsScore + 3;
+                phase07SelectionsScore = phase07SelectionsScore + 3;
             }
             else if (phase07Part02SelectedAmount > 1)
             {
@@ -13233,7 +14097,7 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Increase total energy and dietary protein intake. ");
             phase07Part02Selection03Selected = false;
             phase07Part02SelectedAmount--;
-			phase07SelectionsScore = phase07SelectionsScore - 3;
+            phase07SelectionsScore = phase07SelectionsScore - 3;
         }
     }
 
@@ -13253,7 +14117,7 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Increase fluid intake. ");
                 phase07Part02Selection04Selected = true;
                 phase07Part02SelectedAmount++;
-				phase07SelectionsScore = phase07SelectionsScore + 3;
+                phase07SelectionsScore = phase07SelectionsScore + 3;
             }
             else if (phase07Part02SelectedAmount > 1)
             {
@@ -13273,7 +14137,7 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Increase fluid intake. ");
             phase07Part02Selection04Selected = false;
             phase07Part02SelectedAmount--;
-			phase07SelectionsScore = phase07SelectionsScore - 3;
+            phase07SelectionsScore = phase07SelectionsScore - 3;
         }
     }
 
@@ -13293,7 +14157,7 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Minimize nutrition impact symptoms to improve oral intake. ");
                 phase07Part02Selection05Selected = true;
                 phase07Part02SelectedAmount++;
-				phase07SelectionsScore = phase07SelectionsScore + 2;
+                phase07SelectionsScore = phase07SelectionsScore + 2;
             }
             else if (phase07Part02SelectedAmount > 1)
             {
@@ -13313,7 +14177,7 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Minimize nutrition impact symptoms to improve oral intake. ");
             phase07Part02Selection05Selected = false;
             phase07Part02SelectedAmount--;
-			phase07SelectionsScore = phase07SelectionsScore - 2;
+            phase07SelectionsScore = phase07SelectionsScore - 2;
         }
     }
 
@@ -13333,7 +14197,7 @@ public class MenuOptions : MonoBehaviour
                 Phase07SelectionText.Add("Assist with improved self-feeding ability. ");
                 phase07Part02Selection06Selected = true;
                 phase07Part02SelectedAmount++;
-				phase07SelectionsScore = phase07SelectionsScore + 1;
+                phase07SelectionsScore = phase07SelectionsScore + 1;
             }
             else if (phase07Part02SelectedAmount > 1)
             {
@@ -13353,13 +14217,14 @@ public class MenuOptions : MonoBehaviour
             Phase07SelectionText.Remove("Assist with improved self-feeding ability. ");
             phase07Part02Selection06Selected = false;
             phase07Part02SelectedAmount--;
-			phase07SelectionsScore = phase07SelectionsScore - 1;
+            phase07SelectionsScore = phase07SelectionsScore - 1;
         }
     }
 
     public void BiochemicalCorrectAnswer01Selected()
     {
-        if (!Phase2BiochemicalAnswer01HasBeenSelected) {
+        if (!Phase2BiochemicalAnswer01HasBeenSelected)
+        {
             BiochemicalRightAnswer01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
             Phase2BiochemicalAnswerSelected += 1;
             Phase2ComputerBiochemicalAnswersSelected += 1;
@@ -13387,8 +14252,10 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void BiochemicalCorrectAnswer03Selected() {
-        if (!Phase2BiochemicalAnswer03HasBeenSelected) {
+    public void BiochemicalCorrectAnswer03Selected()
+    {
+        if (!Phase2BiochemicalAnswer03HasBeenSelected)
+        {
             Phase2BiochemicalAnswerSelected += 1;
             biochemicalCorrectAnswer01Text.SetActive(true);
             phase2BiochemicalProgressFillImage.fillAmount = Phase2BiochemicalAnswerSelected / Phase2BiochemicalAnswerTotal;
@@ -13407,14 +14274,16 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void BiochemicalWhyCorrectAnswerPopUpToggle() {
+    public void BiochemicalWhyCorrectAnswerPopUpToggle()
+    {
         biochemicalWhyCorrectAnswerAnim.SetBool("MenuActivated", false);
         biochemicalWhyCorrectAnswerAnim.SetBool("MenuDeactivated", true);
     }
 
     public void BiochemicalWhyCorrectAnswer01Selected()
     {
-        if (!Phase2BiochemicalWhyAnswerHasBeenSelected) {
+        if (!Phase2BiochemicalWhyAnswerHasBeenSelected)
+        {
             Phase2BiochemicalWhyAnswerSelected += 1;
             BiochemicalWhyAnswerAnim.SetBool("MenuActivated", false);
             biochemicalWhyCorrectAnswerAnim.SetBool("MenuDefault", false);
@@ -13430,28 +14299,31 @@ public class MenuOptions : MonoBehaviour
 
     public void BiochemicalIncorrectAnswer01Selected()
     {
-        if (!Phase2BiochemicalWrongAnswer01HasBeenSelected) {
+        if (!Phase2BiochemicalWrongAnswer01HasBeenSelected)
+        {
             Phase2SelectWrongAnswerBiochemicalScore += 1;
             if (Phase2SelectWrongAnswerBiochemicalScore <= 1)
             {
                 HintText.text = "This is incorrect, reconsider your option.";
-            } else if (Phase2SelectWrongAnswerBiochemicalScore >= 2) {
+            }
+            else if (Phase2SelectWrongAnswerBiochemicalScore >= 2)
+            {
                 HintText.text = "This is incorrect, carefully consider which parameters will be influenced by the nutritional intervention.";
             }
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer01SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
             Phase2BiochemicalWrongAnswer01HasBeenSelected = true;
-            
+
         }
     }
 
@@ -13471,12 +14343,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer02SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13500,12 +14372,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer03SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13529,12 +14401,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer04SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13558,12 +14430,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer05SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13587,12 +14459,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer06SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13616,12 +14488,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer07SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13645,12 +14517,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerBiochemicalScore == 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerBiochemicalScore > 1)
             {
                 phase02BiochemicalPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             BiochemicalWrongAnswer08SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13665,13 +14537,15 @@ public class MenuOptions : MonoBehaviour
         biochemicalWhyIncorrectAnswer01Selected = true;
         BiochemicalWhyIncorrectAnswer01Text.color = alreadySelectedColour;
         biochemicalWhyIncorrectAnswerSelectedScore += 1;
-        if (biochemicalWhyIncorrectAnswerSelectedScore == 1) {
+        if (biochemicalWhyIncorrectAnswerSelectedScore == 1)
+        {
             phase02BiochemicalWhyPlayerRating = playerRatingIntermediate;
-			phase08OverallScore = phase08OverallScore + 1;
+            phase08OverallScore = phase08OverallScore + 1;
         }
-        else if (biochemicalWhyIncorrectAnswerSelectedScore > 1) {
+        else if (biochemicalWhyIncorrectAnswerSelectedScore > 1)
+        {
             phase02BiochemicalWhyPlayerRating = playerRatingNovice;
-			phase08OverallScore = phase08OverallScore + 1;
+            phase08OverallScore = phase08OverallScore + 1;
         }
     }
 
@@ -13686,18 +14560,19 @@ public class MenuOptions : MonoBehaviour
         if (biochemicalWhyIncorrectAnswerSelectedScore == 1)
         {
             phase02BiochemicalWhyPlayerRating = playerRatingIntermediate;
-			phase08OverallScore = phase08OverallScore + 1;
+            phase08OverallScore = phase08OverallScore + 1;
         }
         else if (biochemicalWhyIncorrectAnswerSelectedScore > 1)
         {
             phase02BiochemicalWhyPlayerRating = playerRatingNovice;
-			phase08OverallScore = phase08OverallScore + 1;
+            phase08OverallScore = phase08OverallScore + 1;
         }
     }
 
     public void MedicationCorrectAnswer01Selected()
     {
-        if (!Phase2MedicationAnswer01HasBeenSelected) {
+        if (!Phase2MedicationAnswer01HasBeenSelected)
+        {
             MedicationRightAnswer01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
             MedicationAnswerOneText.text = "Correct Answer 1 Text";
             Phase2MedicationAnswerSelected += 1;
@@ -13719,7 +14594,8 @@ public class MenuOptions : MonoBehaviour
 
     public void MedicationIncorrectAnswer01Selected()
     {
-        if (!Phase2MedicationWrongAnswer01HasBeenSelected) {
+        if (!Phase2MedicationWrongAnswer01HasBeenSelected)
+        {
             HintText.text = "This is not the right answer, try the other thing please 01";
             Phase2SelectWrongAnswerMedicationScore += 1;
             MedicationWrongAnswer01SelectImage.sprite = BiochemicalIncorrectAnswerSelectedSprite;
@@ -13777,23 +14653,27 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-	public void ClientHistoryCorrectAnswer00() {
-		if (!clientHistoryCorrectAnswerSelected00) {
-			clientHistoryCorrectAnswer00Text.SetActive(true);
-			clientHistoryAnswersSelected += 1;
-			phase2ClientHistoryProgressFillImage.fillAmount = clientHistoryAnswersSelected / Phase2ClientHistoryAnswerTotal;
-			clientHistoryCorrectAnswerSelected00 = true;
-		}
-	}
+    public void ClientHistoryCorrectAnswer00()
+    {
+        if (!clientHistoryCorrectAnswerSelected00)
+        {
+            clientHistoryCorrectAnswer00Text.SetActive(true);
+            clientHistoryAnswersSelected += 1;
+            phase2ClientHistoryProgressFillImage.fillAmount = clientHistoryAnswersSelected / Phase2ClientHistoryAnswerTotal;
+            clientHistoryCorrectAnswerSelected00 = true;
+        }
+    }
 
     public void PatientInformationCorrectAnswer01Selected()
     {
-        if (!medicalHistoryAnswer01HasBeenSelected) {
+        if (!medicalHistoryAnswer01HasBeenSelected)
+        {
             PatientInformationAnswerOneText.text = patientNameString;
             PatientInformationAge.SetActive(true);
             PatientInformationGender.SetActive(true);
             Phase2PatientHistoryCompleted = true;
-            foreach (GameObject item in medicalHistoryNameReferences) {
+            foreach (GameObject item in medicalHistoryNameReferences)
+            {
                 item.GetComponent<Text>().color = alreadySelectedDarkColour;
                 item.GetComponent<Button>().interactable = false;
             }
@@ -13801,8 +14681,10 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void ClientHistoryCorrectAnswer01() {
-        if (!clientHistoryCorrectAnswerSelected01) {
+    public void ClientHistoryCorrectAnswer01()
+    {
+        if (!clientHistoryCorrectAnswerSelected01)
+        {
             clientHistoryCorrectAnswer01Text.SetActive(true);
             clientHistoryAnswersSelected += 1;
             phase2ClientHistoryProgressFillImage.fillAmount = clientHistoryAnswersSelected / Phase2ClientHistoryAnswerTotal;
@@ -13863,7 +14745,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void ClientHistoryCorrectAnswer06() {
+    public void ClientHistoryCorrectAnswer06()
+    {
         if (!clientHistoryCorrectAnswerSelected06)
         {
             clientHistoryCorrectAnswer15Text.SetActive(true);
@@ -14150,15 +15033,19 @@ public class MenuOptions : MonoBehaviour
 
     public void MedicalHistoryIncorrectAnswer01Selected()
     {
-        if (!medicalHistoryWrongAnswer01HasBeenSelected) {
+        if (!medicalHistoryWrongAnswer01HasBeenSelected)
+        {
             HintText.text = "This information is not relevant and will not be saved to your ClinPad.";
             Phase2SelectWrongAnswerMedicalHistoryScore += 1;
-            if (Phase2SelectWrongAnswerMedicalHistoryScore == 1) {
+            if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
+            {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-            } else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1) {
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
+            {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             medicalHistoryWrongAnswer01HasBeenSelected = true;
@@ -14174,14 +15061,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer02HasBeenSelected = true;
         }
     }
@@ -14195,14 +15082,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer03HasBeenSelected = true;
         }
     }
@@ -14216,14 +15103,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer04HasBeenSelected = true;
         }
     }
@@ -14237,14 +15124,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer05HasBeenSelected = true;
         }
     }
@@ -14258,12 +15145,12 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             MenuButton.isOn = true;
             medicalHistoryWrongAnswer06HasBeenSelected = true;
@@ -14279,59 +15166,59 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer07HasBeenSelected = true;
         }
     }
 
-	public void MedicalHistoryIncorrectAnswer07bSelected()
-	{
-		if (!medicalHistoryWrongAnswer07bHasBeenSelected)
-		{
-			HintText.text = "This information is not relevant and will not be saved to your ClinPad.";
-			Phase2SelectWrongAnswerMedicalHistoryScore += 1;
-			if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
-			{
-				phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-			}
-			else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
-			{
-				phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
-			}
-			MenuButton.isOn = true;            
-			medicalHistoryWrongAnswer07bHasBeenSelected = true;
-		}
-	}
+    public void MedicalHistoryIncorrectAnswer07bSelected()
+    {
+        if (!medicalHistoryWrongAnswer07bHasBeenSelected)
+        {
+            HintText.text = "This information is not relevant and will not be saved to your ClinPad.";
+            Phase2SelectWrongAnswerMedicalHistoryScore += 1;
+            if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
+            {
+                phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
+            {
+                phase02MedicalHistoryPlayerRating = playerRatingNovice;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            MenuButton.isOn = true;
+            medicalHistoryWrongAnswer07bHasBeenSelected = true;
+        }
+    }
 
-	public void MedicalHistoryIncorrectAnswer07cSelected()
-	{
-		if (!medicalHistoryWrongAnswer07cHasBeenSelected)
-		{
-			HintText.text = "This information is not relevant and will not be saved to your ClinPad.";
-			Phase2SelectWrongAnswerMedicalHistoryScore += 1;
-			if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
-			{
-				phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-			}
-			else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
-			{
-				phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
-			}
-			MenuButton.isOn = true;            
-			medicalHistoryWrongAnswer07cHasBeenSelected = true;
-		}
-	}
+    public void MedicalHistoryIncorrectAnswer07cSelected()
+    {
+        if (!medicalHistoryWrongAnswer07cHasBeenSelected)
+        {
+            HintText.text = "This information is not relevant and will not be saved to your ClinPad.";
+            Phase2SelectWrongAnswerMedicalHistoryScore += 1;
+            if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
+            {
+                phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
+            {
+                phase02MedicalHistoryPlayerRating = playerRatingNovice;
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            MenuButton.isOn = true;
+            medicalHistoryWrongAnswer07cHasBeenSelected = true;
+        }
+    }
 
     public void MedicalHistoryIncorrectAnswer08Selected()
     {
@@ -14342,14 +15229,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer08HasBeenSelected = true;
         }
     }
@@ -14363,14 +15250,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer09HasBeenSelected = true;
         }
     }
@@ -14383,15 +15270,15 @@ public class MenuOptions : MonoBehaviour
             Phase2SelectWrongAnswerMedicalHistoryScore += 1;
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
-				phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer10HasBeenSelected = true;
         }
     }
@@ -14405,14 +15292,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer11HasBeenSelected = true;
         }
     }
@@ -14426,14 +15313,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer12HasBeenSelected = true;
         }
     }
@@ -14447,14 +15334,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer13HasBeenSelected = true;
         }
     }
@@ -14468,14 +15355,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer14HasBeenSelected = true;
         }
     }
@@ -14489,14 +15376,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer15HasBeenSelected = true;
         }
     }
@@ -14510,14 +15397,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer16HasBeenSelected = true;
         }
     }
@@ -14531,14 +15418,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer17HasBeenSelected = true;
         }
     }
@@ -14552,14 +15439,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer18HasBeenSelected = true;
         }
     }
@@ -14573,14 +15460,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer19HasBeenSelected = true;
         }
     }
@@ -14594,14 +15481,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer20HasBeenSelected = true;
         }
     }
@@ -14615,14 +15502,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer21HasBeenSelected = true;
         }
     }
@@ -14636,14 +15523,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer22HasBeenSelected = true;
         }
     }
@@ -14657,14 +15544,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer23HasBeenSelected = true;
         }
     }
@@ -14678,14 +15565,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer24HasBeenSelected = true;
         }
     }
@@ -14699,14 +15586,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer25HasBeenSelected = true;
         }
     }
@@ -14720,14 +15607,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer26HasBeenSelected = true;
         }
     }
@@ -14741,14 +15628,14 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer27HasBeenSelected = true;
         }
     }
@@ -14762,21 +15649,22 @@ public class MenuOptions : MonoBehaviour
             if (Phase2SelectWrongAnswerMedicalHistoryScore == 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase2SelectWrongAnswerMedicalHistoryScore > 1)
             {
                 phase02MedicalHistoryPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
-            MenuButton.isOn = true;            
+            MenuButton.isOn = true;
             medicalHistoryWrongAnswer28HasBeenSelected = true;
         }
     }
 
     public void FoodAndNutritionCorrectAnswer28Selected()
     {
-        if (!Phase2FoodAndNutritionAnswer01HasBeenSelected) {
+        if (!Phase2FoodAndNutritionAnswer01HasBeenSelected)
+        {
             FoodAndNutritionRightAnswer01SelectText.color = new Color32(106, 181, 67, 255);
             FoodAndNutritionAnswerOneText.text = "Correct Answer 1 Text";
             Phase2FoodAndNutritionAnswerSelected += 1;
@@ -14849,7 +15737,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void PatientInvestigationAnthropometryAnswer01Selected() {
+    public void PatientInvestigationAnthropometryAnswer01Selected()
+    {
         if (!Phase4PatientInvestigationAnthropometryAnswer01HasBeenSelected)
         {
             Phase4PatientInvestigationAnthropometryAnswer01HasBeenSelected = true;
@@ -14935,7 +15824,8 @@ public class MenuOptions : MonoBehaviour
                 Phase6Part05Group.SetTrigger("AnimateIn");
             }
         }
-        else if (PhaseManagement.gamePhase == 7) {                        
+        else if (PhaseManagement.gamePhase == 7)
+        {
             currentScene = 9;
             inComputerThree = true;
             ComputerSceneThreeDateGroup.SetActive(true);
@@ -14965,21 +15855,26 @@ public class MenuOptions : MonoBehaviour
                 {
                     phase07PartTwoPopup.SetTrigger("AnimateIn");
                 }
-				else if (Phase07Part04Complete) {
-					Phase07Part05CompletedAnim.SetTrigger("AnimateIn");
-				}
-				else if (Phase07Part03Part01Complete && Phase07Part03Part02Complete) {
-					Phase07Part04AlertMessageToggle();
-				} 
-                else if (phase07PartTwoComplete) {
+                else if (Phase07Part04Complete)
+                {
+                    Phase07Part05CompletedAnim.SetTrigger("AnimateIn");
+                }
+                else if (Phase07Part03Part01Complete && Phase07Part03Part02Complete)
+                {
+                    Phase07Part04AlertMessageToggle();
+                }
+                else if (phase07PartTwoComplete)
+                {
                     phase07PartThreePopup.SetTrigger("AnimateIn");
-                }                               
+                }
             }
-            else {
+            else
+            {
                 phase07PartOnePopup.SetTrigger("AnimateIn");
-            }            
+            }
         }
-        else {
+        else
+        {
             currentScene = 4;
             inComputer = true;
             if (inChat)
@@ -14993,8 +15888,8 @@ public class MenuOptions : MonoBehaviour
                 ComputerSceneAnim.SetBool("InvestigationSceneAnimateOut", false);
                 ComputerSceneAnim.SetBool("InvestigationSceneAnimateIn", true);
             }
-        }        
-    }    
+        }
+    }
 
     public void ChangeSceneToClipboard()
     {
@@ -15017,7 +15912,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void ChangeSceneToMedicalChart() {
+    public void ChangeSceneToMedicalChart()
+    {
         currentScene = 6;
         inMedicalChart = true;
         if (inChat)
@@ -15061,11 +15957,13 @@ public class MenuOptions : MonoBehaviour
         SGAFormButtonGroup.SetActive(true);
     }
 
-    public void ChangeSceneFromSGAForm() {
-        if (SGASceneAnim.GetBool("InvestigationSceneAnimateIn") == true) {
+    public void ChangeSceneFromSGAForm()
+    {
+        if (SGASceneAnim.GetBool("InvestigationSceneAnimateIn") == true)
+        {
             SGASceneAnim.SetBool("InvestigationSceneAnimateIn", false);
             SGASceneAnim.SetBool("InvestigationSceneAnimateOut", true);
-        }        
+        }
         NPCRightDieticianImage.SetBool("NPCRightAnimateOut", false);
         NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
         FoodGroupResourceGroup.SetActive(false);
@@ -15075,13 +15973,14 @@ public class MenuOptions : MonoBehaviour
         NurseNavButton.interactable = true;
         DieticianNavButton.interactable = true;
         PatientNavButton.interactable = true;
-        ActivateChatButton.interactable = true;        
+        ActivateChatButton.interactable = true;
         currentScene = 0;
         inSGAForm = false;
         Phase5CompleteCheck();
     }
 
-    public void ChangeSceneFromMedicalChart() {
+    public void ChangeSceneFromMedicalChart()
+    {
 
         if (MedicalClipboardSceneAnim.GetBool("InvestigationSceneAnimateIn") == true)
         {
@@ -15110,7 +16009,8 @@ public class MenuOptions : MonoBehaviour
         }
         if (phase4InvestigationSelectedScore == phase4InvestigationTotalScore)
         {
-            if (phase4Conversation1Done && phase4Conversation2Done && phase4Conversation3Done && phase4Conversation4Done && phase4Conversation5Done) {
+            if (phase4Conversation1Done && phase4Conversation2Done && phase4Conversation3Done && phase4Conversation4Done && phase4Conversation5Done)
+            {
                 PhaseManagement.gamePhase = 5;
                 nextPhaseSource.Play();
                 PhaseReachedAnim.SetTrigger("PhaseReached");
@@ -15121,8 +16021,8 @@ public class MenuOptions : MonoBehaviour
                 totalProgressAmountText.text = "50%";
                 Phase4ProgressGroup.SetActive(false);
                 SGAFormButton.SetActive(true);
-                weightChangeCalculatorGroup.SetActive(true);               
-            }            
+                weightChangeCalculatorGroup.SetActive(true);
+            }
         }
     }
 
@@ -15138,23 +16038,29 @@ public class MenuOptions : MonoBehaviour
             currentScene = 0;
             inComputerTwo = false;
             ComputerSceneTwoDateGroup.SetActive(false);
-			if (Phase6Part01Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
-				Phase6Part01Group.SetTrigger("AnimateOut");
-			}
-			if (Phase6Part02Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
-				Phase6Part02Group.SetTrigger("AnimateOut");
-			}
-			if (Phase6Part03Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
-				Phase6Part03Group.SetTrigger("AnimateOut");
-			}
-			if (Phase6Part04Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
-				Phase6Part04Group.SetTrigger("AnimateOut");
-			}
-			if (Phase6Part05Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
-				Phase6Part05Group.SetTrigger("AnimateOut");
-			}
+            if (Phase6Part01Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
+                Phase6Part01Group.SetTrigger("AnimateOut");
+            }
+            if (Phase6Part02Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
+                Phase6Part02Group.SetTrigger("AnimateOut");
+            }
+            if (Phase6Part03Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
+                Phase6Part03Group.SetTrigger("AnimateOut");
+            }
+            if (Phase6Part04Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
+                Phase6Part04Group.SetTrigger("AnimateOut");
+            }
+            if (Phase6Part05Group.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
+                Phase6Part05Group.SetTrigger("AnimateOut");
+            }
         }
-        else if (PhaseManagement.gamePhase == 7) {
+        else if (PhaseManagement.gamePhase == 7)
+        {
             if (ComputerSceneThreeAnim.GetBool("InvestigationSceneAnimateIn") == true)
             {
                 ComputerSceneThreeAnim.SetBool("InvestigationSceneAnimateIn", false);
@@ -15163,7 +16069,8 @@ public class MenuOptions : MonoBehaviour
             currentScene = 0;
             inComputerThree = false;
             ComputerSceneThreeDateGroup.SetActive(false);
-            if (phase07UploadPopup.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
+            if (phase07UploadPopup.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
                 phase07UploadPopup.SetTrigger("AnimateOut");
             }
             if (phase07PartOnePopup.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
@@ -15174,17 +16081,21 @@ public class MenuOptions : MonoBehaviour
             {
                 phase07PartTwoPopup.SetTrigger("AnimateOut");
             }
-            if (phase07PartThreePopup.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
+            if (phase07PartThreePopup.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
                 phase07PartThreePopup.SetTrigger("AnimateOut");
             }
-            if (Phase07Part04ConfirmationAlertAnim.GetBool("MenuActivated") == true) {
+            if (Phase07Part04ConfirmationAlertAnim.GetBool("MenuActivated") == true)
+            {
                 Phase07Part04ConfirmationAlertAnim.SetBool("MenuActivated", false);
             }
-            if (Phase07Part05CompletedAnim.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn")) {
+            if (Phase07Part05CompletedAnim.GetCurrentAnimatorStateInfo(0).IsName("NutritionalDiagnosisAnimateIn"))
+            {
                 Phase07Part05CompletedAnim.SetTrigger("AnimateOut");
             }
         }
-        else {
+        else
+        {
             if (ComputerSceneAnim.GetBool("InvestigationSceneAnimateIn") == true)
             {
                 ComputerSceneAnim.SetBool("InvestigationSceneAnimateIn", false);
@@ -15193,7 +16104,7 @@ public class MenuOptions : MonoBehaviour
             currentScene = 0;
             inComputer = false;
             biochemicalAnswersGroup.SetActive(false);
-        }        
+        }
     }
 
     public void ChangeSceneFromClipboard()
@@ -15334,7 +16245,7 @@ public class MenuOptions : MonoBehaviour
 
     public void QuitToMenu()
     {
-		PhaseManagement.gamePhase = 1;
+        PhaseManagement.gamePhase = 1;
         SceneManager.LoadScene("login_SCENE");
     }
 
@@ -15411,7 +16322,8 @@ public class MenuOptions : MonoBehaviour
         TranscribeAnthropometryGroup.SetActive(true);
     }
 
-    public void TranscribeBiochemicalGroupTab() {
+    public void TranscribeBiochemicalGroupTab()
+    {
         TranscribeSelectedTabHeaderText.text = "Biochemical - Saved Information";
         TranscribeAnthropometryGroup.SetActive(false);
         TranscribeClientHistoryGroup.SetActive(false);
@@ -15465,8 +16377,8 @@ public class MenuOptions : MonoBehaviour
         TranscribeBiochemicalGroup.SetActive(false);
         TranscribeClientHistoryGroup.SetActive(false);
         TranscribeFoodAndNutritionGroup.SetActive(false);
-		TranscribeNutritionDiagnosisGroup.SetActive(false);
-		TranscribeInterventionPlanGroup.SetActive(true);
+        TranscribeNutritionDiagnosisGroup.SetActive(false);
+        TranscribeInterventionPlanGroup.SetActive(true);
         TranscribeMonitoringAndEvaluationGroup.SetActive(false);
     }
 
@@ -15514,7 +16426,8 @@ public class MenuOptions : MonoBehaviour
                 ComputerSceneBackButton.SetActive(true);
                 ContextSensitiveBackToDietitianHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
             }
-            else if (NotesInputBox.GetComponent<InputField>().text.Length <= 5) {
+            else if (NotesInputBox.GetComponent<InputField>().text.Length <= 5)
+            {
                 HintText.text = "Please input at least 6 characters before saving your notes. This text will be saved and be supplementary to you overall score.";
                 MenuButton.isOn = true;
             }
@@ -15570,7 +16483,8 @@ public class MenuOptions : MonoBehaviour
         //}
     }
 
-    public void PatientHeightRecord() {
+    public void PatientHeightRecord()
+    {
         HeightRecordedClinpadText.text = "160cm";
         Phase2AnthropometryAnswerSelected += 1;
         phase2AnthropometryProgressFillImage.fillAmount = Phase2AnthropometryAnswerSelected / Phase2AnthropometryAnswerTotal;
@@ -15591,7 +16505,8 @@ public class MenuOptions : MonoBehaviour
         Phase2DieticianConversationTracker = 3;
     }
 
-    public void PresentFindings() {
+    public void PresentFindings()
+    {
         NPCRightTwoChatPortrait.sprite = DieticianPortraitImage;
         ChatTextRightTwoHeaderImage.color = dietiticSupervisorChatHeaderColour;
         ChatRightTwoNameText.text = dieteticSupervisorNameString;
@@ -15607,10 +16522,11 @@ public class MenuOptions : MonoBehaviour
         currentPhaseProgressFillImage.fillAmount = 0;
         totalProgressFillImage.fillAmount = 0.25f;
         totalProgressAmountText.text = "25%";
-        if (!alreadyReachedPhase3) {
+        if (!alreadyReachedPhase3)
+        {
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
-            PhaseReachedText.text = "REACHED PHASE 3";            
+            PhaseReachedText.text = "REACHED PHASE 3";
             alreadyReachedPhase3 = true;
         }
         Phase2ProgressGroup.SetActive(false);
@@ -15718,7 +16634,8 @@ public class MenuOptions : MonoBehaviour
         Phase2DieticianConversationTracker = 8;
     }
 
-    public void StartPatientAnthropometryInvestigation() {
+    public void StartPatientAnthropometryInvestigation()
+    {
         ChatLeftNameText.text = playerNameString;
         ChatTextLeftHeaderImage.color = playerChatHeaderColour;
         NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
@@ -15739,9 +16656,10 @@ public class MenuOptions : MonoBehaviour
         {
             Phase4PatientConversationTracker = 100;
         }
-        else {
+        else
+        {
             Phase4PatientConversationTracker = 110;
-        }        
+        }
     }
     public void StartPatientClientHistoryInvestigation()
     {
@@ -15777,7 +16695,7 @@ public class MenuOptions : MonoBehaviour
         ChatTextRightTwoHeaderImage.color = patientChatHeaderColour;
         NPCRightTwoChatPortrait.sprite = PatientPortraitImage;
         ChatLeftText.text = "I’m going to ask you a few questions about your personal and social history.";
-        ChatNextButtonText.text = "CONTINUE";        
+        ChatNextButtonText.text = "CONTINUE";
         phaseFourInteractiveButtonGroup.SetActive(false);
         Phase4PatientConversationTracker = 300;
     }
@@ -15800,7 +16718,8 @@ public class MenuOptions : MonoBehaviour
         phaseFourInteractiveButtonGroup.SetActive(false);
         Phase4PatientConversationTracker = 500;
     }
-    public void StartExaminationInvestigation() {
+    public void StartExaminationInvestigation()
+    {
         ChatLeftNameText.text = playerNameString;
         ChatTextLeftHeaderImage.color = playerChatHeaderColour;
         NPCLeftChatPortraitImage.sprite = PlayerPortraitImage;
@@ -15814,48 +16733,53 @@ public class MenuOptions : MonoBehaviour
         ChatTextRightTwoHeaderImage.color = patientChatHeaderColour;
         NPCRightTwoChatPortrait.sprite = PatientPortraitImage;
         ChatLeftText.text = "I need to do a physical examination to assess the muscle and fat stores on your body. Are you feeling okay enough for a brief physical examination?";
-        ChatNextButtonText.text = "NEXT";        
+        ChatNextButtonText.text = "NEXT";
         phaseFourInteractiveButtonGroup.SetActive(false);
         Phase4PatientConversationTracker = 400;
     }
 
-    public void Phase04CheckExamScore() {
-        if (phase4InvestigationSelectedScore > 8) {
+    public void Phase04CheckExamScore()
+    {
+        if (phase4InvestigationSelectedScore > 8)
+        {
             int Phase04ExamScore = phase04ExamSelectionCorrect01Score + phase04ExamSelectionCorrect02Score + phase04ExamSelectionCorrect03Score + phase04ExamSelectionCorrect04Score + phase04ExamSelectionCorrect05Score + phase04ExamSelectionCorrect06Score + phase04ExamSelectionCorrect07Score + phase04ExamSelectionCorrect08Score + phase04ExamSelectionCorrect09Score;
-			phase04Phase05CombinedScore = Phase04ExamScore;
+            phase04Phase05CombinedScore = Phase04ExamScore;
             if (Phase04ExamScore < 8 && Phase04ExamScore > 4)
             {
-				
+
                 phase04ExamPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
             }
             else if (Phase04ExamScore < 5)
-            {				
+            {
                 phase04ExamPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
+                phase08OverallScore = phase08OverallScore + 2;
             }
-			investigationBackButtonText.text = "FINISH";
-        }        
+            investigationBackButtonText.text = "FINISH";
+        }
     }
 
-	public void ReloadGame()
-	{
-		PhaseManagement.gamePhase = 1;
-		int scene = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(scene, LoadSceneMode.Single);
-	}
+    public void ReloadGame()
+    {
+        PhaseManagement.gamePhase = 1;
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
 
-    public void Phase4DropdownOptionSelected01() {
-        if (Phase4InvestigationDropdown01.value > 0) {
+    public void Phase4DropdownOptionSelected01()
+    {
+        if (Phase4InvestigationDropdown01.value > 0)
+        {
             if (!phase4InvestigationScoreGiven01)
             {
                 phase4InvestigationSelectedScore += 1;
             }
-            if (Phase4InvestigationDropdown01.value == 1) {
+            if (Phase4InvestigationDropdown01.value == 1)
+            {
                 physicalExam01Option01.SetActive(true);
                 physicalExam01Option02.SetActive(false);
                 physicalExam01Option03.SetActive(false);
-                phase04ExamSelectionCorrect01Score = 0;              
+                phase04ExamSelectionCorrect01Score = 0;
             }
             else if (Phase4InvestigationDropdown01.value == 2)
             {
@@ -16146,7 +17070,7 @@ public class MenuOptions : MonoBehaviour
         ChatLeftTwoAnim.SetBool("ChatActivated", false);
         ChatLeftTwoAnim.SetBool("ChatFinishedMoveUp", true);
         ChatLeftAnim.SetBool("ChatDefault", false);
-        ChatLeftAnim.SetBool("ChatActivated", true);        
+        ChatLeftAnim.SetBool("ChatActivated", true);
         Phase5DietitianConversationTracker = 100;
     }
 
@@ -16164,7 +17088,8 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatActivated", true);
         Phase5DietitianConversationTracker = 400;
     }
-    public void Phase5EnergyActualOptionSelected() {
+    public void Phase5EnergyActualOptionSelected()
+    {
         ChatNextButtonText.text = "CONTINUE";
         phase5MultipleChoiceButtonGroup.SetActive(false);
         ChatNextButton.interactable = true;
@@ -16177,7 +17102,8 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatActivated", true);
         Phase5DietitianConversationTracker = 1100;
     }
-    public void Phase5EvaluateBodyWeightOptionSelected() {
+    public void Phase5EvaluateBodyWeightOptionSelected()
+    {
         ChatNextButtonText.text = "CONTINUE";
         phase5MultipleChoiceButtonGroup.SetActive(false);
         ChatNextButton.interactable = true;
@@ -16190,7 +17116,8 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatActivated", true);
         Phase5DietitianConversationTracker = 2000;
     }
-    public void Phase5AnalyseDietPartOneOptionA() {
+    public void Phase5AnalyseDietPartOneOptionA()
+    {
         ChatLeftTwoText.text = "Well, my calculations show that Marta’s intake of food from all the food groups were below her requirements.";
         ChatRightTwoText.text = "Okay so what conclusion can you make from this evaluation regarding her nutrient intake?";
         phase5AnalyseDietMultipleChoice01ButtonGroup.SetActive(false);
@@ -16238,7 +17165,8 @@ public class MenuOptions : MonoBehaviour
         phase5AnalyseDietCollatedText = "Your qualitative dietary assessment summary indicates that Marta is just meeting her requirements for the ‘Cereal and breads’ as well as the ‘Meat and alternatives’ food groups but for the other food groups she is below her requirements and ";
     }
 
-    public void Phase5AnalyseDietPartTwoOptionA() {
+    public void Phase5AnalyseDietPartTwoOptionA()
+    {
         phase5AnalyseDietCollatedText = phase5AnalyseDietCollatedText + "her diet is low in energy, protein, and fibre, as well as most micronutrients.";
         ChatRightText.text = "Are you happy to save your evaluation of \"" + phase5AnalyseDietCollatedText + "\" to your Clinpad, do you want to make a different evaluation or come back later?";
         ChatNextButtonText.text = "CHOOSE";
@@ -16317,7 +17245,7 @@ public class MenuOptions : MonoBehaviour
         ChatRightTwoAnim.SetBool("ChatDefault", false);
         ChatRightTwoAnim.SetBool("ChatActivated", true);
         Phase5DietitianConversationTracker = 700;
-        phase5EnergyAndNutrientsCollatedText = "Marta is meeting 73% of her protein needs but only 67% of her energy needs and ";        
+        phase5EnergyAndNutrientsCollatedText = "Marta is meeting 73% of her protein needs but only 67% of her energy needs and ";
     }
 
     public void Phase5EnergyAndNutrientsPartOneOptionC()
@@ -16349,7 +17277,7 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatFinishedMoveUp", true);
         ChatRightAnim.SetBool("ChatDefault", false);
         ChatRightAnim.SetBool("ChatActivated", true);
-        Phase5DietitianConversationTracker = 800;        
+        Phase5DietitianConversationTracker = 800;
     }
 
     public void Phase5EnergyAndNutrientsPartTwoOptionB()
@@ -16385,7 +17313,8 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 800;
     }
 
-    public void Phase5EnergyActualPartOneOptionA() {
+    public void Phase5EnergyActualPartOneOptionA()
+    {
         ChatNextButtonText.text = "CONTINUE";
         ChatRightTwoText.text = "What weight will you use to calculate Marta’s requirement?";
         ChatLeftTwoText.text = "Guidelines for an Adult not in the acute setting.";
@@ -16436,7 +17365,8 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 1200;
     }
 
-    public void Phase5EnergyActualPartTwoOptionA() {
+    public void Phase5EnergyActualPartTwoOptionA()
+    {
         ChatLeftText.text = "Guidelines for an Adult not in the acute setting.";
         ChatRightText.text = "Ok, let's work out that formula.";
         ChatNextButtonText.text = "WORK OUT";
@@ -16574,12 +17504,15 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 1209;
     }
 
-    public void Phase5EnergyActualWeightInputSave() {
+    public void Phase5EnergyActualWeightInputSave()
+    {
         weightFloat = float.Parse(phase5EnergyActualWeightInputFieldGroup.GetComponent<InputField>().text);
-        if (weightFloat == 54) {
+        if (weightFloat == 54)
+        {
             phase5EnergyActualCorrectWeightSelected = true;
         }
-        if (phase5EnergyActualFormulaOneSelected) {
+        if (phase5EnergyActualFormulaOneSelected)
+        {
             Phase5EnergyActualFormulaOneWorking();
         }
         else if (phase5EnergyActualFormulaTwoSelected)
@@ -16596,7 +17529,8 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 1201;
     }
 
-    public void Phase5EnergyActualFormulaOneWorking() {
+    public void Phase5EnergyActualFormulaOneWorking()
+    {
         float formulaResult = ((38 * weightFloat) + 2755) * 1.3f;
         phase5formaularesultstring = formulaResult.ToString();
     }
@@ -16612,7 +17546,8 @@ public class MenuOptions : MonoBehaviour
         float formulaResult = 105 * weightFloat;
         phase5formaularesultstring = formulaResult.ToString();
     }
-    public void Phase5EnergyActualPartTwoFormulaOneWorking() {
+    public void Phase5EnergyActualPartTwoFormulaOneWorking()
+    {
         float formulaResult01 = 0.8f * weightFloat;
         float formulaResult02 = 1 * weightFloat;
         phase5PartTwoFormulaResultString = formulaResult01.ToString() + " - " + formulaResult02.ToString();
@@ -16629,9 +17564,10 @@ public class MenuOptions : MonoBehaviour
         float formulaResult02 = 2 * weightFloat;
         phase5PartTwoFormulaResultString = formulaResult01.ToString() + " - " + formulaResult02.ToString();
     }
-    public void Phase5WeightEvaluationPartOneOptionA() {
+    public void Phase5WeightEvaluationPartOneOptionA()
+    {
         Phase5WeightEvaluationAlertMessageText.text = "This is not the correct evaluation, carefully consider the recommended ranges applicable for elderly individuals.";
-        phase05BodyWeightIncorrectScore++;        
+        phase05BodyWeightIncorrectScore++;
         Phase5WeightEvaluationAlertMessageToggle();
     }
     public void Phase5WeightEvaluationPartOneOptionB()
@@ -16655,7 +17591,8 @@ public class MenuOptions : MonoBehaviour
         phase05BodyWeightIncorrectScore++;
         Phase5WeightEvaluationAlertMessageToggle();
     }
-    public void Phase5WeightEvaluationPartTwoOptionA() {
+    public void Phase5WeightEvaluationPartTwoOptionA()
+    {
         Phase5WeightEvaluationAlertMessageText.text = "This weight range is not ideal for Marta, carefully consider the recommended ranges applicable for elderly individuals.";
         phase05BodyWeightIncorrectScore++;
         Phase5WeightEvaluationAlertMessageToggle();
@@ -16682,15 +17619,20 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 2003;
     }
 
-    public void Phase5WeightEvaluationPartThreeFormulaUpdate() {
-        if (Phase5BodyUsualWeightInputField.text != null && Phase5BodyCurrentWeightInputField.text != null) {
+    public void Phase5WeightEvaluationPartThreeFormulaUpdate()
+    {
+        if (Phase5BodyUsualWeightInputField.text != null && Phase5BodyCurrentWeightInputField.text != null)
+        {
             phase5WeightEvaluationPartThreeUpdatingText.text = Phase5BodyUsualWeightInputField.text + " - " + Phase5BodyCurrentWeightInputField.text + " / " + Phase5BodyUsualWeightInputField.text + " x 100";
-        }        
+        }
     }
 
-    public void Phase5WeightEvaluationPartThreeFormulaWorking() {
-        if (Phase5BodyUsualWeightInputField.text != "") {
-            if (Phase5BodyCurrentWeightInputField.text != "") {
+    public void Phase5WeightEvaluationPartThreeFormulaWorking()
+    {
+        if (Phase5BodyUsualWeightInputField.text != "")
+        {
+            if (Phase5BodyCurrentWeightInputField.text != "")
+            {
                 int usualWeightInt = int.Parse(Phase5BodyUsualWeightInputField.text.ToString());
                 int currentWeightInt = int.Parse(Phase5BodyCurrentWeightInputField.text.ToString());
                 if (usualWeightInt == 59)
@@ -16710,23 +17652,28 @@ public class MenuOptions : MonoBehaviour
                         phase5WeightEvaluationSaved03Text.SetActive(true);
                         Phase5DietitianConversationTracker = 2004;
                     }
-                    else {
+                    else
+                    {
                         Phase5WeightEvaluationAlertMessageText.text = "You have entered the correct value for Marta's usual weight but added the wrong current weight, please enter the correct amount.";
                         Phase5WeightEvaluationAlertMessageToggle();
                     }
                 }
-                else {
+                else
+                {
                     Phase5WeightEvaluationAlertMessageText.text = "You have entered the incorrect value for Marta's usual weight, please try again.";
                     Phase5WeightEvaluationAlertMessageToggle();
                 }
             }
-        }             
+        }
     }
 
-    public void Phase5AnalyseDietSaveToClinpad() {
-        if (phase5AnalyseDietCorrectChoiceOneSelected && phase5AnalyseDietCorrectChoiceTwoSelected) {
+    public void Phase5AnalyseDietSaveToClinpad()
+    {
+        if (phase5AnalyseDietCorrectChoiceOneSelected && phase5AnalyseDietCorrectChoiceTwoSelected)
+        {
             Phase5AnalyseDietTranscribeText.SetActive(true);
-            if (phase5EnergyRequirementsComplete && phase5WeightEvaluationComplete && phase5EnergyActualEvaluationComplete) {
+            if (phase5EnergyRequirementsComplete && phase5WeightEvaluationComplete && phase5EnergyActualEvaluationComplete)
+            {
                 ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
                 ChatRightTwoText.text = "Well done, you correctly assessed Marta’s diet and identified the key nutrients that she may be lacking. You can now complete the SGA form located on the desk behind me.";
                 ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16741,7 +17688,8 @@ public class MenuOptions : MonoBehaviour
                 Phase5DietitianConversationTracker = 600;
                 phase5Part3Complete = true;
             }
-            else {
+            else
+            {
                 ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
                 ChatRightTwoText.text = "Well done, you correctly assessed Marta’s diet and identified the key nutrients that she may be lacking. When you are ready come back to me and we will complete the other evaluations.";
                 ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16755,15 +17703,19 @@ public class MenuOptions : MonoBehaviour
                 ChatNextButton.interactable = true;
                 Phase5DietitianConversationTracker = 600;
             }
-            if (phase05QualatativeDietIncorrectScore == 1) {
+            if (phase05QualatativeDietIncorrectScore == 1)
+            {
                 phase05QualatativeDietPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-            } else if (phase05QualatativeDietIncorrectScore > 1) {
+                phase08OverallScore = phase08OverallScore + 1;
+            }
+            else if (phase05QualatativeDietIncorrectScore > 1)
+            {
                 phase05QualatativeDietPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
-            }                        
+                phase08OverallScore = phase08OverallScore + 2;
+            }
         }
-        else {
+        else
+        {
             ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
             ChatRightTwoText.text = "Mmmm, you seem to have made an error in your assessment. You probably need to revisit Marta’s diet and reconsider your evaluation.";
             ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16782,7 +17734,8 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase5AnalyseDietReevaluate() {
+    public void Phase5AnalyseDietReevaluate()
+    {
         ChatRightTwoText.text = "No problem, we can analyse the qualatative aspects of Marta's diet again.";
         ChatLeftTwoText.text = "I would like to reevaluate, could I please have the questions again.";
         Phase5AnalyseDietFinalDecisionButtonGroup.SetActive(false);
@@ -16819,8 +17772,9 @@ public class MenuOptions : MonoBehaviour
                 ChatNextButton.interactable = true;
                 phase5Part3Complete = true;
                 Phase5DietitianConversationTracker = 1000;
-            }            
-            else {
+            }
+            else
+            {
                 ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
                 ChatRightTwoText.text = "Well done. Since Marta is slowly losing weight while she is having 90% of the lower end of her energy requirement this indicates that her need is likely higher veering towards the upper end of her energy requirement. You still need to complete the other evaluations, come back to me when you are ready.";
                 ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16834,16 +17788,20 @@ public class MenuOptions : MonoBehaviour
                 ChatNextButton.interactable = true;
                 Phase5DietitianConversationTracker = 1000;
             }
-            if (phase05QuantatativeDietIncorrectScore == 1) {
+            if (phase05QuantatativeDietIncorrectScore == 1)
+            {
                 phase05QuantativeDietPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
 
-            } else if (phase05QuantatativeDietIncorrectScore > 1) {
+            }
+            else if (phase05QuantatativeDietIncorrectScore > 1)
+            {
                 phase05QuantativeDietPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
+                phase08OverallScore = phase08OverallScore + 2;
             }
         }
-        else {
+        else
+        {
             ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
             ChatRightTwoText.text = "This does not seem correct, carefully consider the energy and protein requirement you used. Consider her weight history to help identify the correct requirement.";
             ChatRightAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16902,7 +17860,8 @@ public class MenuOptions : MonoBehaviour
                 phase5Part3Complete = true;
                 Phase5DietitianConversationTracker = 1300;
             }
-            else {
+            else
+            {
                 ChatLeftTwoText.text = "I would like to save the information to the Clinpad please.";
                 ChatRightText.text = "Well done, you chose the correct requirements based on best evidence and Marta’s underlying condition. When you are ready you can finish your evaluation of the other sections.";
                 ChatRightTwoAnim.SetBool("ChatFinishedMoveUp", false);
@@ -16919,21 +17878,23 @@ public class MenuOptions : MonoBehaviour
             if (phase05EnergyActualDietIncorrectScore == 1)
             {
                 phase05EnergyActualPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
+                phase08OverallScore = phase08OverallScore + 1;
 
             }
             else if (phase05QuantatativeDietIncorrectScore > 1)
             {
                 phase05EnergyActualPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
+                phase08OverallScore = phase08OverallScore + 2;
             }
         }
-        else {
+        else
+        {
             ChatRightText.text = "Hmmm, some of your requirements do not seem correct.";
             if (!phase5EnergyActualCorrectChoiceOneSelected && !phase5EnergyActualPartTwoCorrectChoiceSelected && !phase5EnergyActualPartThreeCorrectChoiceSelected && !phase5EnergyActualPartFourCorrectChoiceSelected)
             {
                 ChatRightText.text = ChatRightText.text + " Carefully consider your energy, protein, dietary fibre, and fluid recommendations.";
-                if (!phase5EnergyActualCorrectWeightSelected) {
+                if (!phase5EnergyActualCorrectWeightSelected)
+                {
                     ChatRightText.text = ChatRightText.text + " Also you selected the incorrect weight.";
                 }
             }
@@ -17033,7 +17994,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightText.text = ChatRightText.text + " Also you selected the incorrect weight.";
                 }
             }
-            else if (!phase5EnergyActualCorrectChoiceOneSelected && !phase5EnergyActualPartThreeCorrectChoiceSelected && phase5EnergyActualPartTwoCorrectChoiceSelected && phase5EnergyActualPartFourCorrectChoiceSelected) {
+            else if (!phase5EnergyActualCorrectChoiceOneSelected && !phase5EnergyActualPartThreeCorrectChoiceSelected && phase5EnergyActualPartTwoCorrectChoiceSelected && phase5EnergyActualPartFourCorrectChoiceSelected)
+            {
                 ChatRightText.text = ChatRightText.text + " Carefully consider your energy and dietary recommendations.";
                 if (!phase5EnergyActualCorrectWeightSelected)
                 {
@@ -17056,7 +18018,8 @@ public class MenuOptions : MonoBehaviour
                     ChatRightText.text = ChatRightText.text + " Also you selected the incorrect weight.";
                 }
             }
-            else if (!phase5EnergyActualCorrectWeightSelected && phase5EnergyActualPartTwoCorrectChoiceSelected && phase5EnergyActualPartFourCorrectChoiceSelected && phase5EnergyActualPartThreeCorrectChoiceSelected && phase5EnergyActualCorrectChoiceOneSelected) {
+            else if (!phase5EnergyActualCorrectWeightSelected && phase5EnergyActualPartTwoCorrectChoiceSelected && phase5EnergyActualPartFourCorrectChoiceSelected && phase5EnergyActualPartThreeCorrectChoiceSelected && phase5EnergyActualCorrectChoiceOneSelected)
+            {
                 ChatRightText.text = "All of your recommendations were correct however you inputted the incorrect weight. Make sure to check your Clinpad.";
             }
             ChatLeftText.text = "I would like to save the information to the Clinpad please.";
@@ -17100,8 +18063,10 @@ public class MenuOptions : MonoBehaviour
         Phase5DietitianConversationTracker = 1400;
     }
 
-    public void Phase5CompleteCheck() {
-        if (phase5Part1Complete && phase5Part2Complete && phase5Part3Complete) {
+    public void Phase5CompleteCheck()
+    {
+        if (phase5Part1Complete && phase5Part2Complete && phase5Part3Complete)
+        {
             PhaseManagement.gamePhase = 6;
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
@@ -17110,17 +18075,20 @@ public class MenuOptions : MonoBehaviour
             totalProgressFillImage.fillAmount = 0.625f;
             totalProgressAmountText.text = "62.5%";
             TranscribeNutitionDiagnosisTabButton.SetActive(true);
-			PhaseReachedText.text = "REACHED PHASE 6";
-			Phase5ProgressGroup.SetActive(false);
-			SGAFormButton.SetActive (false);
+            PhaseReachedText.text = "REACHED PHASE 6";
+            Phase5ProgressGroup.SetActive(false);
+            SGAFormButton.SetActive(false);
         }
     }
 
-    public void Phase5ToggleSelected01() {
-        if (!phase5Toggle01AlreadySelected) {
+    public void Phase5ToggleSelected01()
+    {
+        if (!phase5Toggle01AlreadySelected)
+        {
             phase5SelectedScore += 1;
         }
-        if (phase5SelectedScore == phase5Part1TotalScore) {
+        if (phase5SelectedScore == phase5Part1TotalScore)
+        {
             phase5Part1Complete = true;
         }
     }
@@ -17197,30 +18165,40 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
-    public void Phase5SOverallSelected() {
-        if (!phase5OverallAlreadySelected) {
+    public void Phase5SOverallSelected()
+    {
+        if (!phase5OverallAlreadySelected)
+        {
             phase5Part2Complete = true;
             phase5OverallAlreadySelected = true;
         }
     }
 
-    public void SavePhase3InputText() {
+    public void SavePhase3InputText()
+    {
         Phase3SavedText.GetComponent<Text>().text = Phase3InputBox.GetComponent<InputField>().text.ToLower();
 
         CheckPhase3String();
     }
 
-    public void CheckPhase3String() {
+    public void CheckPhase3String()
+    {
         Phase3InputTextStringArray = Phase3SavedText.GetComponent<Text>().text.Split(new string[] { ", " }, System.StringSplitOptions.None).Distinct().ToList();
-        foreach (string word in Phase3InputTextStringArray) {
-            if (phase3AcceptedPhrases.Contains(word)) {
-                if (Phase03AnthropometricMeasurementsStringArray.Contains(word)) {
-                    if (!Phase03AnthropometricMeasurementsWordalreadyfound) {
+        foreach (string word in Phase3InputTextStringArray)
+        {
+            if (phase3AcceptedPhrases.Contains(word))
+            {
+                if (Phase03AnthropometricMeasurementsStringArray.Contains(word))
+                {
+                    if (!Phase03AnthropometricMeasurementsWordalreadyfound)
+                    {
                         Phase3InputCheckScore++;
                         Phase03AnthropometryWordsCompleteBox.SetActive(true);
                         Phase03AnthropometricMeasurementsWordalreadyfound = true;
                     }
-                } else if (Phase03ClientHistoryStringArray.Contains(word)) {
+                }
+                else if (Phase03ClientHistoryStringArray.Contains(word))
+                {
                     if (!Phase03ClientHistoryWordalreadyfound)
                     {
                         Phase3InputCheckScore++;
@@ -17255,39 +18233,47 @@ public class MenuOptions : MonoBehaviour
                         Phase03NutritionFocusedPhysicalWordalreadyfound = true;
                     }
                 }
-            } else {
+            }
+            else
+            {
                 phase03IncorrectScore++;
             }
         }
         if (Phase3InputCheckScore >= Phase3InputScoreTotal)
-        {            
+        {
             Phase3CompletionInfoGroupText.text = "You have presented all findings";
-            Phase3CompletionInfoGroupBackgroundImage.color = new Color32(60,172,81,255);
-            Phase3CompletionInfoGroupAlertBackgroundImage.color = new Color32(88,218,83,255);
-            Phase3CompletionImage.sprite = Phase3CompletionSprite; 
+            Phase3CompletionInfoGroupBackgroundImage.color = new Color32(60, 172, 81, 255);
+            Phase3CompletionInfoGroupAlertBackgroundImage.color = new Color32(88, 218, 83, 255);
+            Phase3CompletionImage.sprite = Phase3CompletionSprite;
             hasFoodAndNutritionInformation = true;
             TestFindingsButton.SetActive(false);
             Phase3PresentFindingsConversationTracker = 5;
             ChatNextButtonText.text = "CONTINUE";
             notificationGoodSource.Play();
-            if (phase03IncorrectScore > 2 && phase03IncorrectScore < 6) {
+            if (phase03IncorrectScore > 2 && phase03IncorrectScore < 6)
+            {
                 phase03ParsingPlayerRating = playerRatingIntermediate;
-				phase08OverallScore = phase08OverallScore + 1;
-				Phase08Phase03ResultText.text = "You demonstrated the ability to identify some gaps in the nutrition information you already gathered and picking up some cues from Marta that needed further investigation.";
-            } else if (phase03IncorrectScore > 5) {
+                phase08OverallScore = phase08OverallScore + 1;
+                Phase08Phase03ResultText.text = "You demonstrated the ability to identify some gaps in the nutrition information you already gathered and picking up some cues from Marta that needed further investigation.";
+            }
+            else if (phase03IncorrectScore > 5)
+            {
                 phase03ParsingPlayerRating = playerRatingNovice;
-				phase08OverallScore = phase08OverallScore + 2;
-				Phase08Phase03ResultText.text = "You had difficulty in identifying gaps in the nutrition information you already gathered and difficulty picking up cues from Marta that needed further investigation.";
-			} else if (phase03IncorrectScore < 3) {
-				Phase08Phase03ResultText.text = "You flawlessly demonstrated the ability to identify gaps in the nutrition information you already gathered and picking up cues from Marta that needed further investigation.";
-			}
+                phase08OverallScore = phase08OverallScore + 2;
+                Phase08Phase03ResultText.text = "You had difficulty in identifying gaps in the nutrition information you already gathered and difficulty picking up cues from Marta that needed further investigation.";
+            }
+            else if (phase03IncorrectScore < 3)
+            {
+                Phase08Phase03ResultText.text = "You flawlessly demonstrated the ability to identify gaps in the nutrition information you already gathered and picking up cues from Marta that needed further investigation.";
+            }
         }
-        else {                       
+        else
+        {
             Phase3CompletionInfoGroupText.text = "You have been able to identify " + Phase3InputCheckScore + " out of " + Phase3InputScoreTotal + " overarching nutritional concerns for Marta. What else will be important to clarify?";
-            Phase3CompletionInfoGroupBackgroundImage.color = new Color32(251,3,3,255);
-            Phase3CompletionInfoGroupAlertBackgroundImage.color = new Color32(255,75,75,255);
+            Phase3CompletionInfoGroupBackgroundImage.color = new Color32(251, 3, 3, 255);
+            Phase3CompletionInfoGroupAlertBackgroundImage.color = new Color32(255, 75, 75, 255);
             phase03IncorrectScore++;
-        }        
+        }
         Phase3CompletionInfoGroup.SetActive(true);
         Phase03CompletionInfoAnimClip.Play("Phase03CompletionInfoAnimateIn");
     }
@@ -17298,29 +18284,31 @@ public class MenuOptions : MonoBehaviour
         ChatNextButton.onClick.Invoke();
     }
 
-	IEnumerator Phase08DelayAnimation() {
-		yield return new WaitForSeconds (1f);
-		phase08EndResultInformationDisplayAnim.SetTrigger ("AnimateIn");
-	}
+    IEnumerator Phase08DelayAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        phase08EndResultInformationDisplayAnim.SetTrigger("AnimateIn");
+    }
 
-	IEnumerator Phase07ToPhase08GamephaseTransition() {
-		yield return new WaitForSecondsRealtime (1f);
-		NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
-		yield return new WaitForSecondsRealtime (3f);
-		PhaseManagement.gamePhase = 8;
-		nextPhaseSource.Play();
-		PhaseReachedAnim.SetTrigger("PhaseReached");
-		PhaseReachedText.text = "REACHED PHASE 8";
-		currentPhaseText.text = "8th";
-		currentPhaseProgressFillImage.fillAmount = 0;
-		totalProgressFillImage.fillAmount = 0.875f;
-		totalProgressAmountText.text = "87.5%";
-		Phase7ProgressGroup.SetActive(false);
-		NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
-		DieticianNavButton.isOn = true;
-		canComputer = false;
-		canAnthropometry = false;
-		canMedicalHistory = false;
-		SGAFormButton.SetActive(false);
-	}
+    IEnumerator Phase07ToPhase08GamephaseTransition()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
+        yield return new WaitForSecondsRealtime(3f);
+        PhaseManagement.gamePhase = 8;
+        nextPhaseSource.Play();
+        PhaseReachedAnim.SetTrigger("PhaseReached");
+        PhaseReachedText.text = "REACHED PHASE 8";
+        currentPhaseText.text = "8th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.875f;
+        totalProgressAmountText.text = "87.5%";
+        Phase7ProgressGroup.SetActive(false);
+        NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
+        DieticianNavButton.isOn = true;
+        canComputer = false;
+        canAnthropometry = false;
+        canMedicalHistory = false;
+        SGAFormButton.SetActive(false);
+    }
 }

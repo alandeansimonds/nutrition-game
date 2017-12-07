@@ -66,6 +66,9 @@ namespace Unitycoding.LoginSystem
                 rememberMe.isOn = string.IsNullOrEmpty(username.text) ? false : true;
             }
 
+            EventHandler.Register("OnLoadProgress", OnLoadProgress);
+            EventHandler.Register("OnFailedToLoadProgress", OnFailedToLoadProgress);
+
             EventHandler.Register("OnSaveProgress", OnSaveProgress);
             EventHandler.Register("OnFailedToSaveProgress", OnFailedToSaveProgress);
 
@@ -97,20 +100,53 @@ namespace Unitycoding.LoginSystem
                 PlayerPrefs.DeleteKey("password");
             }
 
-            if (LoginSystem.Settings.loadLevelOnLogin)
-            {
-#if UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
-				Application.LoadLevel(LoginSystem.Settings.levelToLoad);
-#else
-                UnityEngine.SceneManagement.SceneManager.LoadScene(LoginSystem.Settings.levelToLoad);
-#endif
-            }
+            // TODO: Request current saved data.
+            // The level loading should be performed based on the result.
+            LoginSystem.LoadProgress();
+
+            // Moving this to where failing to restore progress will just start a new game.
+//            if (LoginSystem.Settings.loadLevelOnLogin)
+//            {
+//#if UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
+//				Application.LoadLevel(LoginSystem.Settings.levelToLoad);
+//#else
+//                UnityEngine.SceneManagement.SceneManager.LoadScene(LoginSystem.Settings.levelToLoad);
+//#endif
+//            }
         }
 
         private void OnFailedToLogin()
         {
             messageBox.Show(LoginSystem.Settings.loginFailed, delegate (string result) { Show(); }, "OK");
             Close();
+        }
+
+        private void OnLoadProgress()
+        {
+            // Attempt to parse and load progress.
+            // Parsing was handled in a previous step.
+            // Loading will occur as the new game is created.
+
+            // Load the game scene.
+            LoadGameScene();
+        }
+
+        private void OnFailedToLoadProgress()
+        {
+            // Just load the game normally if progress failed to load correctly.
+            LoadGameScene();
+        }
+
+        private void LoadGameScene()
+        {
+            if (LoginSystem.Settings.loadLevelOnLogin)
+            {
+                #if UNITY_4_6 || UNITY_4_7 || UNITY_5_0 || UNITY_5_1 || UNITY_5_2
+				    Application.LoadLevel(LoginSystem.Settings.levelToLoad);
+                #else
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(LoginSystem.Settings.levelToLoad);
+                #endif
+            }
         }
 
         private void OnSaveProgress()
