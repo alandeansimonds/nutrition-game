@@ -1321,7 +1321,8 @@ public class MenuOptions : MonoBehaviour
             // Dietician is normally first enabled during the first conversation.
             NPCRightDieticianImage.SetBool("NPCRightDefault", false);
             NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
-        } else
+        }
+        else
         {
             GameStart();
 
@@ -1390,16 +1391,29 @@ public class MenuOptions : MonoBehaviour
             case "phaseCompleted":
                 // Set phase to resume from.
                 //this.phase
-                if ("1" == datemValue)
+                switch (datemValue)
                 {
-                    TransitionPhase1ToPhase2();
+                    case "1":
+                        TransitionPhase1ToPhase2();
+                        break;
+                    case "2":
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        break;
+                    default:
+                        break;
                 }
+                //if ("1" == datemValue)
+                //{
+                //    TransitionPhase1ToPhase2();
+                //}
                 //break;
                 return true;
-            case "gameStartConversationTracker":
-                gameStartConversationTracker = SafeParse(datemValue, 0);
-                LoginSystem.logger.LogInfo("[Debug]gameStartConversationTracker set to: " + gameStartConversationTracker.ToString());
-                break;
+            // No longer required, since this will always be a fixed value for the phase.
+            //case "gameStartConversationTracker":
+            //    gameStartConversationTracker = SafeParse(datemValue, 0);
+            //    LoginSystem.logger.LogInfo("[Debug]gameStartConversationTracker set to: " + gameStartConversationTracker.ToString());
+            //    break;
             default:
                 break;
         }
@@ -3321,16 +3335,22 @@ public class MenuOptions : MonoBehaviour
     {
         // Need to save all information required to later restore
         // the game to the start of the next phase.
+
+        var payload = new List<PersistencePayload>();
+        int playerId = LoginSystem.playerId;
+
         switch (phaseNumber)
         {
             case 1:
                 // Player name.
                 // Phase completed.
-                var payload = new List<PersistencePayload>();
-                int playerId = LoginSystem.playerId;
                 payload.Add(new PersistencePayload("playerName", this.playerNameString));
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
-                payload.Add(new PersistencePayload("gameStartConversationTracker", gameStartConversationTracker.ToString()));
+                //payload.Add(new PersistencePayload("gameStartConversationTracker", gameStartConversationTracker.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
+            case 2:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
             default:
@@ -4165,6 +4185,93 @@ public class MenuOptions : MonoBehaviour
                 introConversationTracker = 1;
             }
         }
+    }
+
+    public void TransitionPhase2ToPhase3()
+    {
+        //// Internal (non-UI) related properties.
+        //introConversationTracker = 15;
+        //rayCastBlockImage.SetActive(false);
+        //ActivateChatButton.interactable = false;
+        //ActivateInvestigationButton.interactable = false;
+        //ChatNextButton.interactable = false;
+        //canComputer = true;
+        //canAnthropometry = true;
+        //canMedicalHistory = true;
+        //inChat = false;
+
+        //PhaseManagement.gamePhase = 2;
+
+        //// UI Properties to be set upon restoration.
+        //currentPhaseProgressFillImage.fillAmount = 0;
+        //currentPhaseText.text = "2nd";
+        //totalProgressFillImage.fillAmount = 0.125f;
+        //totalProgressAmountText.text = "12.5%";
+        //Phase1ProgressGroup.SetActive(false);
+
+        //ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
+
+        // Copied from the keyboard shortcut to skip phases.  ('Q'.)
+        currentPhaseText.text = "3rd";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.25f;
+        totalProgressAmountText.text = "25%";
+        //if (!alreadyReachedPhase3)
+        //{
+        //    nextPhaseSource.Play();
+        //    PhaseReachedAnim.SetTrigger("PhaseReached");
+        //    PhaseReachedText.text = "REACHED PHASE 3";
+        //    alreadyReachedPhase3 = true;
+        //}
+        Phase2ProgressGroup.SetActive(false);
+        Phase3PresentFindingsConversationTracker = 1;
+        BMICalculatorGroup.SetActive(false);
+        PhaseManagement.gamePhase = 3;
+
+        // Copied from PresentFIndings()
+        ////PhaseManagement.gamePhase = 3;
+        ////currentPhaseText.text = "3rd";
+        ////currentPhaseProgressFillImage.fillAmount = 0;
+        ////totalProgressFillImage.fillAmount = 0.25f;
+        ////totalProgressAmountText.text = "25%";
+        //if (!alreadyReachedPhase3)
+        //{
+        //    nextPhaseSource.Play();
+        //    PhaseReachedAnim.SetTrigger("PhaseReached");
+        //    PhaseReachedText.text = "REACHED PHASE 3";
+        //    alreadyReachedPhase3 = true;
+        //}
+        //Phase2ProgressGroup.SetActive(false);
+        //Phase3PresentFindingsConversationTracker = 1;
+        //BMICalculatorGroup.SetActive(false);
+        ////PhaseManagement.gamePhase = 3;
+
+        // Copied from PresentFindings()
+        //phaseTwoStartInteractiveButtonGroup.SetActive(false);
+        //ChatRightAnim.SetBool("ChatActivated", false);
+        //ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
+        //ChatLeftAnim.SetBool("ChatDefault", false);
+        //ChatLeftAnim.SetBool("ChatActivated", true);
+        //ChatNextButtonText.text = "PRESENT FINDINGS";
+
+        //PhaseManagement.gamePhase = 3;
+
+        //currentPhaseText.text = "3rd";
+        //currentPhaseProgressFillImage.fillAmount = 0;
+        //totalProgressFillImage.fillAmount = 0.25f;
+        //totalProgressAmountText.text = "25%";
+        //if (!alreadyReachedPhase3)
+        //{
+        //    nextPhaseSource.Play();
+        //    PhaseReachedAnim.SetTrigger("PhaseReached");
+        //    PhaseReachedText.text = "REACHED PHASE 3";
+        //    alreadyReachedPhase3 = true;
+        //}
+        //Phase2ProgressGroup.SetActive(false);
+
+        //Phase3PresentFindingsConversationTracker = 1;
+        //BMICalculatorGroup.SetActive(false);
+
     }
 
     public void TransitionPhase1ToPhase2()
@@ -16517,11 +16624,17 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatDefault", false);
         ChatLeftAnim.SetBool("ChatActivated", true);
         ChatNextButtonText.text = "PRESENT FINDINGS";
-        PhaseManagement.gamePhase = 3;
-        currentPhaseText.text = "3rd";
-        currentPhaseProgressFillImage.fillAmount = 0;
-        totalProgressFillImage.fillAmount = 0.25f;
-        totalProgressAmountText.text = "25%";
+
+        // Save progress.
+        PhaseTransitionSave(2);
+        // New way to transition phases.
+        TransitionPhase2ToPhase3();
+
+        //PhaseManagement.gamePhase = 3;
+        //currentPhaseText.text = "3rd";
+        //currentPhaseProgressFillImage.fillAmount = 0;
+        //totalProgressFillImage.fillAmount = 0.25f;
+        //totalProgressAmountText.text = "25%";
         if (!alreadyReachedPhase3)
         {
             nextPhaseSource.Play();
@@ -16532,6 +16645,24 @@ public class MenuOptions : MonoBehaviour
         Phase2ProgressGroup.SetActive(false);
         Phase3PresentFindingsConversationTracker = 1;
         BMICalculatorGroup.SetActive(false);
+        //PhaseManagement.gamePhase = 3;
+
+        // Original.
+        //PhaseManagement.gamePhase = 3;
+        //currentPhaseText.text = "3rd";
+        //currentPhaseProgressFillImage.fillAmount = 0;
+        //totalProgressFillImage.fillAmount = 0.25f;
+        //totalProgressAmountText.text = "25%";
+        //if (!alreadyReachedPhase3)
+        //{
+        //    nextPhaseSource.Play();
+        //    PhaseReachedAnim.SetTrigger("PhaseReached");
+        //    PhaseReachedText.text = "REACHED PHASE 3";
+        //    alreadyReachedPhase3 = true;
+        //}
+        //Phase2ProgressGroup.SetActive(false);
+        //Phase3PresentFindingsConversationTracker = 1;
+        //BMICalculatorGroup.SetActive(false);
     }
 
     public void StartBiochemicalInvestigation()

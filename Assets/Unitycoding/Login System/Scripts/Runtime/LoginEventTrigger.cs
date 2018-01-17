@@ -13,8 +13,12 @@ namespace Unitycoding.LoginSystem{
 					"OnPasswordRecovered",
 					"OnFailedToRecoverPassword",
 					"OnPassworedResetted",
-					"OnFailedToResetPassword"
-				};
+					"OnFailedToResetPassword",
+                    "OnLoadProgress",
+                    "OnFailedToLoadProgress",
+                    "OnSaveProgress",
+                    "OnFailedToSaveProgress"
+                };
 			}
 		}
 

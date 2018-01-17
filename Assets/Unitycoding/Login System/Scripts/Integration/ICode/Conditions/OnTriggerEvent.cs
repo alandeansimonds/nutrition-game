@@ -47,7 +47,11 @@ namespace ICode.Conditions.LoginSystem{
 			OnPasswordRecovered,
 			OnFailedToRecoverPassword,
 			OnPassworedResetted,
-			OnFailedToResetPassword
+			OnFailedToResetPassword,
+            OnLoadProgress,
+            OnFailedToLoadProgress,
+            OnSaveProgress,
+            OnFailedToSaveProgress
 		}
 	}
 }
