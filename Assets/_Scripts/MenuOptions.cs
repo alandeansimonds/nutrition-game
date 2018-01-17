@@ -1394,9 +1394,11 @@ public class MenuOptions : MonoBehaviour
                 switch (datemValue)
                 {
                     case "1":
+                        TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
                         break;
                     case "2":
+                        TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
                         TransitionPhase2ToPhase3();
                         break;
@@ -4296,7 +4298,23 @@ public class MenuOptions : MonoBehaviour
         totalProgressAmountText.text = "12.5%";
         Phase1ProgressGroup.SetActive(false);
 
-        ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
+        //ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
+        // Phase 2 starts at the nurses' station.
+        NurseNavButton.interactable = true;
+        NurseNavButton.isOn = true;
+    }
+
+    public void TransitionPhase0ToPhase1()
+    {
+        TranscribeClientHistoryGroup.SetActive(false);
+        TranscribeAnthropometryGroup.SetActive(false);
+        TranscribeFoodAndNutritionGroup.SetActive(false);
+        TranscribeNutitionDiagnosisTabButton.SetActive(false);
+        TranscribeInterventionPlanTabButton.SetActive(false);
+        TranscribeMonitoringAndEvaluationTabButton.SetActive(false);
+        weightChangeCalculatorGroup.SetActive(false);
+        TranscribeAnthropometryGroupTab();
+        SetDateOnProgressNotes();
     }
 
     public void ChatContinue()
