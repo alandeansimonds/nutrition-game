@@ -1396,11 +1396,17 @@ public class MenuOptions : MonoBehaviour
                     case "1":
                         TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
+                        // Nurses' station is the current room.
+                        NurseNavButton.interactable = true;
+                        NurseNavButton.isOn = true;
                         break;
                     case "2":
                         TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
                         TransitionPhase2ToPhase3();
+                        // Dietician is the current room.
+                        DieticianNavButton.interactable = true;
+                        DieticianNavButton.isOn = true;
                         break;
                     default:
                         break;
@@ -4229,51 +4235,18 @@ public class MenuOptions : MonoBehaviour
         Phase3PresentFindingsConversationTracker = 1;
         BMICalculatorGroup.SetActive(false);
         PhaseManagement.gamePhase = 3;
+        
+        alreadyReachedPhase3 = true;
 
-        // Copied from PresentFIndings()
-        ////PhaseManagement.gamePhase = 3;
-        ////currentPhaseText.text = "3rd";
-        ////currentPhaseProgressFillImage.fillAmount = 0;
-        ////totalProgressFillImage.fillAmount = 0.25f;
-        ////totalProgressAmountText.text = "25%";
-        //if (!alreadyReachedPhase3)
+        // Enable the present findings button.
+        PresentFindingsButton.SetActive(true);
+
+        // Phase 3 starts at the Dietician's Office.
+        //if (isCurrentPhase)
         //{
-        //    nextPhaseSource.Play();
-        //    PhaseReachedAnim.SetTrigger("PhaseReached");
-        //    PhaseReachedText.text = "REACHED PHASE 3";
-        //    alreadyReachedPhase3 = true;
+        //    DieticianNavButton.interactable = true;
+        //    DieticianNavButton.isOn = true;
         //}
-        //Phase2ProgressGroup.SetActive(false);
-        //Phase3PresentFindingsConversationTracker = 1;
-        //BMICalculatorGroup.SetActive(false);
-        ////PhaseManagement.gamePhase = 3;
-
-        // Copied from PresentFindings()
-        //phaseTwoStartInteractiveButtonGroup.SetActive(false);
-        //ChatRightAnim.SetBool("ChatActivated", false);
-        //ChatRightAnim.SetBool("ChatFinishedMoveUp", true);
-        //ChatLeftAnim.SetBool("ChatDefault", false);
-        //ChatLeftAnim.SetBool("ChatActivated", true);
-        //ChatNextButtonText.text = "PRESENT FINDINGS";
-
-        //PhaseManagement.gamePhase = 3;
-
-        //currentPhaseText.text = "3rd";
-        //currentPhaseProgressFillImage.fillAmount = 0;
-        //totalProgressFillImage.fillAmount = 0.25f;
-        //totalProgressAmountText.text = "25%";
-        //if (!alreadyReachedPhase3)
-        //{
-        //    nextPhaseSource.Play();
-        //    PhaseReachedAnim.SetTrigger("PhaseReached");
-        //    PhaseReachedText.text = "REACHED PHASE 3";
-        //    alreadyReachedPhase3 = true;
-        //}
-        //Phase2ProgressGroup.SetActive(false);
-
-        //Phase3PresentFindingsConversationTracker = 1;
-        //BMICalculatorGroup.SetActive(false);
-
     }
 
     public void TransitionPhase1ToPhase2()
@@ -4300,8 +4273,11 @@ public class MenuOptions : MonoBehaviour
 
         //ContextSensitiveNavigationHelperAnim.SetTrigger("ContextSensitiveHelperActivated");
         // Phase 2 starts at the nurses' station.
-        NurseNavButton.interactable = true;
-        NurseNavButton.isOn = true;
+        //if (isCurrentPhase)
+        //{
+        //    NurseNavButton.interactable = true;
+        //    NurseNavButton.isOn = true;
+        //}
     }
 
     public void TransitionPhase0ToPhase1()
@@ -16642,11 +16618,8 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatDefault", false);
         ChatLeftAnim.SetBool("ChatActivated", true);
         ChatNextButtonText.text = "PRESENT FINDINGS";
-
-        // Save progress.
-        PhaseTransitionSave(2);
-        // New way to transition phases.
-        TransitionPhase2ToPhase3();
+        
+        
 
         //PhaseManagement.gamePhase = 3;
         //currentPhaseText.text = "3rd";
@@ -16655,14 +16628,22 @@ public class MenuOptions : MonoBehaviour
         //totalProgressAmountText.text = "25%";
         if (!alreadyReachedPhase3)
         {
+            // Save progress.
+            PhaseTransitionSave(2);
+
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
             PhaseReachedText.text = "REACHED PHASE 3";
-            alreadyReachedPhase3 = true;
+            //alreadyReachedPhase3 = true;
         }
-        Phase2ProgressGroup.SetActive(false);
-        Phase3PresentFindingsConversationTracker = 1;
-        BMICalculatorGroup.SetActive(false);
+
+        // New way to transition phases.
+        TransitionPhase2ToPhase3();
+
+        //Phase2ProgressGroup.SetActive(false);
+        //Phase3PresentFindingsConversationTracker = 1;
+        //BMICalculatorGroup.SetActive(false);
+
         //PhaseManagement.gamePhase = 3;
 
         // Original.
