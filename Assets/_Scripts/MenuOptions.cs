@@ -1423,9 +1423,20 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase2ToPhase3();
                         TransitionPhase3ToPhase4();
                         TransitionPhase4ToPhase5();
-                        // Patient's Room is where phase 4 finished.
+                        // Patient's Room is where phase 4 finishes.
                         PatientNavButton.interactable = true;
                         PatientNavButton.isOn = true;
+                        break;
+                    case "5":
+                        TransitionPhase0ToPhase1();
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        TransitionPhase3ToPhase4();
+                        TransitionPhase4ToPhase5();
+                        TransitionPhase5ToPhase6();
+                        // Dietician's Office is where phase 5 finishes.
+                        DieticianNavButton.interactable = true;
+                        DieticianNavButton.isOn = true;
                         break;
                     default:
                         break;
@@ -3388,6 +3399,10 @@ public class MenuOptions : MonoBehaviour
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
+            case 5:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
             default:
                 break;
         }
@@ -4220,6 +4235,23 @@ public class MenuOptions : MonoBehaviour
                 introConversationTracker = 1;
             }
         }
+    }
+
+    public void TransitionPhase5ToPhase6()
+    {
+        // Copied From Q key handler.  (Used to skip phases.)
+        PhaseManagement.gamePhase = 6;
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        //PhaseReachedText.text = "REACHED PHASE 6";
+        currentPhaseText.text = "6th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.625f;
+        totalProgressAmountText.text = "62.5%";
+        Phase5ProgressGroup.SetActive(false);
+        SGAFormButton.SetActive(false);
+        weightChangeCalculatorGroup.SetActive(false);
+        TranscribeNutitionDiagnosisTabButton.SetActive(true);
     }
 
     public void TransitionPhase4ToPhase5()
@@ -18257,6 +18289,8 @@ public class MenuOptions : MonoBehaviour
     {
         if (phase5Part1Complete && phase5Part2Complete && phase5Part3Complete)
         {
+            PhaseTransitionSave(5);
+
             PhaseManagement.gamePhase = 6;
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
