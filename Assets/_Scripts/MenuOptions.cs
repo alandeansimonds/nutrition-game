@@ -1438,6 +1438,18 @@ public class MenuOptions : MonoBehaviour
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
+                    case "6":
+                        TransitionPhase0ToPhase1();
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        TransitionPhase3ToPhase4();
+                        TransitionPhase4ToPhase5();
+                        TransitionPhase5ToPhase6();
+                        TransitionPhase6ToPhase7();
+                        // Dietician's Office is where phase 6 finishes.
+                        DieticianNavButton.interactable = true;
+                        DieticianNavButton.isOn = true;
+                        break;
                     default:
                         break;
                 }
@@ -3403,6 +3415,10 @@ public class MenuOptions : MonoBehaviour
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
+            case 6:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
             default:
                 break;
         }
@@ -4235,6 +4251,21 @@ public class MenuOptions : MonoBehaviour
                 introConversationTracker = 1;
             }
         }
+    }
+
+    public void TransitionPhase6ToPhase7()
+    {
+        // Copied From Q key handler.  (Used to skip phases.)
+        PhaseManagement.gamePhase = 7;
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        //PhaseReachedText.text = "REACHED PHASE 7";
+        currentPhaseText.text = "7th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.75f;
+        totalProgressAmountText.text = "75%";
+        Phase6ProgressGroup.SetActive(false);
+        TranscribeInterventionPlanTabButton.SetActive(true);
     }
 
     public void TransitionPhase5ToPhase6()
@@ -11908,6 +11939,8 @@ public class MenuOptions : MonoBehaviour
     {
         if (phase6Part04Complete)
         {
+            PhaseTransitionSave(6);
+
             PhaseManagement.gamePhase = 7;
             nextPhaseSource.Play();
             PhaseReachedAnim.SetTrigger("PhaseReached");
