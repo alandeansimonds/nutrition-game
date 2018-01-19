@@ -1417,6 +1417,16 @@ public class MenuOptions : MonoBehaviour
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
+                    case "4":
+                        TransitionPhase0ToPhase1();
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        TransitionPhase3ToPhase4();
+                        TransitionPhase4ToPhase5();
+                        // Patient's Room is where phase 4 finished.
+                        PatientNavButton.interactable = true;
+                        PatientNavButton.isOn = true;
+                        break;
                     default:
                         break;
                 }
@@ -3371,9 +3381,14 @@ public class MenuOptions : MonoBehaviour
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
             case 3:
-            default:
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
+            case 4:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
+            default:
                 break;
         }
     }
@@ -4205,6 +4220,22 @@ public class MenuOptions : MonoBehaviour
                 introConversationTracker = 1;
             }
         }
+    }
+
+    public void TransitionPhase4ToPhase5()
+    {
+        // From Q key handler.  (Used to skip phases.)
+        PhaseManagement.gamePhase = 5;
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        //PhaseReachedText.text = "REACHED PHASE 5";
+        currentPhaseText.text = "5th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.50f;
+        totalProgressAmountText.text = "50%";
+        Phase4ProgressGroup.SetActive(false);
+        SGAFormButton.SetActive(true);
+        weightChangeCalculatorGroup.SetActive(true);
     }
 
     public void TransitionPhase3ToPhase4()
@@ -16150,6 +16181,8 @@ public class MenuOptions : MonoBehaviour
                 Phase4ProgressGroup.SetActive(false);
                 SGAFormButton.SetActive(true);
                 weightChangeCalculatorGroup.SetActive(true);
+                
+                PhaseTransitionSave(4);
             }
         }
     }
