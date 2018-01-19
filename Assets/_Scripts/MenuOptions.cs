@@ -1404,7 +1404,16 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
                         TransitionPhase2ToPhase3();
-                        // Dietician is the current room.
+                        // Dietician's Office is the current room.
+                        DieticianNavButton.interactable = true;
+                        DieticianNavButton.isOn = true;
+                        break;
+                    case "3":
+                        TransitionPhase0ToPhase1();
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        TransitionPhase3ToPhase4();
+                        // Dietician's Office is the current room.
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
@@ -3361,7 +3370,10 @@ public class MenuOptions : MonoBehaviour
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
+            case 3:
             default:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
         }
     }
@@ -4195,6 +4207,20 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
+    public void TransitionPhase3ToPhase4()
+    {
+        // From Q key handler.  (Used to skip phases.)
+        //PhaseReachedText.text = "REACHED PHASE 4";
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        currentPhaseProgressFillImage.fillAmount = 0;
+        currentPhaseText.text = "4th";
+        totalProgressFillImage.fillAmount = 0.375f;
+        totalProgressAmountText.text = "37.5%";
+        Phase3ProgressGroup.SetActive(false);
+        PhaseManagement.gamePhase = 4;
+    }
+
     public void TransitionPhase2ToPhase3()
     {
         //// Internal (non-UI) related properties.
@@ -4914,6 +4940,7 @@ public class MenuOptions : MonoBehaviour
                 totalProgressFillImage.fillAmount = 0.375f;
                 totalProgressAmountText.text = "37.5%";
                 Phase3ProgressGroup.SetActive(false);
+                PhaseTransitionSave(3);
             }
         }
         else if (PhaseManagement.gamePhase == 4)
