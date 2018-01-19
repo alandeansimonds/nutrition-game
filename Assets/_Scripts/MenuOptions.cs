@@ -1450,6 +1450,19 @@ public class MenuOptions : MonoBehaviour
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
+                    case "7":
+                        TransitionPhase0ToPhase1();
+                        TransitionPhase1ToPhase2();
+                        TransitionPhase2ToPhase3();
+                        TransitionPhase3ToPhase4();
+                        TransitionPhase4ToPhase5();
+                        TransitionPhase5ToPhase6();
+                        TransitionPhase6ToPhase7();
+                        TransitionPhase7ToPhase8();
+                        // Patient's Room is where phase 7 finishes.
+                        PatientNavButton.interactable = true;
+                        PatientNavButton.isOn = true;
+                        break;
                     default:
                         break;
                 }
@@ -3419,6 +3432,10 @@ public class MenuOptions : MonoBehaviour
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
+            case 7:
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+                break;
             default:
                 break;
         }
@@ -4253,6 +4270,24 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
+    public void TransitionPhase7ToPhase8()
+    {
+        // Copied From Q key handler.  (Used to skip phases.)
+        PhaseManagement.gamePhase = 8;
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        //PhaseReachedText.text = "REACHED PHASE 8";
+        currentPhaseText.text = "8th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.875f;
+        totalProgressAmountText.text = "87.5%";
+        Phase7ProgressGroup.SetActive(false);
+        NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
+        canComputer = false;
+        canAnthropometry = false;
+        canMedicalHistory = false;
+    }
+
     public void TransitionPhase6ToPhase7()
     {
         // Copied From Q key handler.  (Used to skip phases.)
@@ -4355,7 +4390,7 @@ public class MenuOptions : MonoBehaviour
         Phase3PresentFindingsConversationTracker = 1;
         BMICalculatorGroup.SetActive(false);
         PhaseManagement.gamePhase = 3;
-        
+
         alreadyReachedPhase3 = true;
 
         // Enable the present findings button.
@@ -16246,7 +16281,7 @@ public class MenuOptions : MonoBehaviour
                 Phase4ProgressGroup.SetActive(false);
                 SGAFormButton.SetActive(true);
                 weightChangeCalculatorGroup.SetActive(true);
-                
+
                 PhaseTransitionSave(4);
             }
         }
@@ -16743,8 +16778,8 @@ public class MenuOptions : MonoBehaviour
         ChatLeftAnim.SetBool("ChatDefault", false);
         ChatLeftAnim.SetBool("ChatActivated", true);
         ChatNextButtonText.text = "PRESENT FINDINGS";
-        
-        
+
+
 
         //PhaseManagement.gamePhase = 3;
         //currentPhaseText.text = "3rd";
@@ -18552,6 +18587,9 @@ public class MenuOptions : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
         yield return new WaitForSecondsRealtime(3f);
+
+        PhaseTransitionSave(7);
+
         PhaseManagement.gamePhase = 8;
         nextPhaseSource.Play();
         PhaseReachedAnim.SetTrigger("PhaseReached");
