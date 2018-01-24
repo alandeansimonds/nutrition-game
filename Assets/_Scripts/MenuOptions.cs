@@ -1070,6 +1070,10 @@ public class MenuOptions : MonoBehaviour
     private float phase04Phase05CombinedScore;
     private float phase02CombinedScore;
 
+    // Intermediary variables for saving and restoring.
+    // This avoids needing to repopulate the UI (Since the UI is not used again for this anyway).
+    //private string phase7goal;
+
     // Use this for initialization
     void Start()
     {
@@ -1446,6 +1450,21 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase4ToPhase5();
                         TransitionPhase5ToPhase6();
                         TransitionPhase6ToPhase7();
+
+                        // Restore previously selected goals.
+                        //Phase07NutritionGoal02.SetActive(true);
+                        // TODO: Set corresponding UI elements also.
+                        //Phase07P
+                        Phase06Part01Selection02();
+                        Phase06Part02Selection02();
+                        //Phase06Part03Selection02();
+                        phase7DietaryStrategies02OptionSelected = true;
+                        // TODO: Set the relevant strategy according to what was stored in the database.
+                        //phase7DietaryStrategies01OptionSelected = true;
+                        //phase7DietaryStrategies03OptionSelected = true;
+
+                        //Phase07Part02Select02();
+
                         // Dietician's Office is where phase 6 finishes.
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
@@ -1458,10 +1477,20 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase4ToPhase5();
                         TransitionPhase5ToPhase6();
                         TransitionPhase6ToPhase7();
-                        TransitionPhase7ToPhase8();
+
+                        // TODO: Check that phase 6 selections weren't also required.
+                        Phase07Part02Select02();
+                        phase07FoodStrategyStringArray.Add("Strategy 1");
+                        phase07FoodStrategyStringArray.Add("Strategy 2");
+
                         // Patient's Room is where phase 7 finishes.
                         PatientNavButton.interactable = true;
                         PatientNavButton.isOn = true;
+
+                        // But phase 8 starts in the Doctor's Office.
+                        phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
+                        StartCoroutine("Phase07ToPhase08GamephaseRestoration");
+                        
                         break;
                     default:
                         break;
@@ -3435,6 +3464,17 @@ public class MenuOptions : MonoBehaviour
             case 7:
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
+
+                Debug.Log(Phase07Part03DropZoneArray);
+
+                // Debug: Checking which data should be saved.
+                //foreach (var element in Phase07Part03DropZoneArray)
+                //{
+                //    print(element.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected);
+                //    print(element.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected);
+                //    print(element.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected);
+                //    print(element.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected);
+                //}
                 break;
             default:
                 break;
@@ -12197,7 +12237,8 @@ public class MenuOptions : MonoBehaviour
     {
         if (!phase6Part01Selection01Selected)
         {
-            if (Phase6Part01SelectedAmount < 5)
+            //if (Phase6Part01SelectedAmount < 5)
+            if (Phase6Part01SelectedAmount <= 5)
             {
                 phase6Part01Selection01Selected = true;
                 phase6Part01Selection01SelectImage.sprite = BiochemicalCorrectAnswerSelectedSprite;
@@ -18594,6 +18635,32 @@ public class MenuOptions : MonoBehaviour
         nextPhaseSource.Play();
         PhaseReachedAnim.SetTrigger("PhaseReached");
         PhaseReachedText.text = "REACHED PHASE 8";
+        currentPhaseText.text = "8th";
+        currentPhaseProgressFillImage.fillAmount = 0;
+        totalProgressFillImage.fillAmount = 0.875f;
+        totalProgressAmountText.text = "87.5%";
+        Phase7ProgressGroup.SetActive(false);
+        NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
+        DieticianNavButton.isOn = true;
+        canComputer = false;
+        canAnthropometry = false;
+        canMedicalHistory = false;
+        SGAFormButton.SetActive(false);
+    }
+
+    // Used to restore game progress by replaying the animation before phase 8.
+    IEnumerator Phase07ToPhase08GamephaseRestoration()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        NPCPatientImage.sprite = NPCPatientCasualClothesSprite;
+        yield return new WaitForSecondsRealtime(3f);
+
+        //PhaseTransitionSave(7);
+
+        PhaseManagement.gamePhase = 8;
+        //nextPhaseSource.Play();
+        //PhaseReachedAnim.SetTrigger("PhaseReached");
+        //PhaseReachedText.text = "REACHED PHASE 8";
         currentPhaseText.text = "8th";
         currentPhaseProgressFillImage.fillAmount = 0;
         totalProgressFillImage.fillAmount = 0.875f;
