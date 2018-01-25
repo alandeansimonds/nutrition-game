@@ -1392,6 +1392,249 @@ public class MenuOptions : MonoBehaviour
             case "playerName":
                 this.playerNameString = datemValue;
                 break;
+            case "phase7DietaryStrategies1OptionSelected":
+                phase7DietaryStrategies01OptionSelected = SafeParse(datemValue, false);
+                break;
+            case "phase7DietaryStrategies2OptionSelected":
+                phase7DietaryStrategies02OptionSelected = SafeParse(datemValue, false);
+                break;
+            case "phase7DietaryStrategies3OptionSelected":
+                phase7DietaryStrategies03OptionSelected = SafeParse(datemValue, false);
+                break;
+            //case "phase6part4selection1":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection01();
+            //    }
+            //    break;
+            //case "phase6part4selection2":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection02();
+            //    }
+            //    break;
+            //case "phase6part4selection3":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection03();
+            //    }
+            //    break;
+            //case "phase6part4selection4":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection04();
+            //    }
+            //    break;
+            //case "phase6part4selection5":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection05();
+            //    }
+            //    break;
+            //case "phase6part4selection6":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part04Selection06();
+            //    }
+            //    break;
+            case "phase6part3selection1":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection01();
+                }
+                break;
+            case "phase6part3selection2":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection02();
+                }
+                break;
+            case "phase6part3selection3":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection03();
+                }
+                break;
+            case "phase6part3selection4":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection04();
+                }
+                break;
+            case "phase6part3selection5":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection05();
+                }
+                break;
+            case "phase6part3selection6":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection06();
+                }
+                break;
+            case "phase6part3selection7":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part03Selection07();
+                }
+                break;
+            case "phase6part2selection1":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection01();
+                }
+                break;
+            case "phase6part2selection2":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection02();
+                }
+                break;
+            case "phase6part2selection3":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection03();
+                }
+                break;
+            case "phase6part2selection4":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection04();
+                }
+                break;
+            case "phase6part2selection5":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection05();
+                }
+                break;
+            case "phase6part2selection6":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection06();
+                }
+                break;
+            case "phase6part2selection7":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection07();
+                }
+                break;
+            case "phase6part2selection8":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection08();
+                }
+                break;
+            case "phase6part2selection9":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection09();
+                }
+                break;
+            case "phase6part2selection10":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection10();
+                }
+                break;
+            case "phase6part2selection11":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part02Selection11();
+                }
+                break;
+            case "phase6part1selection1":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection01();
+                }
+                break;
+            case "phase6part1selection2":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection02();
+                }
+                break;
+            case "phase6part1selection3":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection03();
+                }
+                break;
+            case "phase6part1selection4":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection04();
+                }
+                break;
+            case "phase6part1selection5":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection05();
+                }
+                break;
+            case "phase6part1selection6":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection06();
+                }
+                break;
+            case "phase6part1selection7":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection07();
+                }
+                break;
+            case "phase6part1selection8":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection08();
+                }
+                break;
+            case "phase6part1selection9":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection09();
+                }
+                break;
+            case "phase6part1selection10":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection10();
+                }
+                break;
+            case "phase6part1selection11":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection11();
+                }
+                break;
+            case "phase6part1selection12":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection12();
+                }
+                break;
+            case "phase6part1selection13":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection13();
+                }
+                break;
+            case "phase6part1selection14":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection14();
+                }
+                break;
+            case "phase6part1selection15":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase06Part01Selection15();
+                }
+                break;
             case "phaseCompleted":
                 // Set phase to resume from.
                 //this.phase
@@ -1454,11 +1697,12 @@ public class MenuOptions : MonoBehaviour
                         // Restore previously selected goals.
                         //Phase07NutritionGoal02.SetActive(true);
                         // TODO: Set corresponding UI elements also.
+
                         //Phase07P
-                        Phase06Part01Selection02();
-                        Phase06Part02Selection02();
+                        //Phase06Part01Selection02();
+                        //Phase06Part02Selection02();
                         //Phase06Part03Selection02();
-                        phase7DietaryStrategies02OptionSelected = true;
+                        //phase7DietaryStrategies02OptionSelected = true;
                         // TODO: Set the relevant strategy according to what was stored in the database.
                         //phase7DietaryStrategies01OptionSelected = true;
                         //phase7DietaryStrategies03OptionSelected = true;
@@ -1490,7 +1734,7 @@ public class MenuOptions : MonoBehaviour
                         // But phase 8 starts in the Doctor's Office.
                         phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
                         StartCoroutine("Phase07ToPhase08GamephaseRestoration");
-                        
+
                         break;
                     default:
                         break;
@@ -1510,6 +1754,19 @@ public class MenuOptions : MonoBehaviour
                 break;
         }
         return false;
+    }
+
+    bool SafeParse(string input, bool failsafe)
+    {
+        bool result = failsafe;
+        if (bool.TryParse(input, out result))
+        {
+            return result;
+        }
+        else
+        {
+            return failsafe;
+        }
     }
 
     int SafeParse(string input, int failsafe)
@@ -3459,13 +3716,19 @@ public class MenuOptions : MonoBehaviour
                 break;
             case 6:
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                // Add more state information as payload.
+                var phase6Payload = GetPhase6State();
+                payload.AddRange(phase6Payload);
+
+                // DISABLED: While testing phase 6 transition.
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
                 break;
             case 7:
+                // DISABLED: While testing phase 6 transition.
                 payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
 
-                Debug.Log(Phase07Part03DropZoneArray);
+                //Debug.Log(Phase07Part03DropZoneArray);
 
                 // Debug: Checking which data should be saved.
                 //foreach (var element in Phase07Part03DropZoneArray)
@@ -3479,6 +3742,62 @@ public class MenuOptions : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    // Packages relevant game state generated during phase 6.
+    private List<PersistencePayload> GetPhase6State()
+    {
+        List<PersistencePayload> result = new List<PersistencePayload>();
+
+        result.Add(new PersistencePayload("phase6part1selection1", phase6Part01Selection01Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection2", phase6Part01Selection02Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection3", phase6Part01Selection03Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection4", phase6Part01Selection04Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection5", phase6Part01Selection05Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection6", phase6Part01Selection06Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection7", phase6Part01Selection07Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection8", phase6Part01Selection08Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection9", phase6Part01Selection09Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection10", phase6Part01Selection10Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection11", phase6Part01Selection11Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection12", phase6Part01Selection12Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection13", phase6Part01Selection13Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection14", phase6Part01Selection14Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part1selection15", phase6Part01Selection15Selected.ToString()));
+
+        result.Add(new PersistencePayload("phase6part2selection1", phase6Part02Selection01Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection2", phase6Part02Selection02Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection3", phase6Part02Selection03Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection4", phase6Part02Selection04Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection5", phase6Part02Selection05Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection6", phase6Part02Selection06Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection7", phase6Part02Selection07Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection8", phase6Part02Selection08Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection9", phase6Part02Selection09Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection10", phase6Part02Selection10Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part2selection11", phase6Part02Selection11Selected.ToString()));
+
+        result.Add(new PersistencePayload("phase6part3selection1", phase6Part03Selection01Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection2", phase6Part03Selection02Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection3", phase6Part03Selection03Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection4", phase6Part03Selection04Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection5", phase6Part03Selection05Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection6", phase6Part03Selection06Selected.ToString()));
+        result.Add(new PersistencePayload("phase6part3selection7", phase6Part03Selection07Selected.ToString()));
+
+        // Part 4 doesn't seem to be used.
+        //result.Add(new PersistencePayload("phase6part4selection1", phase6Part04Selection01Selected.ToString()));
+        //result.Add(new PersistencePayload("phase6part4selection2", phase6Part04Selection02Selected.ToString()));
+        //result.Add(new PersistencePayload("phase6part4selection3", phase6Part04Selection03Selected.ToString()));
+        //result.Add(new PersistencePayload("phase6part4selection4", phase6Part04Selection04Selected.ToString()));
+        //result.Add(new PersistencePayload("phase6part4selection5", phase6Part04Selection05Selected.ToString()));
+        //result.Add(new PersistencePayload("phase6part4selection6", phase6Part04Selection06Selected.ToString()));
+
+        result.Add(new PersistencePayload("phase7DietaryStrategies1OptionSelected", phase7DietaryStrategies01OptionSelected.ToString()));
+        result.Add(new PersistencePayload("phase7DietaryStrategies2OptionSelected", phase7DietaryStrategies02OptionSelected.ToString()));
+        result.Add(new PersistencePayload("phase7DietaryStrategies3OptionSelected", phase7DietaryStrategies03OptionSelected.ToString()));
+
+        return result;
     }
 
     public void ChangeDietHistoryToSchedule()
