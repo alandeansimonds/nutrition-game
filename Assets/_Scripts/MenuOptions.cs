@@ -1322,9 +1322,10 @@ public class MenuOptions : MonoBehaviour
             // Show clinpad, since the is normally enabled during the first conversation.
             ClinpadButton.SetActive(true);
 
+            // Not sure why this was still enabled.  This is a phase specific setting.
             // Dietician is normally first enabled during the first conversation.
-            NPCRightDieticianImage.SetBool("NPCRightDefault", false);
-            NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
+            //NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+            //NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
         }
         else
         {
@@ -1370,12 +1371,116 @@ public class MenuOptions : MonoBehaviour
             {
                 phaseChanged = ProcessProgressToken(datem.recordName, datem.recordValue) || phaseChanged;
             }
+
             return phaseChanged;
         }
         else
         {
             return false;
         }
+    }
+
+    private void ParsePhase7Tokens(List<PersistencePayload> progressToRestore)
+    {
+        // Process other tokens.
+        var phase7DropZoneToken = GetToken("phase7dropzone", LoginSystem.progressToRestore);
+
+        int dropzone = SafeParse(phase7DropZoneToken, -1);
+        if (dropzone > 0)
+        {
+            GameObject Phase07Part03DropZone = null;
+            switch (dropzone)
+            {
+                case 1:
+                    Phase07Part03DropZone = Phase07Part03DropZone01;
+                    break;
+                case 2:
+                    Phase07Part03DropZone = Phase07Part03DropZone02;
+                    break;
+                case 3:
+                    Phase07Part03DropZone = Phase07Part03DropZone03;
+                    break;
+                case 4:
+                    Phase07Part03DropZone = Phase07Part03DropZone04;
+                    break;
+                case 5:
+                    Phase07Part03DropZone = Phase07Part03DropZone05;
+                    break;
+                case 6:
+                    Phase07Part03DropZone = Phase07Part03DropZone06;
+                    break;
+                case 8:
+                    Phase07Part03DropZone = Phase07Part03DropZone08;
+                    break;
+                case 9:
+                    Phase07Part03DropZone = Phase07Part03DropZone09;
+                    break;
+                case 10:
+                    Phase07Part03DropZone = Phase07Part03DropZone10;
+                    break;
+                case 11:
+                    Phase07Part03DropZone = Phase07Part03DropZone11;
+                    break;
+                case 12:
+                    Phase07Part03DropZone = Phase07Part03DropZone12;
+                    break;
+                case 13:
+                    Phase07Part03DropZone = Phase07Part03DropZone13;
+                    break;
+                default:
+                    break;
+            }
+            Phase07Part03DropZoneArray.Clear();
+            Phase07Part03DropZoneArray.Add(Phase07Part03DropZone);
+            var component = Phase07Part03DropZone.GetComponent<DropZonePhase07>();
+
+            // Get the food strategies chosen.
+            string strat1TokenName = "foodstrat1" + "dz" + dropzone.ToString();
+            string strat1Token = GetToken(strat1TokenName, LoginSystem.progressToRestore);
+            bool strat1 = SafeParse(strat1Token, false);
+            component.phase07FoodStrategy01Selected = strat1;
+            if (strat1) phase07FoodStrategyStringArray.Add(component.foodStrategyString01);
+
+            string strat2TokenName = "foodstrat2" + "dz" + dropzone.ToString();
+            string strat2Token = GetToken(strat2TokenName, LoginSystem.progressToRestore);
+            bool strat2 = SafeParse(strat2Token, false);
+            component.phase07FoodStrategy02Selected = strat2;
+            if (strat2) phase07FoodStrategyStringArray.Add(component.foodStrategyString02);
+
+            string strat3TokenName = "foodstrat3" + "dz" + dropzone.ToString();
+            string strat3Token = GetToken(strat3TokenName, LoginSystem.progressToRestore);
+            bool strat3 = SafeParse(strat3Token, false);
+            component.phase07FoodStrategy03Selected = strat3;
+            if (strat3) phase07FoodStrategyStringArray.Add(component.foodStrategyString03);
+
+            string strat4TokenName = "foodstrat4" + "dz" + dropzone.ToString();
+            string strat4Token = GetToken(strat4TokenName, LoginSystem.progressToRestore);
+            bool strat4 = SafeParse(strat4Token, false);
+            component.phase07FoodStrategy04Selected = strat4;
+            if (strat4) phase07FoodStrategyStringArray.Add(component.foodStrategyString04);
+
+            //"foodstrat1" + "dz" + dropZone.ToString(), component.phase07FoodStrategy01Selected.ToString()
+        }
+    }
+
+    private string GetSubstringToken(string substringName, List<PersistencePayload> progressToRestore)
+    {
+        var result = from token in progressToRestore
+                     where token.recordName.Contains(substringName)
+                     select token.recordValue;
+
+        return result.DefaultIfEmpty(null).FirstOrDefault();
+    }
+
+    private string GetToken(string tokenName, List<PersistencePayload> progressToRestore)
+    {
+        var result = from token in progressToRestore
+                     where token.recordName == tokenName
+                     //let value = SafeParse(token.recordValue, -1)
+                     //where value > 0
+                     select token.recordValue;
+
+        return result.DefaultIfEmpty("").FirstOrDefault();
     }
 
     /// <summary>
@@ -1391,6 +1496,69 @@ public class MenuOptions : MonoBehaviour
         {
             case "playerName":
                 this.playerNameString = datemValue;
+                break;
+            //case "edustrat1":
+            //case "edustrat2":
+            //    phase07FoodStrategyStringArray;
+            //    break;
+            //case "phase7dropzone":
+            //switch (datemValue)
+            //{
+            //    case "1":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone01);
+            //        break;
+            //    case "2":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone02);
+            //        break;
+            //    case "3":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone03);
+            //        break;
+            //    case "4":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone04);
+            //        break;
+            //    case "5":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone05);
+            //        break;
+            //    case "6":
+            //        Phase07Part03DropZoneArray.Add(Phase07Part03DropZone06);
+            //        break;
+            //}
+            //break;
+            case "phase7Part2Selection1Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select01();
+                }
+                break;
+            case "phase7Part2Selection2Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select02();
+                }
+                break;
+            case "phase7Part2Selection3Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select03();
+                }
+                break;
+            case "phase7Part2Selection4Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select04();
+                }
+                break;
+            case "phase7Part2Selection5Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select05();
+                }
+                break;
+            case "phase7Part2Selection6Selected":
+                if (SafeParse(datemValue, false))
+                {
+                    Phase07Part02Select06();
+                }
                 break;
             case "phase7DietaryStrategies1OptionSelected":
                 phase7DietaryStrategies01OptionSelected = SafeParse(datemValue, false);
@@ -1644,6 +1812,8 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
                         // Nurses' station is the current room.
+                        NPCRightNurseImage.SetBool("NPCRightDefault", false);
+                        NPCRightNurseImage.SetBool("NPCRightAnimateIn", true);
                         NurseNavButton.interactable = true;
                         NurseNavButton.isOn = true;
                         break;
@@ -1652,6 +1822,8 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase1ToPhase2();
                         TransitionPhase2ToPhase3();
                         // Dietician's Office is the current room.
+                        NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+                        NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
@@ -1661,6 +1833,8 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase2ToPhase3();
                         TransitionPhase3ToPhase4();
                         // Dietician's Office is the current room.
+                        NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+                        NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
@@ -1671,6 +1845,8 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase3ToPhase4();
                         TransitionPhase4ToPhase5();
                         // Patient's Room is where phase 4 finishes.
+                        NPCRightPatientImage.SetBool("NPCRightDefault", false);
+                        NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
                         PatientNavButton.interactable = true;
                         PatientNavButton.isOn = true;
                         break;
@@ -1682,6 +1858,8 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase4ToPhase5();
                         TransitionPhase5ToPhase6();
                         // Dietician's Office is where phase 5 finishes.
+                        NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+                        NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
@@ -1709,7 +1887,10 @@ public class MenuOptions : MonoBehaviour
 
                         //Phase07Part02Select02();
 
+
                         // Dietician's Office is where phase 6 finishes.
+                        NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+                        NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
@@ -1721,13 +1902,22 @@ public class MenuOptions : MonoBehaviour
                         TransitionPhase4ToPhase5();
                         TransitionPhase5ToPhase6();
                         TransitionPhase6ToPhase7();
+                        TransitionPhase7ToPhase8();
 
                         // TODO: Check that phase 6 selections weren't also required.
+
                         Phase07Part02Select02();
-                        phase07FoodStrategyStringArray.Add("Strategy 1");
-                        phase07FoodStrategyStringArray.Add("Strategy 2");
+                        //phase07FoodStrategyStringArray.Add("Strategy 1");
+                        //phase07FoodStrategyStringArray.Add("Strategy 2");
+
+                        // Restore Food Strategies.
+                        // Restore Educational Strategy.
+
+                        ParsePhase7Tokens(LoginSystem.progressToRestore);
 
                         // Patient's Room is where phase 7 finishes.
+                        NPCRightPatientImage.SetBool("NPCRightDefault", false);
+                        NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
                         PatientNavButton.interactable = true;
                         PatientNavButton.isOn = true;
 
@@ -3725,7 +3915,12 @@ public class MenuOptions : MonoBehaviour
                 break;
             case 7:
                 // DISABLED: While testing phase 6 transition.
-                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                //payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+
+                // Add more state information as payload.
+                var phase7Payload = GetPhase7State();
+                payload.AddRange(phase7Payload);
+
                 Unitycoding.LoginSystem.LoginSystem.SaveProgress(payload);
 
                 //Debug.Log(Phase07Part03DropZoneArray);
@@ -3742,6 +3937,78 @@ public class MenuOptions : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    // Packages relevant game state generated during phase 6.
+    private List<PersistencePayload> GetPhase7State()
+    {
+        List<PersistencePayload> result = new List<PersistencePayload>
+        {
+
+            //if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone01))
+            //{
+            //    result.Add(new PersistencePayload("phase7part3dropzone1foodstrat1", Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected.ToString()));
+            //    result.Add(new PersistencePayload("phase7part3dropzone1foodstrat2", Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected.ToString()));
+            //    result.Add(new PersistencePayload("phase7part3dropzone1foodstrat3", Phase07Part03DropZone01.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected.ToString()));
+            //}
+
+            new PersistencePayload("phase7Part2Selection1Selected", phase07Part02Selection01Selected.ToString()),
+            new PersistencePayload("phase7Part2Selection2Selected", phase07Part02Selection02Selected.ToString()),
+            new PersistencePayload("phase7Part2Selection3Selected", phase07Part02Selection03Selected.ToString()),
+            new PersistencePayload("phase7Part2Selection4Selected", phase07Part02Selection04Selected.ToString()),
+            new PersistencePayload("phase7Part2Selection5Selected", phase07Part02Selection05Selected.ToString()),
+            new PersistencePayload("phase7Part2Selection6Selected", phase07Part02Selection06Selected.ToString())
+        };
+
+        //phase07FoodStrategyStringArray
+
+        // Add entries relating to food strategies.
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone01, 1));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone02, 2));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone03, 3));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone04, 4));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone05, 5));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone06, 6));
+        // This one didn't exist for some reason.
+        //result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone07, 7));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone08, 8));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone09, 9));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone10, 10));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone11, 11));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone12, 12));
+        result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone13, 13));
+
+        // Construct entry for the chosen educational strategy.
+        int stratIndex = 1;
+        foreach (var eduStrat in phase07EducationalStrategyStringArray)
+        {
+            result.Add(new PersistencePayload("edustrat" + stratIndex, eduStrat));
+            ++stratIndex;
+        }
+
+        return result;
+    }
+
+    private List<PersistencePayload> GetPhase7DropZonePayload(GameObject Phase07Part03DropZone, int dropZone)
+    {
+        // Creates payloads if they are required to restore state.
+        List<PersistencePayload> result = new List<PersistencePayload>();
+        if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone))
+        {
+            //result.Add(new PersistencePayload("phase7part3dropzone" + dropZone.ToString() + "foodstrat1", Phase07Part03DropZone.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected.ToString()));
+            //result.Add(new PersistencePayload("phase7part3dropzone" + dropZone.ToString() + "foodstrat2", Phase07Part03DropZone.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected.ToString()));
+            //result.Add(new PersistencePayload("phase7part3dropzone" + dropZone.ToString() + "foodstrat3", Phase07Part03DropZone.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected.ToString()));
+            var component = Phase07Part03DropZone.GetComponent<DropZonePhase07>();
+            if (null == component) return result;
+
+            result.Add(new PersistencePayload("phase7dropzone", dropZone.ToString()));
+            result.Add(new PersistencePayload("foodstrat1" + "dz" + dropZone.ToString(), component.phase07FoodStrategy01Selected.ToString()));
+            result.Add(new PersistencePayload("foodstrat2" + "dz" + dropZone.ToString(), component.phase07FoodStrategy02Selected.ToString()));
+            result.Add(new PersistencePayload("foodstrat3" + "dz" + dropZone.ToString(), component.phase07FoodStrategy03Selected.ToString()));
+            result.Add(new PersistencePayload("foodstrat4" + "dz" + dropZone.ToString(), component.phase07FoodStrategy04Selected.ToString()));
+        }
+
+        return result;
     }
 
     // Packages relevant game state generated during phase 6.
@@ -9676,47 +9943,48 @@ public class MenuOptions : MonoBehaviour
                     }
                     else if (Phase07Part03DropZoneArray.Contains(Phase07Part03DropZone02))
                     {
-                        if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                        var ph07pa03dz02Comp = Phase07Part03DropZone02.GetComponent<DropZonePhase07>();
+                        if (ph07pa03dz02Comp.phase07FoodStrategy01Selected)
                         {
                             phase08Selection01FoodStrategy01 = "yogurt";
-                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                            if (ph07pa03dz02Comp.phase07FoodStrategy02Selected)
                             {
                                 phase08ConversationTracker = 1100;
                             }
-                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            else if (ph07pa03dz02Comp.phase07FoodStrategy03Selected)
                             {
                                 phase08Selection01FoodStrategy02 = "open the legumes";
                                 phase08ConversationTracker = 1200;
                                 phase07StrategiesScore += 1;
                             }
-                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            else if (ph07pa03dz02Comp.phase07FoodStrategy04Selected)
                             {
                                 phase08Selection01FoodStrategy02 = "buy the bars";
                                 phase08ConversationTracker = 1200;
                                 phase07StrategiesScore += 1;
                             }
                         }
-                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy02Selected)
+                        else if (ph07pa03dz02Comp.phase07FoodStrategy02Selected)
                         {
                             phase08Selection01FoodStrategy01 = "ham";
-                            if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy01Selected)
+                            if (ph07pa03dz02Comp.phase07FoodStrategy01Selected)
                             {
                                 phase08ConversationTracker = 1100;
                             }
-                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                            else if (ph07pa03dz02Comp.phase07FoodStrategy03Selected)
                             {
                                 phase08Selection01FoodStrategy02 = "open the legumes";
                                 phase08ConversationTracker = 1200;
                                 phase07StrategiesScore += 1;
                             }
-                            else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy04Selected)
+                            else if (ph07pa03dz02Comp.phase07FoodStrategy04Selected)
                             {
                                 phase08Selection01FoodStrategy02 = "buy the bars";
                                 phase08ConversationTracker = 1200;
                                 phase07StrategiesScore += 1;
                             }
                         }
-                        else if (Phase07Part03DropZone02.GetComponent<DropZonePhase07>().phase07FoodStrategy03Selected)
+                        else if (ph07pa03dz02Comp.phase07FoodStrategy03Selected)
                         {
                             phase08ConversationTracker = 1300;
                             phase07StrategiesScore += 2;
