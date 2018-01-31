@@ -26,7 +26,10 @@
 		$url .= $_SERVER['REQUEST_URI'];
 
 		$activation = md5(uniqid(rand(), true));
-		mysqli_query($db,"INSERT INTO account(user,password,email,active) VALUES ('$username',MD5('".$password."'),'$email','$activation')");
+		#mysqli_query($db,"INSERT INTO account(user,password,email,active) VALUES ('$username',MD5('".$password."'),'$email','$activation')");
+		# The accounts will now be activated by default.
+		# This is to work around the email server not working.
+		mysqli_query($db,"INSERT INTO account(user,password,email,active) VALUES ('$username',MD5('".$password."'),'$email', NULL)");
 		$message = " To activate your account, please click on this link:\n\n";
                 $message .= dirname($url). '/activate.php?email=' . urlencode($email) . "&key=$activation";
 
