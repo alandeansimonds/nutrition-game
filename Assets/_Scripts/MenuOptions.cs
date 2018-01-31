@@ -1460,6 +1460,58 @@ public class MenuOptions : MonoBehaviour
             if (strat4) phase07FoodStrategyStringArray.Add(component.foodStrategyString04);
 
             //"foodstrat1" + "dz" + dropZone.ToString(), component.phase07FoodStrategy01Selected.ToString()
+
+            //DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy = null;
+
+            // Get the educational strategy chosen.
+
+            //result.Add(new PersistencePayload("group" + stratGroup.ToString() + "edustrat" + "1", dropZonePhase07EducationalStrategy.phase07EducationalStrategy01Selected.ToString()));
+            string eduGroup1Strat1Name = "group" + "1" + "edustrat" + "1";
+            string eduGroup1Strat1Token = GetToken(eduGroup1Strat1Name, LoginSystem.progressToRestore);
+            bool eduGroup1Strat1 = SafeParse(eduGroup1Strat1Token, false);
+            dropZonePhase07EducationalStrategy01.phase07EducationalStrategy01Selected = eduGroup1Strat1;
+
+            string eduGroup1Strat2Name = "group" + "1" + "edustrat" + "2";
+            string eduGroup1Strat2Token = GetToken(eduGroup1Strat2Name, LoginSystem.progressToRestore);
+            bool eduGroup1Strat2 = SafeParse(eduGroup1Strat2Token, false);
+            dropZonePhase07EducationalStrategy01.phase07EducationalStrategy02Selected = eduGroup1Strat2;
+
+            string eduGroup2Strat1Name = "group" + "2" + "edustrat" + "1";
+            string eduGroup2Strat1Token = GetToken(eduGroup2Strat1Name, LoginSystem.progressToRestore);
+            bool eduGroup2Strat1 = SafeParse(eduGroup2Strat1Token, false);
+            dropZonePhase07EducationalStrategy02.phase07EducationalStrategy01Selected = eduGroup2Strat1;
+
+            string eduGroup2Strat2Name = "group" + "2" + "edustrat" + "2";
+            string eduGroup2Strat2Token = GetToken(eduGroup2Strat2Name, LoginSystem.progressToRestore);
+            bool eduGroup2Strat2 = SafeParse(eduGroup2Strat2Token, false);
+            dropZonePhase07EducationalStrategy02.phase07EducationalStrategy02Selected = eduGroup2Strat2;
+
+            string eduGroup3Strat1Name = "group" + "3" + "edustrat" + "1";
+            string eduGroup3Strat1Token = GetToken(eduGroup3Strat1Name, LoginSystem.progressToRestore);
+            bool eduGroup3Strat1 = SafeParse(eduGroup3Strat1Token, false);
+            dropZonePhase07EducationalStrategy03.phase07EducationalStrategy01Selected = eduGroup3Strat1;
+
+            string eduGroup3Strat2Name = "group" + "3" + "edustrat" + "2";
+            string eduGroup3Strat2Token = GetToken(eduGroup3Strat2Name, LoginSystem.progressToRestore);
+            bool eduGroup3Strat2 = SafeParse(eduGroup3Strat2Token, false);
+            dropZonePhase07EducationalStrategy03.phase07EducationalStrategy02Selected = eduGroup3Strat2;
+
+            string eduGroup4Strat1Name = "group" + "4" + "edustrat" + "1";
+            string eduGroup4Strat1Token = GetToken(eduGroup4Strat1Name, LoginSystem.progressToRestore);
+            bool eduGroup4Strat1 = SafeParse(eduGroup4Strat1Token, false);
+            dropZonePhase07EducationalStrategy04.phase07EducationalStrategy01Selected = eduGroup4Strat1;
+
+            string eduGroup4Strat2Name = "group" + "4" + "edustrat" + "2";
+            string eduGroup4Strat2Token = GetToken(eduGroup4Strat2Name, LoginSystem.progressToRestore);
+            bool eduGroup4Strat2 = SafeParse(eduGroup4Strat2Token, false);
+            dropZonePhase07EducationalStrategy04.phase07EducationalStrategy02Selected = eduGroup4Strat2;
+
+            //string edustratTokenName = "edustrat" + dropzone.ToString();
+            //string edustratToken = GetToken(edustratTokenName, LoginSystem.progressToRestore);
+            //bool edustrat = SafeParse(edustratToken, false);
+            //component.phase07FoodStrategy04Selected = strat4;
+
+            //if (strat4) phase07FoodStrategyStringArray.Add(component.foodStrategyString04);
         }
     }
 
@@ -1906,7 +1958,7 @@ public class MenuOptions : MonoBehaviour
 
                         // TODO: Check that phase 6 selections weren't also required.
 
-                        Phase07Part02Select02();
+                        //Phase07Part02Select02();
                         //phase07FoodStrategyStringArray.Add("Strategy 1");
                         //phase07FoodStrategyStringArray.Add("Strategy 2");
 
@@ -3915,7 +3967,7 @@ public class MenuOptions : MonoBehaviour
                 break;
             case 7:
                 // DISABLED: While testing phase 6 transition.
-                //payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
+                payload.Add(new PersistencePayload("phaseCompleted", phaseNumber.ToString()));
 
                 // Add more state information as payload.
                 var phase7Payload = GetPhase7State();
@@ -3979,12 +4031,40 @@ public class MenuOptions : MonoBehaviour
         result.AddRange(GetPhase7DropZonePayload(Phase07Part03DropZone13, 13));
 
         // Construct entry for the chosen educational strategy.
-        int stratIndex = 1;
-        foreach (var eduStrat in phase07EducationalStrategyStringArray)
-        {
-            result.Add(new PersistencePayload("edustrat" + stratIndex, eduStrat));
-            ++stratIndex;
-        }
+        //int stratIndex = 1;
+        //foreach (var eduStrat in phase07EducationalStrategyStringArray)
+        //{
+        //    result.Add(new PersistencePayload("edustrat" + stratIndex, eduStrat));
+        //    ++stratIndex;
+        //}
+
+        // Store educational strategies as a number.
+        result.AddRange(GetPhase7EducationalPayload(dropZonePhase07EducationalStrategy01, 1));
+        result.AddRange(GetPhase7EducationalPayload(dropZonePhase07EducationalStrategy02, 2));
+        result.AddRange(GetPhase7EducationalPayload(dropZonePhase07EducationalStrategy03, 3));
+        result.AddRange(GetPhase7EducationalPayload(dropZonePhase07EducationalStrategy04, 4));
+
+        return result;
+    }
+
+    private List<PersistencePayload> GetPhase7EducationalPayload(DropZonePhase07EducationalStrategy dropZonePhase07EducationalStrategy, int stratGroup)
+    {
+        List<PersistencePayload> result = new List<PersistencePayload>();
+
+        //int solutionNumber = -1;
+        //if (dropZonePhase07EducationalStrategy.phase07EducationalStrategy01Selected)
+        //{
+        //solutionNumber = 1;
+        //result.Add(new PersistencePayload("educationStrat" + stratNumber.ToString(), solutionNumber.ToString()));
+        result.Add(new PersistencePayload("group" + stratGroup.ToString() + "edustrat" + "1", dropZonePhase07EducationalStrategy.phase07EducationalStrategy01Selected.ToString()));
+        //}
+        //else if (dropZonePhase07EducationalStrategy.phase07EducationalStrategy02Selected)
+        //{
+        //solutionNumber = 2;
+        //result.Add(new PersistencePayload("educationStrat" + stratNumber.ToString(), solutionNumber.ToString()));
+        //result.Add(new PersistencePayload("edustrat" + stratGroup.ToString(), "2"));
+        result.Add(new PersistencePayload("group" + stratGroup.ToString() + "edustrat" + "2", dropZonePhase07EducationalStrategy.phase07EducationalStrategy02Selected.ToString()));
+        //}
 
         return result;
     }
