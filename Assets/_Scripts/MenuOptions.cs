@@ -219,6 +219,103 @@ public class MenuOptions : MonoBehaviour
     private List<GameObject> Phase6PartThreeDropZonesArray = new List<GameObject>();
     [SerializeField]
     private List<GameObject> Phase07Part03DropZoneArray = new List<GameObject>();
+
+    private static string[] phase3PhrasesFeedingAbilityRaw =
+    {
+        "Feeding", "Self-feeding", "self feeding", "self feeding ability",
+        "Eating ability",
+        "Food access",
+        "Food availability",
+        "Food supply",
+        "Mobility",
+        "Cooking ability",
+        "Shopping",
+        "Physical ability"
+    };
+    private static string[] phase3PhrasesFeedingAbility = (from phrase in phase3PhrasesFeedingAbilityRaw
+                                                           select phrase.ToLower()).ToArray();
+    private static string[] phase3PhrasesFoodIntakeRaw =
+    {
+        "Oral intake",
+        "Food intake",
+        "Intake",
+        "Current intake",
+        "Food believes",
+        "Food beliefs",
+        "Food fears",
+        "myths",
+        "Preference",
+        "Tolerance",
+        "Intolerance",
+        "Food",
+        "Nutrient",
+        "Nutrients",
+        "Fibre",
+        "Fluid",
+        "Energy",
+        "Protein",
+        "Diet history"
+    };
+    private static string[] phase3PhrasesFoodIntake = (from phrase in phase3PhrasesFoodIntakeRaw
+                                                       select phrase.ToLower()).ToArray();
+    private static string[] phase3PhrasesNutritionFocusedPhysicalRaw =
+    {
+        "Malnutrition",
+        "Dehydration",
+        "SGA",
+        "Fat stores",
+        "Muscle stores",
+        "subjective global assessment",
+        "bowels",
+        "stools",
+        "constipation",
+        "appetite",
+        "fatigue",
+        "altered taste"
+    };
+    private static string[] phase3PhrasesNutritionFocusedPhysical = (from phrase in phase3PhrasesNutritionFocusedPhysicalRaw
+                                                                     select phrase.ToLower()).ToArray();
+    private static string[] phase3PhrasesAnthropometryRaw =
+    {
+        "Weight",
+        "Height",
+        "BMI",
+        "Body mass index",
+        "Weight history",
+        "Ideal body weight",
+        "Percentage weight loss",
+        "Weight loss",
+        "Weight change"
+    };
+    private static string[] phase3PhrasesAnthropometry = (from phrase in phase3PhrasesAnthropometryRaw
+                                                          select phrase.ToLower()).ToArray();
+    private static string[] phase3PhrasesClientHistoryRaw =
+    {
+        "nutrition-related side effects",
+        "nutrition related side effects",
+        "Medication side effects",
+        "family history",
+        "financial means",
+        "Finance",
+        "Finances",
+        "Budget",
+        "Social support",
+        "Support groups",
+        "Isolation",
+        "Family support",
+        "Support",
+        "Nausea",
+        "Vomiting",
+        "Dry mouth",
+        "Appetite",
+        "Bowel habits",
+        "Constipation",
+        "Pain",
+        "nutrition impact symptoms"
+    };
+    private static string[] phase3PhrasesClientHistory = (from phrase in phase3PhrasesClientHistoryRaw
+                                                          select phrase.ToLower()).ToArray();
+
     public string[] phase3AcceptedPhrases;
     public GameObject[] phase6Part03EvidenceOptions;
     public GameObject[] phase07Part03EvidenceOptions;
@@ -19453,57 +19550,72 @@ public class MenuOptions : MonoBehaviour
 
     public void CheckPhase3String()
     {
-        Phase3InputTextStringArray = Phase3SavedText.GetComponent<Text>().text.Split(new string[] { ", " }, System.StringSplitOptions.None).Distinct().ToList();
+        // Previous way of splitting tokens.
+        //Phase3InputTextStringArray = Phase3SavedText.GetComponent<Text>().text.Split(new string[] { ", " }, System.StringSplitOptions.None).Distinct().ToList();
+
+        // Hopefully a better way of splitting tokens.
+        var tokens = Phase3SavedText.GetComponent<Text>().text.Split(new string[] { ",", ".", "?", ":", ";" }, System.StringSplitOptions.None);
+        var cleanTokens = from token in tokens
+                          select token.Trim().ToLower();
+        var Phase3InputTextStringArray = cleanTokens.Distinct().ToList();
+
+        // Note: collections for testing are now defined in code, since it is too cumbersome to edit/maintain within the Unity interface.
+        // (Existing collections were left intact in case they somehow prevent bugs by their presence.)
         foreach (string word in Phase3InputTextStringArray)
         {
-            if (phase3AcceptedPhrases.Contains(word))
+            //if (phase3AcceptedPhrases.Contains(word))
+            //{
+            //if (Phase03AnthropometricMeasurementsStringArray.Contains(word))
+            if (phase3PhrasesAnthropometry.Contains(word))
             {
-                if (Phase03AnthropometricMeasurementsStringArray.Contains(word))
+                if (!Phase03AnthropometricMeasurementsWordalreadyfound)
                 {
-                    if (!Phase03AnthropometricMeasurementsWordalreadyfound)
-                    {
-                        Phase3InputCheckScore++;
-                        Phase03AnthropometryWordsCompleteBox.SetActive(true);
-                        Phase03AnthropometricMeasurementsWordalreadyfound = true;
-                    }
-                }
-                else if (Phase03ClientHistoryStringArray.Contains(word))
-                {
-                    if (!Phase03ClientHistoryWordalreadyfound)
-                    {
-                        Phase3InputCheckScore++;
-                        Phase03ClientHistoryWordsCompleteBox.SetActive(true);
-                        Phase03ClientHistoryWordalreadyfound = true;
-                    }
-                }
-                else if (Phase03FeedingAbilityStringArray.Contains(word))
-                {
-                    if (!Phase03FeedingAbilityWordalreadyfound)
-                    {
-                        Phase3InputCheckScore++;
-                        Phase03FeedingAbilityWordsCompleteBox.SetActive(true);
-                        Phase03FeedingAbilityWordalreadyfound = true;
-                    }
-                }
-                else if (Phase03FoodIntakeStringArray.Contains(word))
-                {
-                    if (!Phase03FoodIntakeWordalreadyfound)
-                    {
-                        Phase3InputCheckScore++;
-                        Phase03FoodIntakeWordsCompleteBox.SetActive(true);
-                        Phase03FoodIntakeWordalreadyfound = true;
-                    }
-                }
-                else if (Phase03NutritionFocusedPhysicalStringArray.Contains(word))
-                {
-                    if (!Phase03NutritionFocusedPhysicalWordalreadyfound)
-                    {
-                        Phase3InputCheckScore++;
-                        Phase03NutriitionFocusedPhysicalWordsCompleteBox.SetActive(true);
-                        Phase03NutritionFocusedPhysicalWordalreadyfound = true;
-                    }
+                    Phase3InputCheckScore++;
+                    Phase03AnthropometryWordsCompleteBox.SetActive(true);
+                    Phase03AnthropometricMeasurementsWordalreadyfound = true;
                 }
             }
+            //else if (Phase03ClientHistoryStringArray.Contains(word))
+            else if (phase3PhrasesClientHistory.Contains(word))
+            {
+                if (!Phase03ClientHistoryWordalreadyfound)
+                {
+                    Phase3InputCheckScore++;
+                    Phase03ClientHistoryWordsCompleteBox.SetActive(true);
+                    Phase03ClientHistoryWordalreadyfound = true;
+                }
+            }
+            //else if (Phase03FeedingAbilityStringArray.Contains(word))
+            else if (phase3PhrasesFeedingAbility.Contains(word))
+            {
+                if (!Phase03FeedingAbilityWordalreadyfound)
+                {
+                    Phase3InputCheckScore++;
+                    Phase03FeedingAbilityWordsCompleteBox.SetActive(true);
+                    Phase03FeedingAbilityWordalreadyfound = true;
+                }
+            }
+            //else if (Phase03FoodIntakeStringArray.Contains(word))
+            else if (phase3PhrasesFoodIntake.Contains(word))
+            {
+                if (!Phase03FoodIntakeWordalreadyfound)
+                {
+                    Phase3InputCheckScore++;
+                    Phase03FoodIntakeWordsCompleteBox.SetActive(true);
+                    Phase03FoodIntakeWordalreadyfound = true;
+                }
+            }
+            //else if (Phase03NutritionFocusedPhysicalStringArray.Contains(word))
+            else if (phase3PhrasesNutritionFocusedPhysical.Contains(word))
+            {
+                if (!Phase03NutritionFocusedPhysicalWordalreadyfound)
+                {
+                    Phase3InputCheckScore++;
+                    Phase03NutriitionFocusedPhysicalWordsCompleteBox.SetActive(true);
+                    Phase03NutritionFocusedPhysicalWordalreadyfound = true;
+                }
+            }
+            //}
             else
             {
                 phase03IncorrectScore++;
