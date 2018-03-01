@@ -1380,10 +1380,274 @@ public class MenuOptions : MonoBehaviour
         }
     }
 
+    private void ParsePhase6Tokens(List<PersistencePayload> progressToRestore)
+    {
+        foreach (var token in progressToRestore)
+        {
+            string datemValue = token.recordValue;
+            switch (token.recordName)
+            {
+                case "phase6part3selection1":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection01();
+                    }
+                    break;
+                case "phase6part3selection2":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection02();
+                    }
+                    break;
+                case "phase6part3selection3":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection03();
+                    }
+                    break;
+                case "phase6part3selection4":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection04();
+                    }
+                    break;
+                case "phase6part3selection5":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection05();
+                    }
+                    break;
+                case "phase6part3selection6":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection06();
+                    }
+                    break;
+                case "phase6part3selection7":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part03Selection07();
+                    }
+                    break;
+                case "phase6part2selection1":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection01();
+                    }
+                    break;
+                case "phase6part2selection2":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection02();
+                    }
+                    break;
+                case "phase6part2selection3":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection03();
+                    }
+                    break;
+                case "phase6part2selection4":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection04();
+                    }
+                    break;
+                case "phase6part2selection5":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection05();
+                    }
+                    break;
+                case "phase6part2selection6":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection06();
+                    }
+                    break;
+                case "phase6part2selection7":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection07();
+                    }
+                    break;
+                case "phase6part2selection8":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection08();
+                    }
+                    break;
+                case "phase6part2selection9":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection09();
+                    }
+                    break;
+                case "phase6part2selection10":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection10();
+                    }
+                    break;
+                case "phase6part2selection11":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part02Selection11();
+                    }
+                    break;
+                case "phase6part1selection1":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection01();
+                    }
+                    break;
+                case "phase6part1selection2":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection02();
+                    }
+                    break;
+                case "phase6part1selection3":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection03();
+                    }
+                    break;
+                case "phase6part1selection4":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection04();
+                    }
+                    break;
+                case "phase6part1selection5":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection05();
+                    }
+                    break;
+                case "phase6part1selection6":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection06();
+                    }
+                    break;
+                case "phase6part1selection7":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection07();
+                    }
+                    break;
+                case "phase6part1selection8":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection08();
+                    }
+                    break;
+                case "phase6part1selection9":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection09();
+                    }
+                    break;
+                case "phase6part1selection10":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection10();
+                    }
+                    break;
+                case "phase6part1selection11":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection11();
+                    }
+                    break;
+                case "phase6part1selection12":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection12();
+                    }
+                    break;
+                case "phase6part1selection13":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection13();
+                    }
+                    break;
+                case "phase6part1selection14":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection14();
+                    }
+                    break;
+                case "phase6part1selection15":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase06Part01Selection15();
+                    }
+                    break;
+            }
+        }
+    }
+
     private void ParsePhase7Tokens(List<PersistencePayload> progressToRestore)
     {
-        // Process other tokens.
-        var phase7DropZoneToken = GetToken("phase7dropzone", LoginSystem.progressToRestore);
+
+        foreach (var token in progressToRestore)
+        {
+            var datemValue = token.recordValue;
+            switch (token.recordName)
+            {
+                // Process other tokens.
+                case "phase7Part2Selection1Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select01();
+                    }
+                    break;
+                case "phase7Part2Selection2Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select02();
+                    }
+                    break;
+                case "phase7Part2Selection3Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select03();
+                    }
+                    break;
+                case "phase7Part2Selection4Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select04();
+                    }
+                    break;
+                case "phase7Part2Selection5Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select05();
+                    }
+                    break;
+                case "phase7Part2Selection6Selected":
+                    if (SafeParse(datemValue, false))
+                    {
+                        Phase07Part02Select06();
+                    }
+                    break;
+                case "phase7DietaryStrategies1OptionSelected":
+                    phase7DietaryStrategies01OptionSelected = SafeParse(datemValue, false);
+                    break;
+                case "phase7DietaryStrategies2OptionSelected":
+                    phase7DietaryStrategies02OptionSelected = SafeParse(datemValue, false);
+                    break;
+                case "phase7DietaryStrategies3OptionSelected":
+                    phase7DietaryStrategies03OptionSelected = SafeParse(datemValue, false);
+                    break;
+            }
+        }
+
+        //var phase7DropZoneToken = GetToken("phase7dropzone", LoginSystem.progressToRestore);
+        var phase7DropZoneToken = GetToken("phase7dropzone", progressToRestore);
 
         int dropzone = SafeParse(phase7DropZoneToken, -1);
         if (dropzone > 0)
@@ -1576,51 +1840,53 @@ public class MenuOptions : MonoBehaviour
             //        break;
             //}
             //break;
-            case "phase7Part2Selection1Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select01();
-                }
-                break;
-            case "phase7Part2Selection2Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select02();
-                }
-                break;
-            case "phase7Part2Selection3Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select03();
-                }
-                break;
-            case "phase7Part2Selection4Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select04();
-                }
-                break;
-            case "phase7Part2Selection5Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select05();
-                }
-                break;
-            case "phase7Part2Selection6Selected":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase07Part02Select06();
-                }
-                break;
-            case "phase7DietaryStrategies1OptionSelected":
-                phase7DietaryStrategies01OptionSelected = SafeParse(datemValue, false);
-                break;
-            case "phase7DietaryStrategies2OptionSelected":
-                phase7DietaryStrategies02OptionSelected = SafeParse(datemValue, false);
-                break;
-            case "phase7DietaryStrategies3OptionSelected":
-                phase7DietaryStrategies03OptionSelected = SafeParse(datemValue, false);
-                break;
+
+            //case "phase7Part2Selection1Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select01();
+            //    }
+            //    break;
+            //case "phase7Part2Selection2Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select02();
+            //    }
+            //    break;
+            //case "phase7Part2Selection3Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select03();
+            //    }
+            //    break;
+            //case "phase7Part2Selection4Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select04();
+            //    }
+            //    break;
+            //case "phase7Part2Selection5Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select05();
+            //    }
+            //    break;
+            //case "phase7Part2Selection6Selected":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase07Part02Select06();
+            //    }
+            //    break;
+            //case "phase7DietaryStrategies1OptionSelected":
+            //    phase7DietaryStrategies01OptionSelected = SafeParse(datemValue, false);
+            //    break;
+            //case "phase7DietaryStrategies2OptionSelected":
+            //    phase7DietaryStrategies02OptionSelected = SafeParse(datemValue, false);
+            //    break;
+            //case "phase7DietaryStrategies3OptionSelected":
+            //    phase7DietaryStrategies03OptionSelected = SafeParse(datemValue, false);
+            //    break;
+
             //case "phase6part4selection1":
             //    if (SafeParse(datemValue, false))
             //    {
@@ -1657,204 +1923,205 @@ public class MenuOptions : MonoBehaviour
             //        Phase06Part04Selection06();
             //    }
             //    break;
-            case "phase6part3selection1":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection01();
-                }
-                break;
-            case "phase6part3selection2":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection02();
-                }
-                break;
-            case "phase6part3selection3":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection03();
-                }
-                break;
-            case "phase6part3selection4":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection04();
-                }
-                break;
-            case "phase6part3selection5":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection05();
-                }
-                break;
-            case "phase6part3selection6":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection06();
-                }
-                break;
-            case "phase6part3selection7":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part03Selection07();
-                }
-                break;
-            case "phase6part2selection1":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection01();
-                }
-                break;
-            case "phase6part2selection2":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection02();
-                }
-                break;
-            case "phase6part2selection3":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection03();
-                }
-                break;
-            case "phase6part2selection4":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection04();
-                }
-                break;
-            case "phase6part2selection5":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection05();
-                }
-                break;
-            case "phase6part2selection6":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection06();
-                }
-                break;
-            case "phase6part2selection7":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection07();
-                }
-                break;
-            case "phase6part2selection8":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection08();
-                }
-                break;
-            case "phase6part2selection9":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection09();
-                }
-                break;
-            case "phase6part2selection10":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection10();
-                }
-                break;
-            case "phase6part2selection11":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part02Selection11();
-                }
-                break;
-            case "phase6part1selection1":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection01();
-                }
-                break;
-            case "phase6part1selection2":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection02();
-                }
-                break;
-            case "phase6part1selection3":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection03();
-                }
-                break;
-            case "phase6part1selection4":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection04();
-                }
-                break;
-            case "phase6part1selection5":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection05();
-                }
-                break;
-            case "phase6part1selection6":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection06();
-                }
-                break;
-            case "phase6part1selection7":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection07();
-                }
-                break;
-            case "phase6part1selection8":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection08();
-                }
-                break;
-            case "phase6part1selection9":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection09();
-                }
-                break;
-            case "phase6part1selection10":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection10();
-                }
-                break;
-            case "phase6part1selection11":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection11();
-                }
-                break;
-            case "phase6part1selection12":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection12();
-                }
-                break;
-            case "phase6part1selection13":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection13();
-                }
-                break;
-            case "phase6part1selection14":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection14();
-                }
-                break;
-            case "phase6part1selection15":
-                if (SafeParse(datemValue, false))
-                {
-                    Phase06Part01Selection15();
-                }
-                break;
+
+            //case "phase6part3selection1":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection01();
+            //    }
+            //    break;
+            //case "phase6part3selection2":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection02();
+            //    }
+            //    break;
+            //case "phase6part3selection3":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection03();
+            //    }
+            //    break;
+            //case "phase6part3selection4":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection04();
+            //    }
+            //    break;
+            //case "phase6part3selection5":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection05();
+            //    }
+            //    break;
+            //case "phase6part3selection6":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection06();
+            //    }
+            //    break;
+            //case "phase6part3selection7":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part03Selection07();
+            //    }
+            //    break;
+            //case "phase6part2selection1":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection01();
+            //    }
+            //    break;
+            //case "phase6part2selection2":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection02();
+            //    }
+            //    break;
+            //case "phase6part2selection3":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection03();
+            //    }
+            //    break;
+            //case "phase6part2selection4":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection04();
+            //    }
+            //    break;
+            //case "phase6part2selection5":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection05();
+            //    }
+            //    break;
+            //case "phase6part2selection6":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection06();
+            //    }
+            //    break;
+            //case "phase6part2selection7":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection07();
+            //    }
+            //    break;
+            //case "phase6part2selection8":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection08();
+            //    }
+            //    break;
+            //case "phase6part2selection9":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection09();
+            //    }
+            //    break;
+            //case "phase6part2selection10":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection10();
+            //    }
+            //    break;
+            //case "phase6part2selection11":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part02Selection11();
+            //    }
+            //    break;
+            //case "phase6part1selection1":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection01();
+            //    }
+            //    break;
+            //case "phase6part1selection2":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection02();
+            //    }
+            //    break;
+            //case "phase6part1selection3":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection03();
+            //    }
+            //    break;
+            //case "phase6part1selection4":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection04();
+            //    }
+            //    break;
+            //case "phase6part1selection5":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection05();
+            //    }
+            //    break;
+            //case "phase6part1selection6":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection06();
+            //    }
+            //    break;
+            //case "phase6part1selection7":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection07();
+            //    }
+            //    break;
+            //case "phase6part1selection8":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection08();
+            //    }
+            //    break;
+            //case "phase6part1selection9":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection09();
+            //    }
+            //    break;
+            //case "phase6part1selection10":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection10();
+            //    }
+            //    break;
+            //case "phase6part1selection11":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection11();
+            //    }
+            //    break;
+            //case "phase6part1selection12":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection12();
+            //    }
+            //    break;
+            //case "phase6part1selection13":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection13();
+            //    }
+            //    break;
+            //case "phase6part1selection14":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection14();
+            //    }
+            //    break;
+            //case "phase6part1selection15":
+            //    if (SafeParse(datemValue, false))
+            //    {
+            //        Phase06Part01Selection15();
+            //    }
+            //    break;
             case "phaseCompleted":
                 // Set phase to resume from.
                 //this.phase
@@ -1902,6 +2169,12 @@ public class MenuOptions : MonoBehaviour
                         PatientNavButton.interactable = true;
                         PatientNavButton.isOn = true;
                         break;
+                    // TODO: Renable phase 7 when bugs are fixed.
+                    // This will currently instead resume from the end of phase 5.
+                    case "7":
+                    // TODO: Renable phase 6 when bugs are fixed.
+                    // This will currently instead resume from the end of phase 5.
+                    case "6":
                     case "5":
                         TransitionPhase0ToPhase1();
                         TransitionPhase1ToPhase2();
@@ -1915,69 +2188,62 @@ public class MenuOptions : MonoBehaviour
                         DieticianNavButton.interactable = true;
                         DieticianNavButton.isOn = true;
                         break;
-                    case "6":
-                        TransitionPhase0ToPhase1();
-                        TransitionPhase1ToPhase2();
-                        TransitionPhase2ToPhase3();
-                        TransitionPhase3ToPhase4();
-                        TransitionPhase4ToPhase5();
-                        TransitionPhase5ToPhase6();
-                        TransitionPhase6ToPhase7();
+                    // Disabling phase 6 restoration for deployment, until outstanding progression bugs can be fixed:
+                    // Phase 5 will be restored instead.
+                    //case "6":
+                    //    TransitionPhase0ToPhase1();
+                    //    TransitionPhase1ToPhase2();
+                    //    TransitionPhase2ToPhase3();
+                    //    TransitionPhase3ToPhase4();
+                    //    TransitionPhase4ToPhase5();
+                    //    TransitionPhase5ToPhase6();
+                    //    TransitionPhase6ToPhase7();
 
-                        // Restore previously selected goals.
-                        //Phase07NutritionGoal02.SetActive(true);
-                        // TODO: Set corresponding UI elements also.
+                    //    // Restore previously selected goals.
+                    //    ParsePhase6Tokens(LoginSystem.progressToRestore);
 
-                        //Phase07P
-                        //Phase06Part01Selection02();
-                        //Phase06Part02Selection02();
-                        //Phase06Part03Selection02();
-                        //phase7DietaryStrategies02OptionSelected = true;
-                        // TODO: Set the relevant strategy according to what was stored in the database.
-                        //phase7DietaryStrategies01OptionSelected = true;
-                        //phase7DietaryStrategies03OptionSelected = true;
+                    //    // Dietician's Office is where phase 6 finishes.
+                    //    NPCRightDieticianImage.SetBool("NPCRightDefault", false);
+                    //    NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
+                    //    DieticianNavButton.interactable = true;
+                    //    DieticianNavButton.isOn = true;
+                    //    break;
 
-                        //Phase07Part02Select02();
+                    // Disabling end of phase 7 progress restoration until bugs are fixed that prevent progression.
+                    // The problem may be related to choosing multiple strategies.
+                    //case "7":
+                    //    TransitionPhase0ToPhase1();
+                    //    TransitionPhase1ToPhase2();
+                    //    TransitionPhase2ToPhase3();
+                    //    TransitionPhase3ToPhase4();
+                    //    TransitionPhase4ToPhase5();
+                    //    TransitionPhase5ToPhase6();
+                    //    TransitionPhase6ToPhase7();
+                    //    TransitionPhase7ToPhase8();
 
+                    //    // TODO: Check that phase 6 selections are actually required to be restored.
+                    //    ParsePhase6Tokens(LoginSystem.progressToRestore);
 
-                        // Dietician's Office is where phase 6 finishes.
-                        NPCRightDieticianImage.SetBool("NPCRightDefault", false);
-                        NPCRightDieticianImage.SetBool("NPCRightAnimateIn", true);
-                        DieticianNavButton.interactable = true;
-                        DieticianNavButton.isOn = true;
-                        break;
-                    case "7":
-                        TransitionPhase0ToPhase1();
-                        TransitionPhase1ToPhase2();
-                        TransitionPhase2ToPhase3();
-                        TransitionPhase3ToPhase4();
-                        TransitionPhase4ToPhase5();
-                        TransitionPhase5ToPhase6();
-                        TransitionPhase6ToPhase7();
-                        TransitionPhase7ToPhase8();
+                    //    //Phase07Part02Select02();
+                    //    //phase07FoodStrategyStringArray.Add("Strategy 1");
+                    //    //phase07FoodStrategyStringArray.Add("Strategy 2");
 
-                        // TODO: Check that phase 6 selections weren't also required.
+                    //    // Restore Food Strategies.
+                    //    // Restore Educational Strategy.
 
-                        //Phase07Part02Select02();
-                        //phase07FoodStrategyStringArray.Add("Strategy 1");
-                        //phase07FoodStrategyStringArray.Add("Strategy 2");
+                    //    ParsePhase7Tokens(LoginSystem.progressToRestore);
 
-                        // Restore Food Strategies.
-                        // Restore Educational Strategy.
+                    //    // Patient's Room is where phase 7 finishes.
+                    //    NPCRightPatientImage.SetBool("NPCRightDefault", false);
+                    //    NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
+                    //    PatientNavButton.interactable = true;
+                    //    PatientNavButton.isOn = true;
 
-                        ParsePhase7Tokens(LoginSystem.progressToRestore);
+                    //    // But phase 8 starts in the Doctor's Office.
+                    //    phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
+                    //    StartCoroutine("Phase07ToPhase08GamephaseRestoration");
 
-                        // Patient's Room is where phase 7 finishes.
-                        NPCRightPatientImage.SetBool("NPCRightDefault", false);
-                        NPCRightPatientImage.SetBool("NPCRightAnimateIn", true);
-                        PatientNavButton.interactable = true;
-                        PatientNavButton.isOn = true;
-
-                        // But phase 8 starts in the Doctor's Office.
-                        phase07ToPhase08TransitionAnim.SetTrigger("AnimateIn");
-                        StartCoroutine("Phase07ToPhase08GamephaseRestoration");
-
-                        break;
+                    //    break;
                     default:
                         break;
                 }
