@@ -1364,7 +1364,8 @@ public class MenuOptions : MonoBehaviour
     /// <returns>True if a phase change was processed.  i.e Progress is not starting from the beginning.</returns>
     private bool LoadExistingGame()
     {
-        if (null != LoginSystem.progressToRestore)
+        // Needs to also check whether the game is being replayed.
+        if ((null != LoginSystem.progressToRestore) && !PhaseManagement.forceNewGame)
         {
             bool phaseChanged = false;
             foreach (var datem in LoginSystem.progressToRestore)
@@ -18025,6 +18026,9 @@ public class MenuOptions : MonoBehaviour
 
     public void ReloadGame()
     {
+        // Indicate that the game shouldn't be loaded from the database.
+        PhaseManagement.forceNewGame = true;
+
         PhaseManagement.gamePhase = 1;
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
